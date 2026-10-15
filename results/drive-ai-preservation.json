@@ -1,0 +1,39 @@
+{
+  "what": "드라이브 이름 검색 확장(분석 순서 변경 포함) 전후 AI 검색 비교. 기준은 02073f7 이전 측정(.tmp/names-baseline), 변경 후는 새 .tmp 색인. identical = 질의별 순위·상위 3개·z·위치까지 같음(시간 제외).",
+  "date": "2026-10-14",
+  "runs": {
+    "eval_search test_data": {
+      "identical": true,
+      "hybrid": {
+        "n": 29,
+        "r1": 0.862,
+        "r3": 0.931,
+        "mrr": 0.897,
+        "place_ok": "10/11",
+        "hits_per_query": 1.62
+      }
+    },
+    "setsScale holdout": {
+      "identical": true,
+      "setsscale_on": {
+        "n": 32,
+        "r1": 1.0,
+        "r3": 1.0,
+        "mrr": 1.0,
+        "place_ok": "10/10",
+        "hits_per_query": 1.97
+      }
+    },
+    "setsScale test_data": {
+      "identical": true,
+      "setsscale_on": {
+        "n": 29,
+        "r1": 0.862,
+        "r3": 0.931,
+        "mrr": 0.897,
+        "place_ok": "10/11",
+        "hits_per_query": 1.62
+      }
+    }
+  }
+}

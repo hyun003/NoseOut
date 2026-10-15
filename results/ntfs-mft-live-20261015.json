@@ -1,0 +1,15 @@
+{
+  "registration": [
+    [
+      "mft",
+      1
+    ]
+  ],
+  "initial_count": 15,
+  "missing": 0,
+  "extra": 0,
+  "create_seconds": 1.052,
+  "rename_seconds": 1.052,
+  "final_count": 16,
+  "integrity": "ok"
+}

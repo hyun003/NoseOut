@@ -1,0 +1,83 @@
+{
+  "note": "setsScale on/off comparison, 2026-10-13, test_data synthetic set. Decision: keep ON (original DigUp).",
+  "modes": {
+    "on": {
+      "hybrid_51": {
+        "r1": "47/51",
+        "mrr": 0.941
+      },
+      "stage3_hybrid": {
+        "n": 29,
+        "r1": 0.862,
+        "r3": 0.931,
+        "mrr": 0.897,
+        "place_ok": "10/11"
+      },
+      "stage3_meaning_only": {
+        "n": 29,
+        "r1": 0.828,
+        "r3": 0.828,
+        "mrr": 0.828,
+        "place_ok": "9/9"
+      },
+      "stage2": {
+        "n": 22,
+        "r1": 1.0,
+        "r3": 1.0,
+        "mrr": 1.0,
+        "place_ok": "3/3"
+      },
+      "misses_hybrid": [
+        "washing machine won't drain the water",
+        "notice that the lift will be out of service",
+        "차를 세워 둔 비용은 어디서 내나",
+        "where can I leave my bike"
+      ],
+      "misses_meaning_only": [
+        "notice that the lift will be out of service",
+        "차를 세워 둔 비용은 어디서 내나",
+        "when is the emergency power generator tested",
+        "where can I leave my bike",
+        "SERIAL-77Q3X"
+      ]
+    },
+    "off": {
+      "hybrid_51": {
+        "r1": "48/51",
+        "mrr": 0.961
+      },
+      "stage3_hybrid": {
+        "n": 29,
+        "r1": 0.897,
+        "r3": 0.966,
+        "mrr": 0.931,
+        "place_ok": "10/11"
+      },
+      "stage3_meaning_only": {
+        "n": 29,
+        "r1": 0.862,
+        "r3": 0.862,
+        "mrr": 0.862,
+        "place_ok": "9/9"
+      },
+      "stage2": {
+        "n": 22,
+        "r1": 1.0,
+        "r3": 1.0,
+        "mrr": 1.0,
+        "place_ok": "3/3"
+      },
+      "misses_hybrid": [
+        "washing machine won't drain the water",
+        "notice that the lift will be out of service",
+        "where can I leave my bike"
+      ],
+      "misses_meaning_only": [
+        "notice that the lift will be out of service",
+        "when is the emergency power generator tested",
+        "where can I leave my bike",
+        "SERIAL-77Q3X"
+      ]
+    }
+  }
+}

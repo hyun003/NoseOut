@@ -1,0 +1,75 @@
+{
+  "size": 100000,
+  "made_s": 25.3,
+  "machine": "Ryzen 7 7800X3D, 64 GB, NVMe, Windows 11 (따뜻한 파일 캐시, 합성 폴더를 드라이브로 취급)",
+  "names": {
+    "registered_s_including_2s_pause": 7.3,
+    "registered_s_without_pause": 5.3,
+    "files": 80026,
+    "folders": 6314,
+    "system_entries_listed": 0,
+    "first_result_s": {
+      "any": 0.076,
+      "documents_marker": 0.097
+    },
+    "pause_took_ms": 1.0,
+    "count_stayed_while_paused": true,
+    "search_during_registration": {
+      "n": 536,
+      "p50_ms": 6.06,
+      "p95_ms": 19.94,
+      "max_ms": 26.81
+    },
+    "search_after_ms": {
+      "보고": 15.84,
+      "청구서": 15.28,
+      "report": 15.96,
+      "invoice 2": 15.86,
+      "a": 34.28,
+      "zzzz없음": 10.36,
+      "documents 고유표식": 12.11
+    },
+    "memory_before": {
+      "working_set_mb": 68.1,
+      "peak_working_set_mb": 68.1,
+      "private_mb": 534.1
+    },
+    "memory_after": {
+      "working_set_mb": 75.5,
+      "peak_working_set_mb": 79.5,
+      "private_mb": 540.1
+    },
+    "walker_done": true,
+    "db_bytes": 93283216,
+    "rescan_unchanged_s": 1.31
+  },
+  "watch": {
+    "app_registration_s": 4.33,
+    "watchers": 1,
+    "idle_cpu_percent_of_one_core": 1.09,
+    "burst": {
+      "system_folder_writes": 3000,
+      "user_folder_new_files": 200,
+      "cpu_seconds": 2.86,
+      "wall_seconds": 5.07,
+      "cpu_percent_of_one_core": 56.4,
+      "last_user_file_searchable_after_s": 0.6,
+      "user_files_listed": 200,
+      "system_folder_files_listed": 0,
+      "memory_before": {
+        "working_set_mb": 94.1,
+        "peak_working_set_mb": 94.1,
+        "private_mb": 546.9
+      },
+      "memory_after": {
+        "working_set_mb": 95.2,
+        "peak_working_set_mb": 97.0,
+        "private_mb": 549.0
+      }
+    },
+    "watch_state": "감시 중: 폴더 1개 · 이름 범위 1개",
+    "quit_s": 0.26,
+    "threads_left_after_quit": 0,
+    "watchers_left": 0
+  }
+}

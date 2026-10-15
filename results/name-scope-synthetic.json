@@ -1,0 +1,64 @@
+{
+  "mode": "synthetic",
+  "roots": [
+    {
+      "drive_root": false
+    }
+  ],
+  "exclusions": 0,
+  "first_registration": {
+    "seconds": 4.51,
+    "cpu_seconds": 6.5,
+    "cpu_percent_of_one_core": 144.2,
+    "files": 100000,
+    "folders": 2550,
+    "unreadable_paths": 0,
+    "first_hit_s": 0.058,
+    "search_during_registration": {
+      "n": 232,
+      "p50_ms": 8.27,
+      "p95_ms": 20.83,
+      "max_ms": 22.62
+    },
+    "memory_before": {
+      "working_set_mb": 34.4,
+      "peak_working_set_mb": 34.4,
+      "private_mb": 504.7
+    },
+    "memory_after": {
+      "working_set_mb": 36.0,
+      "peak_working_set_mb": 40.4,
+      "private_mb": 506.1
+    }
+  },
+  "restart_check": {
+    "seconds": 0.92,
+    "cpu_seconds": 0.92,
+    "added": 0,
+    "removed": 0
+  },
+  "search_after_ms_median": {
+    "query1": 8.67,
+    "query2": 13.86,
+    "query3": 13.6,
+    "query4": 14.0,
+    "query5": 13.52,
+    "query6": 7.76
+  },
+  "names_db_bytes": 77590528,
+  "memory_peak": {
+    "working_set_mb": 35.7,
+    "peak_working_set_mb": 40.4,
+    "private_mb": 504.7
+  },
+  "synthetic_size": 100000,
+  "stats_collect": {
+    "index_rows": 100000,
+    "seconds_median": 0.201,
+    "counted_done": 69300,
+    "counted_failed": 9900,
+    "failures_listed": 200
+  },
+  "measured_at": "2026-10-14 23:53",
+  "note": "OS 파일 캐시를 비우지 않음(관리자 권한 필요). 이름 목록은 .tmp의 별도 파일. 파일 이름·경로는 기록하지 않음."
+}

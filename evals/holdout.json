@@ -1,0 +1,42 @@
+{
+  "base": "test_data_holdout",
+  "note": "독립 평가 세트 (4단계 시작 전 확정, 결과를 보기 전에 작성). 데이터: scripts/make_holdout_data.py. 3단계 세트(evals/test_data.json)와 주제·문장·질의가 겹치지 않는다. 'meaning'은 검색어의 어떤 단어도 파일·폴더 이름에 없는 질의, 'ocr'은 스크린샷 속 글자로만 찾을 수 있는 질의(4단계 OCR 측정용).",
+  "queries": [
+    {"q": "biggest vegetable we ever grew", "expect": "documents/long/the_patient_gardener.txt", "contains": "212 kilograms", "tag": ["long-doc", "meaning"]},
+    {"q": "how to stop snails from eating the plants", "expect": "documents/long/the_patient_gardener.txt", "contains": "Copper tape", "tag": ["long-doc", "meaning"]},
+    {"q": "what replaced the old greenhouse heater", "expect": "documents/long/the_patient_gardener.txt", "contains": "paraffin heater", "tag": ["long-doc", "meaning"]},
+    {"q": "how many stairs up the church tower", "expect": "documents/long/river_city_guide.pdf", "page": 9, "tag": ["long-pdf", "meaning"]},
+    {"q": "where do I collect something I forgot on the tram", "expect": "documents/long/river_city_guide.pdf", "page": 44, "tag": ["long-pdf", "meaning"]},
+    {"q": "balloon crash on a theatre roof", "expect": "documents/long/river_city_guide.pdf", "page": 73, "tag": ["long-pdf", "meaning"]},
+    {"q": "회사에서 사무용품 비용을 얼마까지 지원해 주나", "expect": "documents/long/IT_안내서.txt", "contains": "15만 원", "tag": ["long-doc", "ko", "meaning"]},
+    {"q": "해외에서 재택근무해도 되나요", "expect": "documents/long/IT_안내서.txt", "contains": "해외에서 원격근무", "tag": ["long-doc", "ko", "meaning"]},
+    {"q": "rules for working remotely from another country", "expect": "documents/long/IT_안내서.txt", "contains": "해외에서 원격근무", "tag": ["long-doc", "cross-lingual", "meaning"]},
+
+    {"q": "leaking faucet in the kitchen", "expect": "documents/email_landlord.txt", "tag": ["meaning"]},
+    {"q": "swimming pool closed for cleaning", "expect": "documents/gym_membership.md", "tag": ["meaning"]},
+    {"q": "a child's celebration with dinosaurs", "expect": "documents/birthday_party.txt", "tag": ["meaning"]},
+    {"q": "when were the brake pads replaced", "expect": "documents/car_service.txt", "tag": ["meaning"]},
+    {"q": "where does the reading group meet", "expect": "documents/독서모임.md", "tag": ["meaning", "cross-lingual"]},
+    {"q": "새 집으로 옮기기 전 준비", "expect": "documents/이사_체크리스트.txt", "tag": ["meaning", "ko"]},
+    {"q": "the kid can't eat peanuts, where is her injection pen", "expect": "documents/allergy_note.txt", "tag": ["meaning"]},
+    {"q": "simple loaf baked in a cast iron pot", "expect": "documents/recipe_bread.md", "tag": ["meaning"]},
+
+    {"q": "an umbrella in the rain", "expect": "pictures/IMG_3301.jpg", "tag": ["image", "meaning"]},
+    {"q": "a red bicycle", "expect": "pictures/IMG_3302.jpg", "tag": ["image", "meaning"]},
+    {"q": "a cup of hot coffee", "expect": "pictures/IMG_3303.jpg", "tag": ["image", "meaning"]},
+    {"q": "a circle divided into colored slices", "expect": "pictures/chart_final.png", "tag": ["image", "meaning"]},
+    {"q": "snowy mountain peaks", "expect": "pictures/IMG_3304.jpg", "tag": ["image", "meaning"]},
+    {"q": "a wall clock showing the time", "expect": "pictures/IMG_3305.jpg", "tag": ["image", "meaning"]},
+    {"q": "커피 한 잔", "expect": "pictures/IMG_3303.jpg", "tag": ["image", "ko", "meaning"]},
+
+    {"q": "wrong password, account about to be locked", "expect": "pictures/Screenshots/Screenshot 2026-09-02 101500.png", "tag": ["screenshot", "meaning"]},
+    {"q": "the file finished downloading", "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png", "tag": ["screenshot", "meaning"]},
+    {"q": "dentist appointment reminder", "expect": "pictures/Screenshots/Screenshot 2026-09-11 083000.png", "tag": ["screenshot", "meaning"]},
+    {"q": "phone battery almost empty", "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png", "tag": ["screenshot", "meaning"]},
+    {"q": "배터리가 거의 다 됐다는 알림", "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png", "tag": ["screenshot", "ko", "meaning"]},
+
+    {"q": "holiday_photos.zip", "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png", "tag": ["keyword", "ocr"]},
+    {"q": "EpiPen", "expect": "documents/allergy_note.txt", "tag": ["keyword"]},
+    {"q": "386 steps", "expect": "documents/long/river_city_guide.pdf", "page": 9, "tag": ["keyword", "long-pdf"]}
+  ]
+}

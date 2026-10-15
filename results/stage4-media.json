@@ -1,0 +1,109 @@
+[
+  {
+    "q": "where they talk about sleep",
+    "tag": "audio",
+    "rank": 1,
+    "segment": "audio",
+    "loc": 25.0,
+    "top": [
+      "media/home_show_ep12.m4a",
+      "pictures/night_sky.png"
+    ]
+  },
+  {
+    "q": "tips for falling asleep at night",
+    "tag": "audio",
+    "rank": 1,
+    "segment": "audio",
+    "loc": 25.0,
+    "top": [
+      "media/home_show_ep12.m4a",
+      "pictures/night_sky.png"
+    ]
+  },
+  {
+    "q": "community garden opening",
+    "tag": "audio",
+    "rank": 1,
+    "segment": "audio",
+    "loc": 0.0,
+    "top": [
+      "media/home_show_ep12.m4a",
+      "misc/note_a.md"
+    ]
+  },
+  {
+    "q": "trains are faster than flying",
+    "tag": "audio",
+    "rank": 1,
+    "segment": "audio",
+    "loc": 50.0,
+    "top": [
+      "media/home_show_ep12.m4a",
+      "documents/tokyo_trip.md"
+    ]
+  },
+  {
+    "q": "치과 예약 음성 메모",
+    "tag": "audio",
+    "rank": 1,
+    "segment": "audio",
+    "loc": 0.0,
+    "top": [
+      "media/음성메모_0917.m4a"
+    ]
+  },
+  {
+    "q": "dentist appointment reminder voice note",
+    "tag": "cross-lingual",
+    "rank": null,
+    "segment": null,
+    "loc": null,
+    "top": [
+      "media/home_show_ep12.m4a"
+    ]
+  },
+  {
+    "q": "black and white stripes in a video",
+    "tag": "frame",
+    "rank": 1,
+    "segment": "frame",
+    "loc": 0.5,
+    "top": [
+      "media/clip_2026-08-30.mp4",
+      "pictures/sunset_beach.heic"
+    ]
+  },
+  {
+    "q": "a sailboat on the water",
+    "tag": "frame",
+    "rank": 1,
+    "segment": "frame",
+    "loc": 6.5,
+    "top": [
+      "media/clip_2026-08-30.mp4",
+      "pictures/sunset_beach.heic",
+      "pictures/quarterly_chart.png"
+    ]
+  },
+  {
+    "q": "birthday cake with candles",
+    "tag": "frame",
+    "rank": 1,
+    "segment": "frame",
+    "loc": 9.5,
+    "top": [
+      "media/clip_2026-08-30.mp4"
+    ]
+  },
+  {
+    "q": "weather forecast with rain tomorrow",
+    "tag": "soundtrack",
+    "rank": 1,
+    "segment": "audio",
+    "loc": 0.0,
+    "top": [
+      "media/clip_2026-08-30.mp4"
+    ]
+  }
+]

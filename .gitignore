@@ -1,0 +1,35 @@
+.venv/
+__pycache__/
+.pytest_cache/
+vendor/
+models/
+results/*.log
+test_data/
+.index/
+.tmp/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+test_data_holdout/
+
+# 개인용 빌드와 공개 준비 산출물
+build/
+dist/
+outputs/
+*.spec
+
+# 로컬 인증·설정 및 인증서
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# 공개 스냅샷에는 재배포 조건 미확정인 Windows TTS 출력 제외
+# 기존 Git에 추적 중인 파일/과거 이력을 이 규칙이 제거하지는 않는다.
+tests/fixtures/meeting_en.wav
+tests/fixtures/weather_en.wav
+tests/fixtures/recipe_en.wav
+tests/fixtures/train_ko.wav

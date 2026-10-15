@@ -1,0 +1,122 @@
+{
+  "measured": "2026-10-14 20:33",
+  "passed": 23,
+  "total": 23,
+  "checks": [
+    {
+      "check": "첫 실행: 검색 엔진 준비와 '색인 없음' 안내",
+      "ok": true,
+      "observed": "아직 색인이 없습니다. '검색 폴더'에서 폴더를 고르고 색인을 시작하세요."
+    },
+    {
+      "check": "금지 폴더(사용자 폴더 전체) 거부와 한국어 안내",
+      "ok": true,
+      "observed": "사용자 폴더 전체는 고를 수 없습니다. 문서·사진처럼 검색할 하위 폴더를 골라 주세요."
+    },
+    {
+      "check": "검색 폴더·코드 폴더 추가",
+      "ok": true,
+      "observed": ""
+    },
+    {
+      "check": "색인 일시정지 (현재 파일 뒤에서 대기, 버튼 '이어하기')",
+      "ok": true,
+      "observed": "일시정지 중 — 이어하기를 누르면 남은 작업을 계속합니다."
+    },
+    {
+      "check": "이어하기 후 색인 완료 (일반 + 코드)",
+      "ok": true,
+      "observed": "색인을 마쳤습니다.  새 파일 21, 바뀐 파일 0, 지운 파일 0, 그대로 0 · 읽음 19, 건너뜀 2, 실패 0 (코드 파일 1)"
+    },
+    {
+      "check": "의미 검색: 'a red stop sign' → stop_sign.jpg 1위",
+      "ok": true,
+      "observed": "['stop_sign.jpg']"
+    },
+    {
+      "check": "한국어 음성 검색(같은 언어): 음성메모 상위",
+      "ok": true,
+      "observed": "['음성메모_0917.m4a']"
+    },
+    {
+      "check": "코드 검색: 정의 줄",
+      "ok": true,
+      "observed": "['net.py'] 1번째 줄"
+    },
+    {
+      "check": "하위 폴더 제외",
+      "ok": true,
+      "observed": ""
+    },
+    {
+      "check": "제외한 폴더의 결과 즉시 숨김",
+      "ok": true,
+      "observed": "[]"
+    },
+    {
+      "check": "제외 해제 후 결과 복원",
+      "ok": true,
+      "observed": "['stop_sign.jpg']"
+    },
+    {
+      "check": "자동 감시: 새 파일이 자동으로 검색됨",
+      "ok": true,
+      "observed": "['lighthouse_notes.md'] / 감시 중: 폴더 2개"
+    },
+    {
+      "check": "종료: 검색·색인 스레드 종료, 감시 스레드 정리",
+      "ok": true,
+      "observed": ""
+    },
+    {
+      "check": "종료: 앱이 띄운 검색 엔진 프로세스 종료",
+      "ok": true,
+      "observed": "1 owned"
+    },
+    {
+      "check": "재실행: 설정 유지(폴더·코드 폴더·감시)",
+      "ok": true,
+      "observed": ""
+    },
+    {
+      "check": "재실행: 꺼져 있던 동안 추가한 파일을 확인해 검색됨",
+      "ok": true,
+      "observed": "['offline_note.md']"
+    },
+    {
+      "check": "엔진 파일이 없을 때 한국어 안내(내부 오류 숨김)",
+      "ok": true,
+      "observed": "검색 엔진 파일(llama.cpp 또는 모델)을 찾지 못했습니다. vendor\\llama와 models 폴더를 확인하세요."
+    },
+    {
+      "check": "자세한 오류는 app.log에 기록",
+      "ok": true,
+      "observed": ""
+    },
+    {
+      "check": "버전 불일치: 검색 창 안내, 그 색인은 검색에 쓰지 않음",
+      "ok": true,
+      "observed": "이 색인은 다른 모델·엔진으로 만들어져 함께 쓸 수 없습니다. 기존 색인은 그대로 두었습니다. 설정 폴더의 index.sqlite를 다른 곳으로 옮기거나 지운 뒤 다시 색인하세요."
+    },
+    {
+      "check": "버전 불일치: 자동 갱신 실패 뒤 자동 반영 멈춤(반복 실패 없음)",
+      "ok": true,
+      "observed": "자동 반영 멈춤 — '색인 시작'을 누르면 놓친 변경까지 확인하고 다시 감시합니다"
+    },
+    {
+      "check": "버전 불일치: 색인 시작 시 한국어 안내",
+      "ok": true,
+      "observed": "이 색인은 다른 모델·엔진으로 만들어져 함께 쓸 수 없습니다. 기존 색인은 그대로 두었습니다. 설정 폴더의 index.sqlite를 다른 곳으로 옮기거나 지운 뒤 다시 색인하세요."
+    },
+    {
+      "check": "버전 불일치: 기존 색인 파일은 바뀌지 않음",
+      "ok": true,
+      "observed": ""
+    },
+    {
+      "check": "실제 진입점 'python -m digup_win app' 시작·종료 코드 0",
+      "ok": true,
+      "observed": "exit 0, 8.5s"
+    }
+  ]
+}

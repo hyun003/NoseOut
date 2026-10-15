@@ -1,0 +1,8 @@
+{
+  "monthly_ffmpeg_setup_exit": 0,
+  "existing_folder_refused": true,
+  "bad_hash_refused_and_cleaned": true,
+  "runtime_setup_and_repeat_exit": 0,
+  "runtime_escape_refused": true,
+  "powershell_version": "Windows PowerShell 5.1"
+}

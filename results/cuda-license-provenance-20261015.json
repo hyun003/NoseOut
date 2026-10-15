@@ -1,0 +1,34 @@
+[
+  {
+    "component": "cuda_cudart",
+    "url": "https://developer.download.nvidia.com/compute/cuda/redist/cuda_cudart/windows-x86_64/cuda_cudart-windows-x86_64-13.4.49-archive.zip",
+    "archive_sha256": "e6663f3d3e8949eedc2d5ab92c7c5b9fa3f2a222086d91c42bfc5a38bf2b0225",
+    "notices": [
+      "cuda_cudart-windows-x86_64-13.4.49-archive/LICENSE"
+    ],
+    "dlls": [
+      {
+        "file": "cudart64_13.dll",
+        "same": true
+      }
+    ]
+  },
+  {
+    "component": "libcublas",
+    "url": "https://developer.download.nvidia.com/compute/cuda/redist/libcublas/windows-x86_64/libcublas-windows-x86_64-13.7.0.27-archive.zip",
+    "archive_sha256": "fff93984ee8a85dd8568e4b9000f9e3ef7153f0f73b176756bcbad3c6622d1f0",
+    "notices": [
+      "libcublas-windows-x86_64-13.7.0.27-archive/LICENSE"
+    ],
+    "dlls": [
+      {
+        "file": "cublas64_13.dll",
+        "same": true
+      },
+      {
+        "file": "cublasLt64_13.dll",
+        "same": true
+      }
+    ]
+  }
+]

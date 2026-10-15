@@ -1,0 +1,2712 @@
+{
+  "evals": "holdout.json",
+  "modes": {
+    "on": {
+      "hybrid": {
+        "words": true,
+        "overall": {
+          "n": 32,
+          "r1": 1.0,
+          "r3": 1.0,
+          "mrr": 1.0,
+          "place_ok": "10/10",
+          "hits_per_query": 1.97
+        },
+        "by_tag": {
+          "cross-lingual": {
+            "n": 2,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 1.5
+          },
+          "image": {
+            "n": 7,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 2.71
+          },
+          "keyword": {
+            "n": 3,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 1.33
+          },
+          "ko": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "2/2",
+            "hits_per_query": 1.2
+          },
+          "long-doc": {
+            "n": 6,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "6/6",
+            "hits_per_query": 1.17
+          },
+          "long-pdf": {
+            "n": 4,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "4/4",
+            "hits_per_query": 2.0
+          },
+          "meaning": {
+            "n": 29,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "9/9",
+            "hits_per_query": 2.03
+          },
+          "ocr": {
+            "n": 1,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 1.0
+          },
+          "screenshot": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 2.0
+          }
+        },
+        "rows": [
+          {
+            "q": "biggest vegetable we ever grew",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 1,
+            "z": 2.17,
+            "loc": 7.0
+          },
+          {
+            "q": "how to stop snails from eating the plants",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 1,
+            "z": 2.57,
+            "loc": 22.0
+          },
+          {
+            "q": "what replaced the old greenhouse heater",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt",
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 2,
+            "z": 5.03,
+            "loc": 44.0
+          },
+          {
+            "q": "how many stairs up the church tower",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 1,
+            "z": 6.36,
+            "loc": 9.0
+          },
+          {
+            "q": "where do I collect something I forgot on the tram",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 1,
+            "z": 3.18,
+            "loc": 44.0
+          },
+          {
+            "q": "balloon crash on a theatre roof",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 4,
+            "z": 6.85,
+            "loc": 73.0
+          },
+          {
+            "q": "회사에서 사무용품 비용을 얼마까지 지원해 주나",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 1.94,
+            "loc": 42.0
+          },
+          {
+            "q": "해외에서 재택근무해도 되나요",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 2.62,
+            "loc": 44.0
+          },
+          {
+            "q": "rules for working remotely from another country",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "cross-lingual",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 2.7,
+            "loc": 44.0
+          },
+          {
+            "q": "leaking faucet in the kitchen",
+            "expect": "documents/email_landlord.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/email_landlord.txt"
+            ],
+            "hits": 1,
+            "z": 4.58,
+            "loc": 1.0
+          },
+          {
+            "q": "swimming pool closed for cleaning",
+            "expect": "documents/gym_membership.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/gym_membership.md",
+              "documents/email_landlord.txt",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 3,
+            "z": 3.75,
+            "loc": 1.0
+          },
+          {
+            "q": "a child's celebration with dinosaurs",
+            "expect": "documents/birthday_party.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/birthday_party.txt",
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 4,
+            "z": 7.15,
+            "loc": 1.0
+          },
+          {
+            "q": "when were the brake pads replaced",
+            "expect": "documents/car_service.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/car_service.txt",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 2,
+            "z": 7.54,
+            "loc": 1.0
+          },
+          {
+            "q": "where does the reading group meet",
+            "expect": "documents/독서모임.md",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/독서모임.md",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 5.19,
+            "loc": 1.0
+          },
+          {
+            "q": "새 집으로 옮기기 전 준비",
+            "expect": "documents/이사_체크리스트.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/이사_체크리스트.txt",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 3.33,
+            "loc": 1.0
+          },
+          {
+            "q": "the kid can't eat peanuts, where is her injection pen",
+            "expect": "documents/allergy_note.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/allergy_note.txt"
+            ],
+            "hits": 1,
+            "z": 5.14,
+            "loc": 1.0
+          },
+          {
+            "q": "simple loaf baked in a cast iron pot",
+            "expect": "documents/recipe_bread.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/recipe_bread.md",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 2,
+            "z": 6.16,
+            "loc": 1.0
+          },
+          {
+            "q": "an umbrella in the rain",
+            "expect": "pictures/IMG_3301.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3301.jpg",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 2,
+            "z": 5.74,
+            "loc": null
+          },
+          {
+            "q": "a red bicycle",
+            "expect": "pictures/IMG_3302.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3302.jpg",
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 2,
+            "z": 6.52,
+            "loc": null
+          },
+          {
+            "q": "a cup of hot coffee",
+            "expect": "pictures/IMG_3303.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3303.jpg",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 2,
+            "z": 7.08,
+            "loc": null
+          },
+          {
+            "q": "a circle divided into colored slices",
+            "expect": "pictures/chart_final.png",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/chart_final.png",
+              "pictures/IMG_3305.jpg",
+              "pictures/IMG_3301.jpg"
+            ],
+            "hits": 5,
+            "z": 6.41,
+            "loc": null
+          },
+          {
+            "q": "snowy mountain peaks",
+            "expect": "pictures/IMG_3304.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3304.jpg",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+            ],
+            "hits": 3,
+            "z": 6.32,
+            "loc": null
+          },
+          {
+            "q": "a wall clock showing the time",
+            "expect": "pictures/IMG_3305.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3305.jpg",
+              "documents/long/river_city_guide.pdf",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 4,
+            "z": 7.27,
+            "loc": null
+          },
+          {
+            "q": "커피 한 잔",
+            "expect": "pictures/IMG_3303.jpg",
+            "tag": [
+              "image",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3303.jpg"
+            ],
+            "hits": 1,
+            "z": 4.02,
+            "loc": null
+          },
+          {
+            "q": "wrong password, account about to be locked",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 2.71,
+            "loc": null
+          },
+          {
+            "q": "the file finished downloading",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 2,
+            "z": 3.44,
+            "loc": null
+          },
+          {
+            "q": "dentist appointment reminder",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 2,
+            "z": 4.42,
+            "loc": null
+          },
+          {
+            "q": "phone battery almost empty",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 3,
+            "z": 4.38,
+            "loc": null
+          },
+          {
+            "q": "배터리가 거의 다 됐다는 알림",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "tag": [
+              "screenshot",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-20 221000.png"
+            ],
+            "hits": 1,
+            "z": 2.23,
+            "loc": null
+          },
+          {
+            "q": "holiday_photos.zip",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "tag": [
+              "keyword",
+              "ocr"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+            ],
+            "hits": 1,
+            "z": 6.99,
+            "loc": null
+          },
+          {
+            "q": "EpiPen",
+            "expect": "documents/allergy_note.txt",
+            "tag": [
+              "keyword"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/allergy_note.txt"
+            ],
+            "hits": 1,
+            "z": 3.67,
+            "loc": 1.0
+          },
+          {
+            "q": "386 steps",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "keyword",
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf",
+              "documents/car_service.txt"
+            ],
+            "hits": 2,
+            "z": 4.71,
+            "loc": 9.0
+          }
+        ]
+      },
+      "meaning_only": {
+        "words": false,
+        "overall": {
+          "n": 32,
+          "r1": 0.969,
+          "r3": 0.969,
+          "mrr": 0.969,
+          "place_ok": "9/9",
+          "hits_per_query": 1.81
+        },
+        "by_tag": {
+          "cross-lingual": {
+            "n": 2,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 1.5
+          },
+          "image": {
+            "n": 7,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 2.57
+          },
+          "keyword": {
+            "n": 3,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 1.33
+          },
+          "ko": {
+            "n": 5,
+            "r1": 0.8,
+            "r3": 0.8,
+            "mrr": 0.8,
+            "place_ok": "1/1",
+            "hits_per_query": 1.0
+          },
+          "long-doc": {
+            "n": 6,
+            "r1": 0.833,
+            "r3": 0.833,
+            "mrr": 0.833,
+            "place_ok": "5/5",
+            "hits_per_query": 0.83
+          },
+          "long-pdf": {
+            "n": 4,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "4/4",
+            "hits_per_query": 2.0
+          },
+          "meaning": {
+            "n": 29,
+            "r1": 0.966,
+            "r3": 0.966,
+            "mrr": 0.966,
+            "place_ok": "8/8",
+            "hits_per_query": 1.86
+          },
+          "ocr": {
+            "n": 1,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 1.0
+          },
+          "screenshot": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 1.8
+          }
+        },
+        "rows": [
+          {
+            "q": "biggest vegetable we ever grew",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 1,
+            "z": 2.17,
+            "loc": 7.0
+          },
+          {
+            "q": "how to stop snails from eating the plants",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 1,
+            "z": 2.57,
+            "loc": 22.0
+          },
+          {
+            "q": "what replaced the old greenhouse heater",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 1,
+            "z": 5.03,
+            "loc": 44.0
+          },
+          {
+            "q": "how many stairs up the church tower",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 1,
+            "z": 6.36,
+            "loc": 9.0
+          },
+          {
+            "q": "where do I collect something I forgot on the tram",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 1,
+            "z": 3.18,
+            "loc": 44.0
+          },
+          {
+            "q": "balloon crash on a theatre roof",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 4,
+            "z": 6.85,
+            "loc": 73.0
+          },
+          {
+            "q": "회사에서 사무용품 비용을 얼마까지 지원해 주나",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "ko",
+              "meaning"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [],
+            "hits": 0,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "해외에서 재택근무해도 되나요",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 2.62,
+            "loc": 44.0
+          },
+          {
+            "q": "rules for working remotely from another country",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "cross-lingual",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 2.7,
+            "loc": 44.0
+          },
+          {
+            "q": "leaking faucet in the kitchen",
+            "expect": "documents/email_landlord.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/email_landlord.txt"
+            ],
+            "hits": 1,
+            "z": 4.58,
+            "loc": 1.0
+          },
+          {
+            "q": "swimming pool closed for cleaning",
+            "expect": "documents/gym_membership.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/gym_membership.md",
+              "documents/email_landlord.txt",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 3,
+            "z": 3.75,
+            "loc": 1.0
+          },
+          {
+            "q": "a child's celebration with dinosaurs",
+            "expect": "documents/birthday_party.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/birthday_party.txt",
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 4,
+            "z": 7.15,
+            "loc": 1.0
+          },
+          {
+            "q": "when were the brake pads replaced",
+            "expect": "documents/car_service.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/car_service.txt",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 2,
+            "z": 7.54,
+            "loc": 1.0
+          },
+          {
+            "q": "where does the reading group meet",
+            "expect": "documents/독서모임.md",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/독서모임.md",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 5.19,
+            "loc": 1.0
+          },
+          {
+            "q": "새 집으로 옮기기 전 준비",
+            "expect": "documents/이사_체크리스트.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/이사_체크리스트.txt",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 3.33,
+            "loc": 1.0
+          },
+          {
+            "q": "the kid can't eat peanuts, where is her injection pen",
+            "expect": "documents/allergy_note.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/allergy_note.txt"
+            ],
+            "hits": 1,
+            "z": 5.14,
+            "loc": 1.0
+          },
+          {
+            "q": "simple loaf baked in a cast iron pot",
+            "expect": "documents/recipe_bread.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/recipe_bread.md"
+            ],
+            "hits": 1,
+            "z": 6.16,
+            "loc": 1.0
+          },
+          {
+            "q": "an umbrella in the rain",
+            "expect": "pictures/IMG_3301.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3301.jpg",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 2,
+            "z": 5.74,
+            "loc": null
+          },
+          {
+            "q": "a red bicycle",
+            "expect": "pictures/IMG_3302.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3302.jpg",
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 2,
+            "z": 6.52,
+            "loc": null
+          },
+          {
+            "q": "a cup of hot coffee",
+            "expect": "pictures/IMG_3303.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3303.jpg",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 2,
+            "z": 7.08,
+            "loc": null
+          },
+          {
+            "q": "a circle divided into colored slices",
+            "expect": "pictures/chart_final.png",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/chart_final.png",
+              "pictures/IMG_3305.jpg",
+              "pictures/IMG_3301.jpg"
+            ],
+            "hits": 5,
+            "z": 6.41,
+            "loc": null
+          },
+          {
+            "q": "snowy mountain peaks",
+            "expect": "pictures/IMG_3304.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3304.jpg",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+            ],
+            "hits": 3,
+            "z": 6.32,
+            "loc": null
+          },
+          {
+            "q": "a wall clock showing the time",
+            "expect": "pictures/IMG_3305.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3305.jpg",
+              "documents/long/river_city_guide.pdf",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 3,
+            "z": 7.27,
+            "loc": null
+          },
+          {
+            "q": "커피 한 잔",
+            "expect": "pictures/IMG_3303.jpg",
+            "tag": [
+              "image",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3303.jpg"
+            ],
+            "hits": 1,
+            "z": 4.02,
+            "loc": null
+          },
+          {
+            "q": "wrong password, account about to be locked",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 2.71,
+            "loc": null
+          },
+          {
+            "q": "the file finished downloading",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+            ],
+            "hits": 1,
+            "z": 3.44,
+            "loc": null
+          },
+          {
+            "q": "dentist appointment reminder",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 2,
+            "z": 4.42,
+            "loc": null
+          },
+          {
+            "q": "phone battery almost empty",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 3,
+            "z": 4.38,
+            "loc": null
+          },
+          {
+            "q": "배터리가 거의 다 됐다는 알림",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "tag": [
+              "screenshot",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-20 221000.png"
+            ],
+            "hits": 1,
+            "z": 2.23,
+            "loc": null
+          },
+          {
+            "q": "holiday_photos.zip",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "tag": [
+              "keyword",
+              "ocr"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+            ],
+            "hits": 1,
+            "z": 6.99,
+            "loc": null
+          },
+          {
+            "q": "EpiPen",
+            "expect": "documents/allergy_note.txt",
+            "tag": [
+              "keyword"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/allergy_note.txt"
+            ],
+            "hits": 1,
+            "z": 3.67,
+            "loc": 1.0
+          },
+          {
+            "q": "386 steps",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "keyword",
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf",
+              "documents/car_service.txt"
+            ],
+            "hits": 2,
+            "z": 4.71,
+            "loc": 9.0
+          }
+        ]
+      },
+      "speed": {
+        "median_ms": 0.96,
+        "max_ms": 2.03,
+        "vectors": 196,
+        "scale_rows": 128
+      }
+    },
+    "off": {
+      "hybrid": {
+        "words": true,
+        "overall": {
+          "n": 32,
+          "r1": 1.0,
+          "r3": 1.0,
+          "mrr": 1.0,
+          "place_ok": "9/10",
+          "hits_per_query": 2.5
+        },
+        "by_tag": {
+          "cross-lingual": {
+            "n": 2,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 1.5
+          },
+          "image": {
+            "n": 7,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 3.43
+          },
+          "keyword": {
+            "n": 3,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 3.0
+          },
+          "ko": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/2",
+            "hits_per_query": 1.6
+          },
+          "long-doc": {
+            "n": 6,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "5/6",
+            "hits_per_query": 1.17
+          },
+          "long-pdf": {
+            "n": 4,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "4/4",
+            "hits_per_query": 2.5
+          },
+          "meaning": {
+            "n": 29,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "8/9",
+            "hits_per_query": 2.45
+          },
+          "ocr": {
+            "n": 1,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 1.0
+          },
+          "screenshot": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 3.0
+          }
+        },
+        "rows": [
+          {
+            "q": "biggest vegetable we ever grew",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 1,
+            "z": 2.58,
+            "loc": 7.0
+          },
+          {
+            "q": "how to stop snails from eating the plants",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 1,
+            "z": 3.01,
+            "loc": 22.0
+          },
+          {
+            "q": "what replaced the old greenhouse heater",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt",
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 2,
+            "z": 4.62,
+            "loc": 44.0
+          },
+          {
+            "q": "how many stairs up the church tower",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 1,
+            "z": 6.44,
+            "loc": 9.0
+          },
+          {
+            "q": "where do I collect something I forgot on the tram",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 1,
+            "z": 3.42,
+            "loc": 44.0
+          },
+          {
+            "q": "balloon crash on a theatre roof",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 3,
+            "z": 5.52,
+            "loc": 73.0
+          },
+          {
+            "q": "회사에서 사무용품 비용을 얼마까지 지원해 주나",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": false,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 2.33,
+            "loc": 24.0
+          },
+          {
+            "q": "해외에서 재택근무해도 되나요",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 3.04,
+            "loc": 44.0
+          },
+          {
+            "q": "rules for working remotely from another country",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "cross-lingual",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 3.1,
+            "loc": 44.0
+          },
+          {
+            "q": "leaking faucet in the kitchen",
+            "expect": "documents/email_landlord.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/email_landlord.txt",
+              "documents/car_service.txt",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 3,
+            "z": 4.94,
+            "loc": 1.0
+          },
+          {
+            "q": "swimming pool closed for cleaning",
+            "expect": "documents/gym_membership.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/gym_membership.md",
+              "documents/email_landlord.txt",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 3,
+            "z": 4.25,
+            "loc": 1.0
+          },
+          {
+            "q": "a child's celebration with dinosaurs",
+            "expect": "documents/birthday_party.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/birthday_party.txt",
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 4,
+            "z": 8.07,
+            "loc": 1.0
+          },
+          {
+            "q": "when were the brake pads replaced",
+            "expect": "documents/car_service.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/car_service.txt",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 2,
+            "z": 8.16,
+            "loc": 1.0
+          },
+          {
+            "q": "where does the reading group meet",
+            "expect": "documents/독서모임.md",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/독서모임.md",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 5.13,
+            "loc": 1.0
+          },
+          {
+            "q": "새 집으로 옮기기 전 준비",
+            "expect": "documents/이사_체크리스트.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/이사_체크리스트.txt",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 3.68,
+            "loc": 1.0
+          },
+          {
+            "q": "the kid can't eat peanuts, where is her injection pen",
+            "expect": "documents/allergy_note.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/allergy_note.txt",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 2,
+            "z": 5.95,
+            "loc": 1.0
+          },
+          {
+            "q": "simple loaf baked in a cast iron pot",
+            "expect": "documents/recipe_bread.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/recipe_bread.md",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 2,
+            "z": 6.37,
+            "loc": 1.0
+          },
+          {
+            "q": "an umbrella in the rain",
+            "expect": "pictures/IMG_3301.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3301.jpg",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 2,
+            "z": 6.44,
+            "loc": null
+          },
+          {
+            "q": "a red bicycle",
+            "expect": "pictures/IMG_3302.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3302.jpg",
+              "documents/long/river_city_guide.pdf",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 4,
+            "z": 7.74,
+            "loc": null
+          },
+          {
+            "q": "a cup of hot coffee",
+            "expect": "pictures/IMG_3303.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3303.jpg",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 3,
+            "z": 8.08,
+            "loc": null
+          },
+          {
+            "q": "a circle divided into colored slices",
+            "expect": "pictures/chart_final.png",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/chart_final.png",
+              "pictures/IMG_3305.jpg",
+              "pictures/IMG_3301.jpg"
+            ],
+            "hits": 6,
+            "z": 7.6,
+            "loc": null
+          },
+          {
+            "q": "snowy mountain peaks",
+            "expect": "pictures/IMG_3304.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3304.jpg",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+            ],
+            "hits": 3,
+            "z": 7.06,
+            "loc": null
+          },
+          {
+            "q": "a wall clock showing the time",
+            "expect": "pictures/IMG_3305.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3305.jpg",
+              "documents/long/river_city_guide.pdf",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 4,
+            "z": 5.49,
+            "loc": null
+          },
+          {
+            "q": "커피 한 잔",
+            "expect": "pictures/IMG_3303.jpg",
+            "tag": [
+              "image",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3303.jpg",
+              "documents/독서모임.md"
+            ],
+            "hits": 2,
+            "z": 4.57,
+            "loc": null
+          },
+          {
+            "q": "wrong password, account about to be locked",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 3.22,
+            "loc": null
+          },
+          {
+            "q": "the file finished downloading",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 4,
+            "z": 3.93,
+            "loc": null
+          },
+          {
+            "q": "dentist appointment reminder",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 2,
+            "z": 5.06,
+            "loc": null
+          },
+          {
+            "q": "phone battery almost empty",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 5,
+            "z": 4.75,
+            "loc": null
+          },
+          {
+            "q": "배터리가 거의 다 됐다는 알림",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "tag": [
+              "screenshot",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 2.6,
+            "loc": null
+          },
+          {
+            "q": "holiday_photos.zip",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "tag": [
+              "keyword",
+              "ocr"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+            ],
+            "hits": 1,
+            "z": 7.79,
+            "loc": null
+          },
+          {
+            "q": "EpiPen",
+            "expect": "documents/allergy_note.txt",
+            "tag": [
+              "keyword"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/allergy_note.txt",
+              "documents/long/the_patient_gardener.txt",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 3,
+            "z": 4.24,
+            "loc": 1.0
+          },
+          {
+            "q": "386 steps",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "keyword",
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf",
+              "documents/car_service.txt",
+              "pictures/IMG_3302.jpg"
+            ],
+            "hits": 5,
+            "z": 4.94,
+            "loc": 9.0
+          }
+        ]
+      },
+      "meaning_only": {
+        "words": false,
+        "overall": {
+          "n": 32,
+          "r1": 1.0,
+          "r3": 1.0,
+          "mrr": 1.0,
+          "place_ok": "9/10",
+          "hits_per_query": 2.41
+        },
+        "by_tag": {
+          "cross-lingual": {
+            "n": 2,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 1.5
+          },
+          "image": {
+            "n": 7,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 3.29
+          },
+          "keyword": {
+            "n": 3,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 3.0
+          },
+          "ko": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/2",
+            "hits_per_query": 1.6
+          },
+          "long-doc": {
+            "n": 6,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "5/6",
+            "hits_per_query": 1.0
+          },
+          "long-pdf": {
+            "n": 4,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "4/4",
+            "hits_per_query": 2.5
+          },
+          "meaning": {
+            "n": 29,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "8/9",
+            "hits_per_query": 2.34
+          },
+          "ocr": {
+            "n": 1,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 1.0
+          },
+          "screenshot": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": null,
+            "hits_per_query": 2.8
+          }
+        },
+        "rows": [
+          {
+            "q": "biggest vegetable we ever grew",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 1,
+            "z": 2.58,
+            "loc": 7.0
+          },
+          {
+            "q": "how to stop snails from eating the plants",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 1,
+            "z": 3.01,
+            "loc": 22.0
+          },
+          {
+            "q": "what replaced the old greenhouse heater",
+            "expect": "documents/long/the_patient_gardener.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 1,
+            "z": 4.62,
+            "loc": 44.0
+          },
+          {
+            "q": "how many stairs up the church tower",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 1,
+            "z": 6.44,
+            "loc": 9.0
+          },
+          {
+            "q": "where do I collect something I forgot on the tram",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf"
+            ],
+            "hits": 1,
+            "z": 3.42,
+            "loc": 44.0
+          },
+          {
+            "q": "balloon crash on a theatre roof",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 3,
+            "z": 5.52,
+            "loc": 73.0
+          },
+          {
+            "q": "회사에서 사무용품 비용을 얼마까지 지원해 주나",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": false,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 2.33,
+            "loc": 24.0
+          },
+          {
+            "q": "해외에서 재택근무해도 되나요",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 3.04,
+            "loc": 44.0
+          },
+          {
+            "q": "rules for working remotely from another country",
+            "expect": "documents/long/IT_안내서.txt",
+            "tag": [
+              "long-doc",
+              "cross-lingual",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 1,
+            "z": 3.1,
+            "loc": 44.0
+          },
+          {
+            "q": "leaking faucet in the kitchen",
+            "expect": "documents/email_landlord.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/email_landlord.txt",
+              "documents/long/IT_안내서.txt",
+              "documents/car_service.txt"
+            ],
+            "hits": 3,
+            "z": 4.94,
+            "loc": 1.0
+          },
+          {
+            "q": "swimming pool closed for cleaning",
+            "expect": "documents/gym_membership.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/gym_membership.md",
+              "documents/email_landlord.txt",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 3,
+            "z": 4.25,
+            "loc": 1.0
+          },
+          {
+            "q": "a child's celebration with dinosaurs",
+            "expect": "documents/birthday_party.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/birthday_party.txt",
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 4,
+            "z": 8.07,
+            "loc": 1.0
+          },
+          {
+            "q": "when were the brake pads replaced",
+            "expect": "documents/car_service.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/car_service.txt",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 2,
+            "z": 8.16,
+            "loc": 1.0
+          },
+          {
+            "q": "where does the reading group meet",
+            "expect": "documents/독서모임.md",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/독서모임.md",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 5.13,
+            "loc": 1.0
+          },
+          {
+            "q": "새 집으로 옮기기 전 준비",
+            "expect": "documents/이사_체크리스트.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/이사_체크리스트.txt",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 3.68,
+            "loc": 1.0
+          },
+          {
+            "q": "the kid can't eat peanuts, where is her injection pen",
+            "expect": "documents/allergy_note.txt",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/allergy_note.txt",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 2,
+            "z": 5.95,
+            "loc": 1.0
+          },
+          {
+            "q": "simple loaf baked in a cast iron pot",
+            "expect": "documents/recipe_bread.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/recipe_bread.md",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 2,
+            "z": 6.37,
+            "loc": 1.0
+          },
+          {
+            "q": "an umbrella in the rain",
+            "expect": "pictures/IMG_3301.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3301.jpg",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 2,
+            "z": 6.44,
+            "loc": null
+          },
+          {
+            "q": "a red bicycle",
+            "expect": "pictures/IMG_3302.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3302.jpg",
+              "documents/long/river_city_guide.pdf",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 4,
+            "z": 7.74,
+            "loc": null
+          },
+          {
+            "q": "a cup of hot coffee",
+            "expect": "pictures/IMG_3303.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3303.jpg",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/the_patient_gardener.txt"
+            ],
+            "hits": 3,
+            "z": 8.08,
+            "loc": null
+          },
+          {
+            "q": "a circle divided into colored slices",
+            "expect": "pictures/chart_final.png",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/chart_final.png",
+              "pictures/IMG_3305.jpg",
+              "pictures/IMG_3301.jpg"
+            ],
+            "hits": 6,
+            "z": 7.6,
+            "loc": null
+          },
+          {
+            "q": "snowy mountain peaks",
+            "expect": "pictures/IMG_3304.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3304.jpg",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+            ],
+            "hits": 3,
+            "z": 7.06,
+            "loc": null
+          },
+          {
+            "q": "a wall clock showing the time",
+            "expect": "pictures/IMG_3305.jpg",
+            "tag": [
+              "image",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3305.jpg",
+              "documents/long/river_city_guide.pdf",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 3,
+            "z": 5.49,
+            "loc": null
+          },
+          {
+            "q": "커피 한 잔",
+            "expect": "pictures/IMG_3303.jpg",
+            "tag": [
+              "image",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/IMG_3303.jpg",
+              "documents/독서모임.md"
+            ],
+            "hits": 2,
+            "z": 4.57,
+            "loc": null
+          },
+          {
+            "q": "wrong password, account about to be locked",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 3.22,
+            "loc": null
+          },
+          {
+            "q": "the file finished downloading",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 3,
+            "z": 3.93,
+            "loc": null
+          },
+          {
+            "q": "dentist appointment reminder",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 2,
+            "z": 5.06,
+            "loc": null
+          },
+          {
+            "q": "phone battery almost empty",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "tag": [
+              "screenshot",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+              "documents/allergy_note.txt"
+            ],
+            "hits": 5,
+            "z": 4.75,
+            "loc": null
+          },
+          {
+            "q": "배터리가 거의 다 됐다는 알림",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "tag": [
+              "screenshot",
+              "ko",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+              "documents/long/IT_안내서.txt"
+            ],
+            "hits": 2,
+            "z": 2.6,
+            "loc": null
+          },
+          {
+            "q": "holiday_photos.zip",
+            "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "tag": [
+              "keyword",
+              "ocr"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+            ],
+            "hits": 1,
+            "z": 7.79,
+            "loc": null
+          },
+          {
+            "q": "EpiPen",
+            "expect": "documents/allergy_note.txt",
+            "tag": [
+              "keyword"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/allergy_note.txt",
+              "documents/long/the_patient_gardener.txt",
+              "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+            ],
+            "hits": 3,
+            "z": 4.24,
+            "loc": 1.0
+          },
+          {
+            "q": "386 steps",
+            "expect": "documents/long/river_city_guide.pdf",
+            "tag": [
+              "keyword",
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/river_city_guide.pdf",
+              "documents/car_service.txt",
+              "pictures/IMG_3302.jpg"
+            ],
+            "hits": 5,
+            "z": 4.94,
+            "loc": 9.0
+          }
+        ]
+      },
+      "speed": {
+        "median_ms": 0.91,
+        "max_ms": 1.5,
+        "vectors": 196,
+        "scale_rows": 196
+      }
+    }
+  },
+  "index": {
+    "files": {
+      "doc": {
+        "done": 10
+      },
+      "image": {
+        "done": 6
+      },
+      "pdf": {
+        "done": 1
+      },
+      "screenshot": {
+        "done": 4
+      }
+    },
+    "vectors": 196,
+    "seconds": 0.0
+  },
+  "changed_queries": [
+    {
+      "q": "leaking faucet in the kitchen",
+      "expect": "documents/email_landlord.txt",
+      "on": {
+        "rank": 1,
+        "top": [
+          "documents/email_landlord.txt"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "documents/email_landlord.txt",
+          "documents/car_service.txt",
+          "documents/long/IT_안내서.txt"
+        ]
+      }
+    },
+    {
+      "q": "the kid can't eat peanuts, where is her injection pen",
+      "expect": "documents/allergy_note.txt",
+      "on": {
+        "rank": 1,
+        "top": [
+          "documents/allergy_note.txt"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "documents/allergy_note.txt",
+          "documents/long/the_patient_gardener.txt"
+        ]
+      }
+    },
+    {
+      "q": "a red bicycle",
+      "expect": "pictures/IMG_3302.jpg",
+      "on": {
+        "rank": 1,
+        "top": [
+          "pictures/IMG_3302.jpg",
+          "documents/long/river_city_guide.pdf"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "pictures/IMG_3302.jpg",
+          "documents/long/river_city_guide.pdf",
+          "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+        ]
+      }
+    },
+    {
+      "q": "a cup of hot coffee",
+      "expect": "pictures/IMG_3303.jpg",
+      "on": {
+        "rank": 1,
+        "top": [
+          "pictures/IMG_3303.jpg",
+          "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "pictures/IMG_3303.jpg",
+          "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+          "documents/long/the_patient_gardener.txt"
+        ]
+      }
+    },
+    {
+      "q": "커피 한 잔",
+      "expect": "pictures/IMG_3303.jpg",
+      "on": {
+        "rank": 1,
+        "top": [
+          "pictures/IMG_3303.jpg"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "pictures/IMG_3303.jpg",
+          "documents/독서모임.md"
+        ]
+      }
+    },
+    {
+      "q": "the file finished downloading",
+      "expect": "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+      "on": {
+        "rank": 1,
+        "top": [
+          "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+          "documents/long/the_patient_gardener.txt"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+          "pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+          "documents/long/IT_안내서.txt"
+        ]
+      }
+    },
+    {
+      "q": "배터리가 거의 다 됐다는 알림",
+      "expect": "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+      "on": {
+        "rank": 1,
+        "top": [
+          "pictures/Screenshots/Screenshot 2026-09-20 221000.png"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+          "documents/long/IT_안내서.txt"
+        ]
+      }
+    },
+    {
+      "q": "EpiPen",
+      "expect": "documents/allergy_note.txt",
+      "on": {
+        "rank": 1,
+        "top": [
+          "documents/allergy_note.txt"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "documents/allergy_note.txt",
+          "documents/long/the_patient_gardener.txt",
+          "pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+        ]
+      }
+    },
+    {
+      "q": "386 steps",
+      "expect": "documents/long/river_city_guide.pdf",
+      "on": {
+        "rank": 1,
+        "top": [
+          "documents/long/river_city_guide.pdf",
+          "documents/car_service.txt"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "documents/long/river_city_guide.pdf",
+          "documents/car_service.txt",
+          "pictures/IMG_3302.jpg"
+        ]
+      }
+    }
+  ]
+}

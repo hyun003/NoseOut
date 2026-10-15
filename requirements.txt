@@ -1,0 +1,16 @@
+numpy==2.5.4
+pillow==12.3.0
+requests==2.34.2
+pytest==9.1.1
+huggingface-hub==2.2.0
+pypdfium2==5.14.0
+python-docx==1.2.0
+pillow-heif==1.8.1
+winrt-runtime==3.2.1
+winrt-Windows.Foundation==3.2.1
+winrt-Windows.Foundation.Collections==3.2.1
+winrt-Windows.Globalization==3.2.1
+winrt-Windows.Graphics.Imaging==3.2.1
+winrt-Windows.Media.Ocr==3.2.1
+winrt-Windows.Storage.Streams==3.2.1
+PySide6-Essentials==6.12.0

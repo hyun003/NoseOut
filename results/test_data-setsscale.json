@@ -1,0 +1,2339 @@
+{
+  "evals": "test_data.json",
+  "modes": {
+    "on": {
+      "hybrid": {
+        "words": true,
+        "overall": {
+          "n": 29,
+          "r1": 0.862,
+          "r3": 0.931,
+          "mrr": 0.897,
+          "place_ok": "10/11",
+          "hits_per_query": 1.52
+        },
+        "by_tag": {
+          "cross-lingual": {
+            "n": 4,
+            "r1": 0.5,
+            "r3": 0.75,
+            "mrr": 0.625,
+            "place_ok": "1/1",
+            "hits_per_query": 1.5
+          },
+          "image": {
+            "n": 8,
+            "r1": 0.875,
+            "r3": 0.875,
+            "mrr": 0.875,
+            "place_ok": null,
+            "hits_per_query": 1.5
+          },
+          "keyword": {
+            "n": 3,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 1.0
+          },
+          "ko": {
+            "n": 4,
+            "r1": 0.75,
+            "r3": 0.75,
+            "mrr": 0.75,
+            "place_ok": "1/1",
+            "hits_per_query": 0.75
+          },
+          "long-doc": {
+            "n": 5,
+            "r1": 0.8,
+            "r3": 1.0,
+            "mrr": 0.9,
+            "place_ok": "4/5",
+            "hits_per_query": 2.2
+          },
+          "long-pdf": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "5/5",
+            "hits_per_query": 1.2
+          },
+          "meaning": {
+            "n": 24,
+            "r1": 0.833,
+            "r3": 0.917,
+            "mrr": 0.875,
+            "place_ok": "7/8",
+            "hits_per_query": 1.62
+          }
+        },
+        "rows": [
+          {
+            "q": "moving a houseplant into a bigger container",
+            "expect": "misc/note_a.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/note_a.md"
+            ],
+            "hits": 1,
+            "z": 6.16,
+            "loc": 1.0
+          },
+          {
+            "q": "what to do after a car crash",
+            "expect": "misc/doc_17.docx",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/doc_17.docx"
+            ],
+            "hits": 1,
+            "z": 8.41,
+            "loc": 1.0
+          },
+          {
+            "q": "washing machine won't drain the water",
+            "expect": "misc/memo_3.txt",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 2,
+            "place_ok": null,
+            "top": [
+              "documents/long/facilities_manual.pdf",
+              "misc/memo_3.txt"
+            ],
+            "hits": 2,
+            "z": 2.98,
+            "loc": 1.0
+          },
+          {
+            "q": "세탁기 물이 안 빠질 때",
+            "expect": "misc/memo_3.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/memo_3.txt"
+            ],
+            "hits": 1,
+            "z": 5.68,
+            "loc": 1.0
+          },
+          {
+            "q": "a house with a red roof and a tree",
+            "expect": "misc/img_a.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/img_a.png"
+            ],
+            "hits": 1,
+            "z": 8.57,
+            "loc": null
+          },
+          {
+            "q": "빨간 지붕 집 그림",
+            "expect": "misc/img_a.png",
+            "tag": [
+              "meaning",
+              "image",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/img_a.png"
+            ],
+            "hits": 1,
+            "z": 4.33,
+            "loc": null
+          },
+          {
+            "q": "how much do I owe for the hosting services",
+            "expect": "documents/invoice_INV-4821.docx",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/invoice_INV-4821.docx",
+              "pictures/quarterly_chart.png",
+              "documents/lease_agreement.pdf"
+            ],
+            "hits": 4,
+            "z": 8.38,
+            "loc": 1.0
+          },
+          {
+            "q": "can I keep a dog or a cat in the apartment",
+            "expect": "documents/lease_agreement.pdf",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/lease_agreement.pdf"
+            ],
+            "hits": 1,
+            "z": 5.6,
+            "loc": 2.0
+          },
+          {
+            "q": "spicy stew with pork and tofu",
+            "expect": "documents/김치찌개_레시피.txt",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/김치찌개_레시피.txt"
+            ],
+            "hits": 1,
+            "z": 8.75,
+            "loc": 1.0
+          },
+          {
+            "q": "Japan itinerary with a temple visit",
+            "expect": "documents/tokyo_trip.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/tokyo_trip.md",
+              "pictures/red_circle.webp"
+            ],
+            "hits": 2,
+            "z": 9.56,
+            "loc": 1.0
+          },
+          {
+            "q": "notice that the lift will be out of service",
+            "expect": "documents/엘리베이터_점검_안내.pdf",
+            "tag": [
+              "meaning",
+              "cross-lingual",
+              "image"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "the online purchase failed because the bank refused the card",
+            "expect": "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+              "pictures/quarterly_chart.png"
+            ],
+            "hits": 2,
+            "z": 8.68,
+            "loc": null
+          },
+          {
+            "q": "a red octagon telling drivers to halt",
+            "expect": "pictures/stop_sign.jpg",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/stop_sign.jpg",
+              "misc/doc_17.docx",
+              "pictures/red_circle.webp"
+            ],
+            "hits": 3,
+            "z": 8.22,
+            "loc": null
+          },
+          {
+            "q": "evening sun reflecting on the ocean",
+            "expect": "pictures/sunset_beach.heic",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/sunset_beach.heic"
+            ],
+            "hits": 1,
+            "z": 6.99,
+            "loc": null
+          },
+          {
+            "q": "lots of tiny stars and a thin moon",
+            "expect": "pictures/night_sky.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/night_sky.png"
+            ],
+            "hits": 1,
+            "z": 8.68,
+            "loc": null
+          },
+          {
+            "q": "graph comparing values with vertical bars",
+            "expect": "pictures/quarterly_chart.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/quarterly_chart.png",
+              "pictures/sunset_beach.heic"
+            ],
+            "hits": 2,
+            "z": 7.5,
+            "loc": null
+          },
+          {
+            "q": "차를 세워 둔 비용은 어디서 내나",
+            "expect": "documents/주차_안내_cp949.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [],
+            "hits": 0,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "is flood damage covered by the warranty",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 5.42,
+            "loc": 12.0
+          },
+          {
+            "q": "how do I change the air purifier filter",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf",
+              "misc/memo_3.txt"
+            ],
+            "hits": 2,
+            "z": 6.3,
+            "loc": 87.0
+          },
+          {
+            "q": "what does error E42 mean",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 6.8,
+            "loc": 115.0
+          },
+          {
+            "q": "the condensate pump is clogged",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 3.6,
+            "loc": 115.0
+          },
+          {
+            "q": "how many weeks of paid leave do new parents get",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/handbook.txt",
+              "documents/lease_agreement.pdf",
+              "pictures/quarterly_chart.png"
+            ],
+            "hits": 4,
+            "z": 4.47,
+            "loc": 3.0
+          },
+          {
+            "q": "when is the emergency power generator tested",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/handbook.txt",
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 2,
+            "z": 1.7,
+            "loc": 37.0
+          },
+          {
+            "q": "where can I leave my bike",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 2,
+            "place_ok": false,
+            "top": [
+              "documents/long/사내_규정.txt",
+              "documents/long/handbook.txt"
+            ],
+            "hits": 2,
+            "z": 0.85,
+            "loc": 3.0
+          },
+          {
+            "q": "야간 근무 수당은 얼마인가",
+            "expect": "documents/long/사내_규정.txt",
+            "tag": [
+              "long-doc",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 1,
+            "z": 3.41,
+            "loc": 49.0
+          },
+          {
+            "q": "night shift pay rate",
+            "expect": "documents/long/사내_규정.txt",
+            "tag": [
+              "long-doc",
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/사내_규정.txt",
+              "pictures/quarterly_chart.png"
+            ],
+            "hits": 2,
+            "z": 4.69,
+            "loc": 49.0
+          },
+          {
+            "q": "INV-4821",
+            "expect": "documents/invoice_INV-4821.docx",
+            "tag": [
+              "keyword"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/invoice_INV-4821.docx"
+            ],
+            "hits": 1,
+            "z": 3.06,
+            "loc": 1.0
+          },
+          {
+            "q": "SERIAL-77Q3X",
+            "expect": "documents/sensor_dump.txt",
+            "tag": [
+              "keyword"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/sensor_dump.txt"
+            ],
+            "hits": 1,
+            "z": null,
+            "loc": 11.0
+          },
+          {
+            "q": "E42",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "keyword",
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 7.93,
+            "loc": 115.0
+          }
+        ]
+      },
+      "meaning_only": {
+        "words": false,
+        "overall": {
+          "n": 29,
+          "r1": 0.828,
+          "r3": 0.828,
+          "mrr": 0.828,
+          "place_ok": "9/9",
+          "hits_per_query": 1.38
+        },
+        "by_tag": {
+          "cross-lingual": {
+            "n": 4,
+            "r1": 0.75,
+            "r3": 0.75,
+            "mrr": 0.75,
+            "place_ok": "1/1",
+            "hits_per_query": 1.5
+          },
+          "image": {
+            "n": 8,
+            "r1": 0.875,
+            "r3": 0.875,
+            "mrr": 0.875,
+            "place_ok": null,
+            "hits_per_query": 1.5
+          },
+          "keyword": {
+            "n": 3,
+            "r1": 0.667,
+            "r3": 0.667,
+            "mrr": 0.667,
+            "place_ok": "1/1",
+            "hits_per_query": 0.67
+          },
+          "ko": {
+            "n": 4,
+            "r1": 0.75,
+            "r3": 0.75,
+            "mrr": 0.75,
+            "place_ok": "1/1",
+            "hits_per_query": 0.75
+          },
+          "long-doc": {
+            "n": 5,
+            "r1": 0.6,
+            "r3": 0.6,
+            "mrr": 0.6,
+            "place_ok": "3/3",
+            "hits_per_query": 1.6
+          },
+          "long-pdf": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "5/5",
+            "hits_per_query": 1.2
+          },
+          "meaning": {
+            "n": 24,
+            "r1": 0.833,
+            "r3": 0.833,
+            "mrr": 0.833,
+            "place_ok": "6/6",
+            "hits_per_query": 1.5
+          }
+        },
+        "rows": [
+          {
+            "q": "moving a houseplant into a bigger container",
+            "expect": "misc/note_a.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/note_a.md"
+            ],
+            "hits": 1,
+            "z": 6.16,
+            "loc": 1.0
+          },
+          {
+            "q": "what to do after a car crash",
+            "expect": "misc/doc_17.docx",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/doc_17.docx"
+            ],
+            "hits": 1,
+            "z": 8.41,
+            "loc": 1.0
+          },
+          {
+            "q": "washing machine won't drain the water",
+            "expect": "misc/memo_3.txt",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/memo_3.txt",
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 2,
+            "z": 2.98,
+            "loc": 1.0
+          },
+          {
+            "q": "세탁기 물이 안 빠질 때",
+            "expect": "misc/memo_3.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/memo_3.txt"
+            ],
+            "hits": 1,
+            "z": 5.68,
+            "loc": 1.0
+          },
+          {
+            "q": "a house with a red roof and a tree",
+            "expect": "misc/img_a.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/img_a.png"
+            ],
+            "hits": 1,
+            "z": 8.57,
+            "loc": null
+          },
+          {
+            "q": "빨간 지붕 집 그림",
+            "expect": "misc/img_a.png",
+            "tag": [
+              "meaning",
+              "image",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/img_a.png"
+            ],
+            "hits": 1,
+            "z": 4.33,
+            "loc": null
+          },
+          {
+            "q": "how much do I owe for the hosting services",
+            "expect": "documents/invoice_INV-4821.docx",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/invoice_INV-4821.docx",
+              "pictures/quarterly_chart.png",
+              "documents/lease_agreement.pdf"
+            ],
+            "hits": 4,
+            "z": 8.38,
+            "loc": 1.0
+          },
+          {
+            "q": "can I keep a dog or a cat in the apartment",
+            "expect": "documents/lease_agreement.pdf",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/lease_agreement.pdf"
+            ],
+            "hits": 1,
+            "z": 5.6,
+            "loc": 2.0
+          },
+          {
+            "q": "spicy stew with pork and tofu",
+            "expect": "documents/김치찌개_레시피.txt",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/김치찌개_레시피.txt"
+            ],
+            "hits": 1,
+            "z": 8.75,
+            "loc": 1.0
+          },
+          {
+            "q": "Japan itinerary with a temple visit",
+            "expect": "documents/tokyo_trip.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/tokyo_trip.md",
+              "pictures/red_circle.webp"
+            ],
+            "hits": 2,
+            "z": 9.56,
+            "loc": 1.0
+          },
+          {
+            "q": "notice that the lift will be out of service",
+            "expect": "documents/엘리베이터_점검_안내.pdf",
+            "tag": [
+              "meaning",
+              "cross-lingual",
+              "image"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "the online purchase failed because the bank refused the card",
+            "expect": "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+              "pictures/quarterly_chart.png"
+            ],
+            "hits": 2,
+            "z": 8.68,
+            "loc": null
+          },
+          {
+            "q": "a red octagon telling drivers to halt",
+            "expect": "pictures/stop_sign.jpg",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/stop_sign.jpg",
+              "misc/doc_17.docx",
+              "pictures/red_circle.webp"
+            ],
+            "hits": 3,
+            "z": 8.22,
+            "loc": null
+          },
+          {
+            "q": "evening sun reflecting on the ocean",
+            "expect": "pictures/sunset_beach.heic",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/sunset_beach.heic"
+            ],
+            "hits": 1,
+            "z": 6.99,
+            "loc": null
+          },
+          {
+            "q": "lots of tiny stars and a thin moon",
+            "expect": "pictures/night_sky.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/night_sky.png"
+            ],
+            "hits": 1,
+            "z": 8.68,
+            "loc": null
+          },
+          {
+            "q": "graph comparing values with vertical bars",
+            "expect": "pictures/quarterly_chart.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/quarterly_chart.png",
+              "pictures/sunset_beach.heic"
+            ],
+            "hits": 2,
+            "z": 7.5,
+            "loc": null
+          },
+          {
+            "q": "차를 세워 둔 비용은 어디서 내나",
+            "expect": "documents/주차_안내_cp949.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [],
+            "hits": 0,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "is flood damage covered by the warranty",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 5.42,
+            "loc": 12.0
+          },
+          {
+            "q": "how do I change the air purifier filter",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf",
+              "misc/memo_3.txt"
+            ],
+            "hits": 2,
+            "z": 6.3,
+            "loc": 87.0
+          },
+          {
+            "q": "what does error E42 mean",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 6.8,
+            "loc": 115.0
+          },
+          {
+            "q": "the condensate pump is clogged",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 3.6,
+            "loc": 115.0
+          },
+          {
+            "q": "how many weeks of paid leave do new parents get",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/handbook.txt",
+              "documents/lease_agreement.pdf",
+              "pictures/quarterly_chart.png"
+            ],
+            "hits": 4,
+            "z": 4.47,
+            "loc": 3.0
+          },
+          {
+            "q": "when is the emergency power generator tested",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [],
+            "hits": 0,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "where can I leave my bike",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 1,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "야간 근무 수당은 얼마인가",
+            "expect": "documents/long/사내_규정.txt",
+            "tag": [
+              "long-doc",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 1,
+            "z": 3.41,
+            "loc": 49.0
+          },
+          {
+            "q": "night shift pay rate",
+            "expect": "documents/long/사내_규정.txt",
+            "tag": [
+              "long-doc",
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/사내_규정.txt",
+              "pictures/quarterly_chart.png"
+            ],
+            "hits": 2,
+            "z": 4.69,
+            "loc": 49.0
+          },
+          {
+            "q": "INV-4821",
+            "expect": "documents/invoice_INV-4821.docx",
+            "tag": [
+              "keyword"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/invoice_INV-4821.docx"
+            ],
+            "hits": 1,
+            "z": 3.06,
+            "loc": 1.0
+          },
+          {
+            "q": "SERIAL-77Q3X",
+            "expect": "documents/sensor_dump.txt",
+            "tag": [
+              "keyword"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [],
+            "hits": 0,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "E42",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "keyword",
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 7.93,
+            "loc": 115.0
+          }
+        ]
+      },
+      "speed": {
+        "median_ms": 1.33,
+        "max_ms": 3.07,
+        "vectors": 259,
+        "scale_rows": 131
+      }
+    },
+    "off": {
+      "hybrid": {
+        "words": true,
+        "overall": {
+          "n": 29,
+          "r1": 0.897,
+          "r3": 0.966,
+          "mrr": 0.931,
+          "place_ok": "10/11",
+          "hits_per_query": 1.97
+        },
+        "by_tag": {
+          "cross-lingual": {
+            "n": 4,
+            "r1": 0.5,
+            "r3": 0.75,
+            "mrr": 0.625,
+            "place_ok": "1/1",
+            "hits_per_query": 1.5
+          },
+          "image": {
+            "n": 8,
+            "r1": 0.875,
+            "r3": 0.875,
+            "mrr": 0.875,
+            "place_ok": null,
+            "hits_per_query": 2.25
+          },
+          "keyword": {
+            "n": 3,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 1.0
+          },
+          "ko": {
+            "n": 4,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 1.5
+          },
+          "long-doc": {
+            "n": 5,
+            "r1": 0.8,
+            "r3": 1.0,
+            "mrr": 0.9,
+            "place_ok": "4/5",
+            "hits_per_query": 2.6
+          },
+          "long-pdf": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "5/5",
+            "hits_per_query": 1.2
+          },
+          "meaning": {
+            "n": 24,
+            "r1": 0.875,
+            "r3": 0.958,
+            "mrr": 0.917,
+            "place_ok": "7/8",
+            "hits_per_query": 2.17
+          }
+        },
+        "rows": [
+          {
+            "q": "moving a houseplant into a bigger container",
+            "expect": "misc/note_a.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/note_a.md"
+            ],
+            "hits": 1,
+            "z": 6.78,
+            "loc": 1.0
+          },
+          {
+            "q": "what to do after a car crash",
+            "expect": "misc/doc_17.docx",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/doc_17.docx"
+            ],
+            "hits": 1,
+            "z": 10.45,
+            "loc": 1.0
+          },
+          {
+            "q": "washing machine won't drain the water",
+            "expect": "misc/memo_3.txt",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 2,
+            "place_ok": null,
+            "top": [
+              "documents/long/facilities_manual.pdf",
+              "misc/memo_3.txt"
+            ],
+            "hits": 2,
+            "z": 3.02,
+            "loc": 1.0
+          },
+          {
+            "q": "세탁기 물이 안 빠질 때",
+            "expect": "misc/memo_3.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/memo_3.txt"
+            ],
+            "hits": 1,
+            "z": 7.21,
+            "loc": 1.0
+          },
+          {
+            "q": "a house with a red roof and a tree",
+            "expect": "misc/img_a.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/img_a.png"
+            ],
+            "hits": 1,
+            "z": 10.5,
+            "loc": null
+          },
+          {
+            "q": "빨간 지붕 집 그림",
+            "expect": "misc/img_a.png",
+            "tag": [
+              "meaning",
+              "image",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/img_a.png",
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 2,
+            "z": 5.1,
+            "loc": null
+          },
+          {
+            "q": "how much do I owe for the hosting services",
+            "expect": "documents/invoice_INV-4821.docx",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/invoice_INV-4821.docx",
+              "pictures/quarterly_chart.png",
+              "documents/lease_agreement.pdf"
+            ],
+            "hits": 5,
+            "z": 10.87,
+            "loc": 1.0
+          },
+          {
+            "q": "can I keep a dog or a cat in the apartment",
+            "expect": "documents/lease_agreement.pdf",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/lease_agreement.pdf",
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 2,
+            "z": 6.93,
+            "loc": 2.0
+          },
+          {
+            "q": "spicy stew with pork and tofu",
+            "expect": "documents/김치찌개_레시피.txt",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/김치찌개_레시피.txt"
+            ],
+            "hits": 1,
+            "z": 10.68,
+            "loc": 1.0
+          },
+          {
+            "q": "Japan itinerary with a temple visit",
+            "expect": "documents/tokyo_trip.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/tokyo_trip.md",
+              "pictures/red_circle.webp",
+              "documents/long/handbook.txt"
+            ],
+            "hits": 3,
+            "z": 12.31,
+            "loc": 1.0
+          },
+          {
+            "q": "notice that the lift will be out of service",
+            "expect": "documents/엘리베이터_점검_안내.pdf",
+            "tag": [
+              "meaning",
+              "cross-lingual",
+              "image"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "the online purchase failed because the bank refused the card",
+            "expect": "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+              "pictures/quarterly_chart.png",
+              "code_project/Screenshot 2026-10-02 retry.png"
+            ],
+            "hits": 5,
+            "z": 10.81,
+            "loc": null
+          },
+          {
+            "q": "a red octagon telling drivers to halt",
+            "expect": "pictures/stop_sign.jpg",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/stop_sign.jpg",
+              "misc/doc_17.docx",
+              "pictures/red_circle.webp"
+            ],
+            "hits": 3,
+            "z": 10.5,
+            "loc": null
+          },
+          {
+            "q": "evening sun reflecting on the ocean",
+            "expect": "pictures/sunset_beach.heic",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/sunset_beach.heic"
+            ],
+            "hits": 1,
+            "z": 7.17,
+            "loc": null
+          },
+          {
+            "q": "lots of tiny stars and a thin moon",
+            "expect": "pictures/night_sky.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/night_sky.png",
+              "pictures/sunset_beach.heic"
+            ],
+            "hits": 2,
+            "z": 9.29,
+            "loc": null
+          },
+          {
+            "q": "graph comparing values with vertical bars",
+            "expect": "pictures/quarterly_chart.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/quarterly_chart.png",
+              "pictures/sunset_beach.heic",
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 3,
+            "z": 8.88,
+            "loc": null
+          },
+          {
+            "q": "차를 세워 둔 비용은 어디서 내나",
+            "expect": "documents/주차_안내_cp949.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/주차_안내_cp949.txt",
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 2,
+            "z": 2.45,
+            "loc": 1.0
+          },
+          {
+            "q": "is flood damage covered by the warranty",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 6.49,
+            "loc": 12.0
+          },
+          {
+            "q": "how do I change the air purifier filter",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf",
+              "misc/memo_3.txt"
+            ],
+            "hits": 2,
+            "z": 5.87,
+            "loc": 87.0
+          },
+          {
+            "q": "what does error E42 mean",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 6.73,
+            "loc": 115.0
+          },
+          {
+            "q": "the condensate pump is clogged",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 3.61,
+            "loc": 115.0
+          },
+          {
+            "q": "how many weeks of paid leave do new parents get",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/handbook.txt",
+              "documents/lease_agreement.pdf",
+              "pictures/quarterly_chart.png"
+            ],
+            "hits": 6,
+            "z": 5.22,
+            "loc": 3.0
+          },
+          {
+            "q": "when is the emergency power generator tested",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/handbook.txt",
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 2,
+            "z": 1.59,
+            "loc": 37.0
+          },
+          {
+            "q": "where can I leave my bike",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 2,
+            "place_ok": false,
+            "top": [
+              "documents/long/사내_규정.txt",
+              "documents/long/handbook.txt"
+            ],
+            "hits": 2,
+            "z": 1.1,
+            "loc": 3.0
+          },
+          {
+            "q": "야간 근무 수당은 얼마인가",
+            "expect": "documents/long/사내_규정.txt",
+            "tag": [
+              "long-doc",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 1,
+            "z": 3.82,
+            "loc": 49.0
+          },
+          {
+            "q": "night shift pay rate",
+            "expect": "documents/long/사내_규정.txt",
+            "tag": [
+              "long-doc",
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/사내_규정.txt",
+              "pictures/quarterly_chart.png"
+            ],
+            "hits": 2,
+            "z": 4.98,
+            "loc": 49.0
+          },
+          {
+            "q": "INV-4821",
+            "expect": "documents/invoice_INV-4821.docx",
+            "tag": [
+              "keyword"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/invoice_INV-4821.docx"
+            ],
+            "hits": 1,
+            "z": 3.22,
+            "loc": 1.0
+          },
+          {
+            "q": "SERIAL-77Q3X",
+            "expect": "documents/sensor_dump.txt",
+            "tag": [
+              "keyword"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/sensor_dump.txt"
+            ],
+            "hits": 1,
+            "z": null,
+            "loc": 11.0
+          },
+          {
+            "q": "E42",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "keyword",
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 7.7,
+            "loc": 115.0
+          }
+        ]
+      },
+      "meaning_only": {
+        "words": false,
+        "overall": {
+          "n": 29,
+          "r1": 0.862,
+          "r3": 0.862,
+          "mrr": 0.862,
+          "place_ok": "9/9",
+          "hits_per_query": 1.83
+        },
+        "by_tag": {
+          "cross-lingual": {
+            "n": 4,
+            "r1": 0.75,
+            "r3": 0.75,
+            "mrr": 0.75,
+            "place_ok": "1/1",
+            "hits_per_query": 1.5
+          },
+          "image": {
+            "n": 8,
+            "r1": 0.875,
+            "r3": 0.875,
+            "mrr": 0.875,
+            "place_ok": null,
+            "hits_per_query": 2.25
+          },
+          "keyword": {
+            "n": 3,
+            "r1": 0.667,
+            "r3": 0.667,
+            "mrr": 0.667,
+            "place_ok": "1/1",
+            "hits_per_query": 0.67
+          },
+          "ko": {
+            "n": 4,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "1/1",
+            "hits_per_query": 1.5
+          },
+          "long-doc": {
+            "n": 5,
+            "r1": 0.6,
+            "r3": 0.6,
+            "mrr": 0.6,
+            "place_ok": "3/3",
+            "hits_per_query": 2.0
+          },
+          "long-pdf": {
+            "n": 5,
+            "r1": 1.0,
+            "r3": 1.0,
+            "mrr": 1.0,
+            "place_ok": "5/5",
+            "hits_per_query": 1.2
+          },
+          "meaning": {
+            "n": 24,
+            "r1": 0.875,
+            "r3": 0.875,
+            "mrr": 0.875,
+            "place_ok": "6/6",
+            "hits_per_query": 2.04
+          }
+        },
+        "rows": [
+          {
+            "q": "moving a houseplant into a bigger container",
+            "expect": "misc/note_a.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/note_a.md"
+            ],
+            "hits": 1,
+            "z": 6.78,
+            "loc": 1.0
+          },
+          {
+            "q": "what to do after a car crash",
+            "expect": "misc/doc_17.docx",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/doc_17.docx"
+            ],
+            "hits": 1,
+            "z": 10.45,
+            "loc": 1.0
+          },
+          {
+            "q": "washing machine won't drain the water",
+            "expect": "misc/memo_3.txt",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/memo_3.txt",
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 2,
+            "z": 3.02,
+            "loc": 1.0
+          },
+          {
+            "q": "세탁기 물이 안 빠질 때",
+            "expect": "misc/memo_3.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/memo_3.txt"
+            ],
+            "hits": 1,
+            "z": 7.21,
+            "loc": 1.0
+          },
+          {
+            "q": "a house with a red roof and a tree",
+            "expect": "misc/img_a.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/img_a.png"
+            ],
+            "hits": 1,
+            "z": 10.5,
+            "loc": null
+          },
+          {
+            "q": "빨간 지붕 집 그림",
+            "expect": "misc/img_a.png",
+            "tag": [
+              "meaning",
+              "image",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "misc/img_a.png",
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 2,
+            "z": 5.1,
+            "loc": null
+          },
+          {
+            "q": "how much do I owe for the hosting services",
+            "expect": "documents/invoice_INV-4821.docx",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/invoice_INV-4821.docx",
+              "pictures/quarterly_chart.png",
+              "documents/lease_agreement.pdf"
+            ],
+            "hits": 5,
+            "z": 10.87,
+            "loc": 1.0
+          },
+          {
+            "q": "can I keep a dog or a cat in the apartment",
+            "expect": "documents/lease_agreement.pdf",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/lease_agreement.pdf",
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 2,
+            "z": 6.93,
+            "loc": 2.0
+          },
+          {
+            "q": "spicy stew with pork and tofu",
+            "expect": "documents/김치찌개_레시피.txt",
+            "tag": [
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/김치찌개_레시피.txt"
+            ],
+            "hits": 1,
+            "z": 10.68,
+            "loc": 1.0
+          },
+          {
+            "q": "Japan itinerary with a temple visit",
+            "expect": "documents/tokyo_trip.md",
+            "tag": [
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/tokyo_trip.md",
+              "pictures/red_circle.webp",
+              "documents/long/handbook.txt"
+            ],
+            "hits": 3,
+            "z": 12.31,
+            "loc": 1.0
+          },
+          {
+            "q": "notice that the lift will be out of service",
+            "expect": "documents/엘리베이터_점검_안내.pdf",
+            "tag": [
+              "meaning",
+              "cross-lingual",
+              "image"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "the online purchase failed because the bank refused the card",
+            "expect": "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+              "pictures/quarterly_chart.png",
+              "code_project/Screenshot 2026-10-02 retry.png"
+            ],
+            "hits": 5,
+            "z": 10.81,
+            "loc": null
+          },
+          {
+            "q": "a red octagon telling drivers to halt",
+            "expect": "pictures/stop_sign.jpg",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/stop_sign.jpg",
+              "misc/doc_17.docx",
+              "pictures/red_circle.webp"
+            ],
+            "hits": 3,
+            "z": 10.5,
+            "loc": null
+          },
+          {
+            "q": "evening sun reflecting on the ocean",
+            "expect": "pictures/sunset_beach.heic",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/sunset_beach.heic"
+            ],
+            "hits": 1,
+            "z": 7.17,
+            "loc": null
+          },
+          {
+            "q": "lots of tiny stars and a thin moon",
+            "expect": "pictures/night_sky.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/night_sky.png",
+              "pictures/sunset_beach.heic"
+            ],
+            "hits": 2,
+            "z": 9.29,
+            "loc": null
+          },
+          {
+            "q": "graph comparing values with vertical bars",
+            "expect": "pictures/quarterly_chart.png",
+            "tag": [
+              "meaning",
+              "image"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "pictures/quarterly_chart.png",
+              "pictures/sunset_beach.heic",
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 3,
+            "z": 8.88,
+            "loc": null
+          },
+          {
+            "q": "차를 세워 둔 비용은 어디서 내나",
+            "expect": "documents/주차_안내_cp949.txt",
+            "tag": [
+              "meaning",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/주차_안내_cp949.txt",
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 2,
+            "z": 2.45,
+            "loc": 1.0
+          },
+          {
+            "q": "is flood damage covered by the warranty",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 6.49,
+            "loc": 12.0
+          },
+          {
+            "q": "how do I change the air purifier filter",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf",
+              "misc/memo_3.txt"
+            ],
+            "hits": 2,
+            "z": 5.87,
+            "loc": 87.0
+          },
+          {
+            "q": "what does error E42 mean",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 6.73,
+            "loc": 115.0
+          },
+          {
+            "q": "the condensate pump is clogged",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "long-pdf",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 3.61,
+            "loc": 115.0
+          },
+          {
+            "q": "how many weeks of paid leave do new parents get",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/handbook.txt",
+              "documents/lease_agreement.pdf",
+              "pictures/quarterly_chart.png"
+            ],
+            "hits": 6,
+            "z": 5.22,
+            "loc": 3.0
+          },
+          {
+            "q": "when is the emergency power generator tested",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [],
+            "hits": 0,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "where can I leave my bike",
+            "expect": "documents/long/handbook.txt",
+            "tag": [
+              "long-doc",
+              "meaning"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 1,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "야간 근무 수당은 얼마인가",
+            "expect": "documents/long/사내_규정.txt",
+            "tag": [
+              "long-doc",
+              "ko"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/사내_규정.txt"
+            ],
+            "hits": 1,
+            "z": 3.82,
+            "loc": 49.0
+          },
+          {
+            "q": "night shift pay rate",
+            "expect": "documents/long/사내_규정.txt",
+            "tag": [
+              "long-doc",
+              "meaning",
+              "cross-lingual"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/사내_규정.txt",
+              "pictures/quarterly_chart.png"
+            ],
+            "hits": 2,
+            "z": 4.98,
+            "loc": 49.0
+          },
+          {
+            "q": "INV-4821",
+            "expect": "documents/invoice_INV-4821.docx",
+            "tag": [
+              "keyword"
+            ],
+            "rank": 1,
+            "place_ok": null,
+            "top": [
+              "documents/invoice_INV-4821.docx"
+            ],
+            "hits": 1,
+            "z": 3.22,
+            "loc": 1.0
+          },
+          {
+            "q": "SERIAL-77Q3X",
+            "expect": "documents/sensor_dump.txt",
+            "tag": [
+              "keyword"
+            ],
+            "rank": null,
+            "place_ok": null,
+            "top": [],
+            "hits": 0,
+            "z": null,
+            "loc": null
+          },
+          {
+            "q": "E42",
+            "expect": "documents/long/facilities_manual.pdf",
+            "tag": [
+              "keyword",
+              "long-pdf"
+            ],
+            "rank": 1,
+            "place_ok": true,
+            "top": [
+              "documents/long/facilities_manual.pdf"
+            ],
+            "hits": 1,
+            "z": 7.7,
+            "loc": 115.0
+          }
+        ]
+      },
+      "speed": {
+        "median_ms": 1.29,
+        "max_ms": 3.09,
+        "vectors": 259,
+        "scale_rows": 259
+      }
+    }
+  },
+  "index": {
+    "files": {
+      "doc": {
+        "done": 11
+      },
+      "image": {
+        "done": 7,
+        "skipped": 1
+      },
+      "pdf": {
+        "done": 3
+      },
+      "screenshot": {
+        "done": 2
+      }
+    },
+    "vectors": 259,
+    "seconds": 0.0
+  },
+  "changed_queries": [
+    {
+      "q": "빨간 지붕 집 그림",
+      "expect": "misc/img_a.png",
+      "on": {
+        "rank": 1,
+        "top": [
+          "misc/img_a.png"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "misc/img_a.png",
+          "documents/long/사내_규정.txt"
+        ]
+      }
+    },
+    {
+      "q": "can I keep a dog or a cat in the apartment",
+      "expect": "documents/lease_agreement.pdf",
+      "on": {
+        "rank": 1,
+        "top": [
+          "documents/lease_agreement.pdf"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "documents/lease_agreement.pdf",
+          "documents/long/사내_규정.txt"
+        ]
+      }
+    },
+    {
+      "q": "Japan itinerary with a temple visit",
+      "expect": "documents/tokyo_trip.md",
+      "on": {
+        "rank": 1,
+        "top": [
+          "documents/tokyo_trip.md",
+          "pictures/red_circle.webp"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "documents/tokyo_trip.md",
+          "pictures/red_circle.webp",
+          "documents/long/handbook.txt"
+        ]
+      }
+    },
+    {
+      "q": "the online purchase failed because the bank refused the card",
+      "expect": "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+      "on": {
+        "rank": 1,
+        "top": [
+          "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+          "pictures/quarterly_chart.png"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+          "pictures/quarterly_chart.png",
+          "code_project/Screenshot 2026-10-02 retry.png"
+        ]
+      }
+    },
+    {
+      "q": "lots of tiny stars and a thin moon",
+      "expect": "pictures/night_sky.png",
+      "on": {
+        "rank": 1,
+        "top": [
+          "pictures/night_sky.png"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "pictures/night_sky.png",
+          "pictures/sunset_beach.heic"
+        ]
+      }
+    },
+    {
+      "q": "graph comparing values with vertical bars",
+      "expect": "pictures/quarterly_chart.png",
+      "on": {
+        "rank": 1,
+        "top": [
+          "pictures/quarterly_chart.png",
+          "pictures/sunset_beach.heic"
+        ]
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "pictures/quarterly_chart.png",
+          "pictures/sunset_beach.heic",
+          "documents/long/facilities_manual.pdf"
+        ]
+      }
+    },
+    {
+      "q": "차를 세워 둔 비용은 어디서 내나",
+      "expect": "documents/주차_안내_cp949.txt",
+      "on": {
+        "rank": null,
+        "top": []
+      },
+      "off": {
+        "rank": 1,
+        "top": [
+          "documents/주차_안내_cp949.txt",
+          "documents/long/사내_규정.txt"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,553 @@
+{
+  "runs": {
+    "10000": {
+      "size": 10000,
+      "memory_before": {
+        "working_set_mb": 26.3,
+        "peak_working_set_mb": 26.3,
+        "private_mb": 17.1
+      },
+      "initial": {
+        "seconds": 0.4,
+        "entries": {
+          "files": 10002,
+          "folders": 904,
+          "roots": {
+            ".tmp\\names-bench\\data-10000": "ok"
+          },
+          "trouble": 0
+        },
+        "folders_walked": 905,
+        "first_result_s": {
+          "any": 0.063,
+          "고유표식_last.pdf": 0.307,
+          "고유표식_first.pdf": 0.404
+        },
+        "search_during_registration": {
+          "n": 81,
+          "p50_ms": 2.46,
+          "p95_ms": 4.07,
+          "max_ms": 9.79
+        },
+        "memory_after": {
+          "working_set_mb": 31.1,
+          "peak_working_set_mb": 32.7,
+          "private_mb": 21.1
+        }
+      },
+      "search": {
+        "per_query": {
+          "보고": {
+            "median_ms": 2.19,
+            "hits": 50
+          },
+          "청구서": {
+            "median_ms": 2.52,
+            "hits": 50
+          },
+          "의료비 영수증": {
+            "median_ms": 1.24,
+            "hits": 25
+          },
+          "report": {
+            "median_ms": 2.31,
+            "hits": 50
+          },
+          "INVOICE": {
+            "median_ms": 2.46,
+            "hits": 50
+          },
+          "Final 2024": {
+            "median_ms": 2.24,
+            "hits": 50
+          },
+          "계약서 2023": {
+            "median_ms": 1.87,
+            "hits": 50
+          },
+          "trip photo": {
+            "median_ms": 1.29,
+            "hits": 44
+          },
+          "tax": {
+            "median_ms": 2.33,
+            "hits": 50
+          },
+          "고유표식": {
+            "median_ms": 0.92,
+            "hits": 2
+          },
+          "zzzz없는이름": {
+            "median_ms": 0.81,
+            "hits": 0
+          },
+          "a": {
+            "median_ms": 4.2,
+            "hits": 50
+          },
+          "pdf": {
+            "median_ms": 2.28,
+            "hits": 50
+          },
+          "2024-03": {
+            "median_ms": 1.56,
+            "hits": 50
+          },
+          "회의록 v2": {
+            "median_ms": 2.15,
+            "hits": 50
+          },
+          "Homework": {
+            "median_ms": 2.36,
+            "hits": 50
+          },
+          "명세": {
+            "median_ms": 2.23,
+            "hits": 50
+          },
+          "backup zip": {
+            "median_ms": 1.21,
+            "hits": 40
+          },
+          "slides final": {
+            "median_ms": 1.27,
+            "hits": 50
+          },
+          "학교 과제": {
+            "median_ms": 1.23,
+            "hits": 35
+          }
+        },
+        "overall": {
+          "n": 20,
+          "p50_ms": 2.17,
+          "p95_ms": 4.2,
+          "max_ms": 4.2
+        },
+        "memory_after": {
+          "working_set_mb": 32.7,
+          "peak_working_set_mb": 32.7,
+          "private_mb": 22.2
+        }
+      },
+      "rescan_unchanged": {
+        "seconds": 0.15,
+        "added": 0,
+        "removed": 0
+      },
+      "watch_apply": {
+        "add_file_ms": 2.12,
+        "rename_file_ms": 2.09,
+        "rename_folder_ms": 9.06,
+        "rename_folder_children": 199,
+        "found_after_folder_rename": true,
+        "delete_file_ms": 1.67
+      },
+      "db_bytes": 15252736,
+      "memory_end": {
+        "working_set_mb": 32.6,
+        "peak_working_set_mb": 32.8,
+        "private_mb": 22.2
+      },
+      "app": {
+        "first_any_result_s": 0.078,
+        "marker_found_s": 0.461,
+        "registered_s": 0.67,
+        "ui_name_search_during_registration": {
+          "n": 101,
+          "p50_ms": 1.59,
+          "p95_ms": 4.49,
+          "max_ms": 13.65
+        },
+        "engine_ready": false,
+        "ai_index_created": false,
+        "memory_before": {
+          "working_set_mb": 92.5,
+          "peak_working_set_mb": 92.5,
+          "private_mb": 546.8
+        },
+        "memory_after": {
+          "working_set_mb": 102.8,
+          "peak_working_set_mb": 103.2,
+          "private_mb": 555.4
+        }
+      }
+    },
+    "100000": {
+      "size": 100000,
+      "memory_before": {
+        "working_set_mb": 26.3,
+        "peak_working_set_mb": 26.3,
+        "private_mb": 17.1
+      },
+      "initial": {
+        "seconds": 5.97,
+        "entries": {
+          "files": 100002,
+          "folders": 8938,
+          "roots": {
+            ".tmp\\names-bench\\data-100000": "ok"
+          },
+          "trouble": 0
+        },
+        "folders_walked": 8939,
+        "first_result_s": {
+          "any": 0.055,
+          "고유표식_last.pdf": 4.844,
+          "고유표식_first.pdf": 6.073
+        },
+        "search_during_registration": {
+          "n": 387,
+          "p50_ms": 7.68,
+          "p95_ms": 27.28,
+          "max_ms": 31.97
+        },
+        "memory_after": {
+          "working_set_mb": 31.8,
+          "peak_working_set_mb": 33.6,
+          "private_mb": 21.4
+        }
+      },
+      "search": {
+        "per_query": {
+          "보고": {
+            "median_ms": 19.39,
+            "hits": 50
+          },
+          "청구서": {
+            "median_ms": 19.48,
+            "hits": 50
+          },
+          "의료비 영수증": {
+            "median_ms": 17.61,
+            "hits": 50
+          },
+          "report": {
+            "median_ms": 19.21,
+            "hits": 50
+          },
+          "INVOICE": {
+            "median_ms": 19.61,
+            "hits": 50
+          },
+          "Final 2024": {
+            "median_ms": 17.48,
+            "hits": 50
+          },
+          "계약서 2023": {
+            "median_ms": 17.57,
+            "hits": 50
+          },
+          "trip photo": {
+            "median_ms": 17.91,
+            "hits": 50
+          },
+          "tax": {
+            "median_ms": 20.4,
+            "hits": 50
+          },
+          "고유표식": {
+            "median_ms": 16.43,
+            "hits": 2
+          },
+          "zzzz없는이름": {
+            "median_ms": 13.38,
+            "hits": 0
+          },
+          "a": {
+            "median_ms": 37.89,
+            "hits": 50
+          },
+          "pdf": {
+            "median_ms": 19.25,
+            "hits": 50
+          },
+          "2024-03": {
+            "median_ms": 18.1,
+            "hits": 50
+          },
+          "회의록 v2": {
+            "median_ms": 17.55,
+            "hits": 50
+          },
+          "Homework": {
+            "median_ms": 19.3,
+            "hits": 50
+          },
+          "명세": {
+            "median_ms": 18.71,
+            "hits": 50
+          },
+          "backup zip": {
+            "median_ms": 16.75,
+            "hits": 50
+          },
+          "slides final": {
+            "median_ms": 17.49,
+            "hits": 50
+          },
+          "학교 과제": {
+            "median_ms": 16.27,
+            "hits": 50
+          }
+        },
+        "overall": {
+          "n": 20,
+          "p50_ms": 18.01,
+          "p95_ms": 37.89,
+          "max_ms": 37.89
+        },
+        "memory_after": {
+          "working_set_mb": 33.2,
+          "peak_working_set_mb": 33.6,
+          "private_mb": 22.9
+        }
+      },
+      "rescan_unchanged": {
+        "seconds": 1.61,
+        "added": 0,
+        "removed": 0
+      },
+      "watch_apply": {
+        "add_file_ms": 1.87,
+        "rename_file_ms": 2.1,
+        "rename_folder_ms": 12.84,
+        "rename_folder_children": 161,
+        "found_after_folder_rename": true,
+        "delete_file_ms": 2.37
+      },
+      "db_bytes": 109108688,
+      "memory_end": {
+        "working_set_mb": 34.3,
+        "peak_working_set_mb": 34.3,
+        "private_mb": 24.7
+      },
+      "app": {
+        "first_any_result_s": 0.075,
+        "marker_found_s": 7.65,
+        "registered_s": 9.13,
+        "ui_name_search_during_registration": {
+          "n": 582,
+          "p50_ms": 9.04,
+          "p95_ms": 25.96,
+          "max_ms": 45.44
+        },
+        "engine_ready": false,
+        "ai_index_created": false,
+        "memory_before": {
+          "working_set_mb": 91.9,
+          "peak_working_set_mb": 91.9,
+          "private_mb": 546.0
+        },
+        "memory_after": {
+          "working_set_mb": 103.8,
+          "peak_working_set_mb": 104.7,
+          "private_mb": 556.2
+        }
+      }
+    },
+    "300000": {
+      "size": 300000,
+      "memory_before": {
+        "working_set_mb": 26.4,
+        "peak_working_set_mb": 26.4,
+        "private_mb": 17.2
+      },
+      "initial": {
+        "seconds": 21.14,
+        "entries": {
+          "files": 300002,
+          "folders": 26762,
+          "roots": {
+            ".tmp\\names-bench\\data-300000": "ok"
+          },
+          "trouble": 0
+        },
+        "folders_walked": 26763,
+        "first_result_s": {
+          "any": 0.056,
+          "고유표식_last.pdf": 0.115,
+          "고유표식_first.pdf": 21.349
+        },
+        "search_during_registration": {
+          "n": 663,
+          "p50_ms": 22.29,
+          "p95_ms": 70.07,
+          "max_ms": 90.79
+        },
+        "memory_after": {
+          "working_set_mb": 33.8,
+          "peak_working_set_mb": 36.6,
+          "private_mb": 23.9
+        }
+      },
+      "search": {
+        "per_query": {
+          "보고": {
+            "median_ms": 56.17,
+            "hits": 50
+          },
+          "청구서": {
+            "median_ms": 55.12,
+            "hits": 50
+          },
+          "의료비 영수증": {
+            "median_ms": 52.34,
+            "hits": 50
+          },
+          "report": {
+            "median_ms": 56.16,
+            "hits": 50
+          },
+          "INVOICE": {
+            "median_ms": 58.34,
+            "hits": 50
+          },
+          "Final 2024": {
+            "median_ms": 61.03,
+            "hits": 50
+          },
+          "계약서 2023": {
+            "median_ms": 53.18,
+            "hits": 50
+          },
+          "trip photo": {
+            "median_ms": 50.32,
+            "hits": 50
+          },
+          "tax": {
+            "median_ms": 58.71,
+            "hits": 50
+          },
+          "고유표식": {
+            "median_ms": 44.42,
+            "hits": 2
+          },
+          "zzzz없는이름": {
+            "median_ms": 45.74,
+            "hits": 0
+          },
+          "a": {
+            "median_ms": 111.35,
+            "hits": 50
+          },
+          "pdf": {
+            "median_ms": 56.38,
+            "hits": 50
+          },
+          "2024-03": {
+            "median_ms": 53.87,
+            "hits": 50
+          },
+          "회의록 v2": {
+            "median_ms": 49.75,
+            "hits": 50
+          },
+          "Homework": {
+            "median_ms": 55.15,
+            "hits": 50
+          },
+          "명세": {
+            "median_ms": 55.86,
+            "hits": 50
+          },
+          "backup zip": {
+            "median_ms": 49.56,
+            "hits": 50
+          },
+          "slides final": {
+            "median_ms": 49.99,
+            "hits": 50
+          },
+          "학교 과제": {
+            "median_ms": 48.32,
+            "hits": 50
+          }
+        },
+        "overall": {
+          "n": 20,
+          "p50_ms": 54.49,
+          "p95_ms": 111.35,
+          "max_ms": 111.35
+        },
+        "memory_after": {
+          "working_set_mb": 36.0,
+          "peak_working_set_mb": 36.6,
+          "private_mb": 26.4
+        }
+      },
+      "rescan_unchanged": {
+        "seconds": 4.69,
+        "added": 0,
+        "removed": 0
+      },
+      "watch_apply": {
+        "add_file_ms": 2.17,
+        "rename_file_ms": 2.05,
+        "rename_folder_ms": 25.9,
+        "rename_folder_children": 161,
+        "found_after_folder_rename": true,
+        "delete_file_ms": 1.98
+      },
+      "db_bytes": 339409912,
+      "memory_end": {
+        "working_set_mb": 37.9,
+        "peak_working_set_mb": 37.9,
+        "private_mb": 28.3
+      },
+      "app": {
+        "first_any_result_s": 0.069,
+        "marker_found_s": 0.197,
+        "registered_s": 25.48,
+        "ui_name_search_during_registration": {
+          "n": 909,
+          "p50_ms": 14.12,
+          "p95_ms": 67.88,
+          "max_ms": 160.44
+        },
+        "engine_ready": false,
+        "ai_index_created": false,
+        "memory_before": {
+          "working_set_mb": 92.4,
+          "peak_working_set_mb": 92.4,
+          "private_mb": 546.6
+        },
+        "memory_after": {
+          "working_set_mb": 106.6,
+          "peak_working_set_mb": 107.0,
+          "private_mb": 558.9
+        }
+      }
+    }
+  },
+  "machine": "Ryzen 7 7800X3D, 64 GB, NVMe, Windows 11 (따뜻한 파일 캐시)",
+  "ai_refresh": {
+    "10000": {
+      "refresh": {
+        "n": 5,
+        "p50_ms": 36.98,
+        "p95_ms": 39.36,
+        "max_ms": 39.36
+      },
+      "search_ms": 29.3
+    },
+    "50000": {
+      "refresh": {
+        "n": 5,
+        "p50_ms": 197.88,
+        "p95_ms": 203.39,
+        "max_ms": 203.39
+      },
+      "search_ms": 91.5
+    },
+    "100000": {
+      "refresh": {
+        "n": 5,
+        "p50_ms": 426.88,
+        "p95_ms": 428.88,
+        "max_ms": 428.88
+      },
+      "search_ms": 185.8
+    }
+  }
+}

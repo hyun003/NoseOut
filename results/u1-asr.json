@@ -1,0 +1,6718 @@
+{
+  "measured": "2026-10-14 02:48",
+  "setup": {
+    "whisper": "whisper.cpp b5454 whisper-bin-win-cuda-12.4.0-x64",
+    "model": "ggml-large-v3-turbo-q5_0.bin",
+    "language": "auto",
+    "decoding": "whisper-cli defaults (beam 5, best-of 5, flash attention)",
+    "transcript_segment": "30 s audio window, same loc; keywords + document vector (title none)",
+    "configs": {
+      "base": "audio vectors only (current product)",
+      "asr": "+ transcript segments, modality text",
+      "asr_own": "+ transcript segments, own modality 'transcript' (per-modality mean)"
+    },
+    "distractor_memos": 20,
+    "search": "product Searcher unchanged (WORD_WEIGHT 2.0, z gate 2.0, setsScale ON)"
+  },
+  "index_seconds_both_bases": 18.8,
+  "not_done": {
+    "a": {
+      "test_data/pictures/app_icon.png": "skipped: small image 64x64",
+      "test_data/media/room_tone.wav": "skipped: silent or too short"
+    },
+    "b": {
+      "media_copy/room_tone.wav": "skipped: silent or too short"
+    }
+  },
+  "transcript_segments_added": {
+    "a": 32,
+    "b": 32
+  },
+  "accuracy": [
+    {
+      "file": "음성메모_0917",
+      "language": "ko",
+      "duration_s": 7.1,
+      "wall_s": 1.04,
+      "load_ms": 526.73,
+      "total_ms": 802.21,
+      "realtime_factor": 0.146,
+      "peak_rss_mb": 496.7,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 1051,
+      "text": "내일 오전 10시에 치과 예약이 있어요. 잊지 말고 건강보험증을 챙겨가세요.",
+      "reference": "내일 오전 열 시에 치과 예약이 있어요. 잊지 말고 건강보험증을 챙겨 가세요.",
+      "error_rate": 0.067,
+      "metric": "CER",
+      "keywords": {
+        "치과": true,
+        "예약": true,
+        "건강보험증": true,
+        "오전": true,
+        "챙겨": true
+      }
+    },
+    {
+      "file": "home_show_ep12",
+      "language": "en",
+      "duration_s": 65.86,
+      "wall_s": 1.69,
+      "load_ms": 471.81,
+      "total_ms": 1502.28,
+      "realtime_factor": 0.026,
+      "peak_rss_mb": 543.6,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 1051,
+      "text": "Welcome back to the weekly home show. Today we have three topics for you. First a quick word about the new community garden, then the main topic, and travel at the end. The community garden opens next month on the corner of Elm Street. Volunteers can sign up for a plot, and tools will be shared in a small shed by the gate. Bring your own gloves, and remember that the water tap is only turned on in the mornings. Now to our main topic, which is sleep. Most adults need between 7 and 9 hours of sleep every night. Keep the bedroom cool and dark, and put the phone away an hour before bed. If you cannot fall asleep after 20 minutes, get up and read until you feel tired. Finally, travel. Trains are often faster than flying for trips under 500 kilometers. Book early for the cheapest seats, and bring snacks for the journey.",
+      "reference": "Welcome back to the weekly home show. Today we have three topics for you. First a quick word about the new community garden, then the main topic, and travel at the end. The community garden opens next month on the corner of Elm Street. Volunteers can sign up for a plot, and tools will be shared in a small shed by the gate. Bring your own gloves, and remember that the water tap is only turned on in the mornings. Now to our main topic, which is sleep. Most adults need between seven and nine hours of sleep every night. Keep the bedroom cool and dark, and put the phone away an hour before bed. If you cannot fall asleep after twenty minutes, get up and read until you feel tired. Finally, travel. Trains are often faster than flying for trips under five hundred kilometers. Book early for the cheapest seats, and bring snacks for the journey.",
+      "error_rate": 0.032,
+      "metric": "WER"
+    },
+    {
+      "file": "clip_2026-08-30",
+      "language": "en",
+      "duration_s": 7.81,
+      "wall_s": 0.92,
+      "load_ms": 468.3,
+      "total_ms": 734.2,
+      "realtime_factor": 0.118,
+      "peak_rss_mb": 494.6,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 1051,
+      "text": "Good evening. Tomorrow will be cloudy in the morning with light rain in the afternoon, so take a jacket if you go out.",
+      "reference": "Good evening. Tomorrow will be cloudy in the morning with light rain in the afternoon, so take a jacket if you go out.",
+      "error_rate": 0.0,
+      "metric": "WER"
+    },
+    {
+      "file": "room_tone",
+      "language": "en",
+      "duration_s": 6.0,
+      "wall_s": 0.85,
+      "load_ms": 470.22,
+      "total_ms": 660.59,
+      "realtime_factor": 0.142,
+      "peak_rss_mb": 493.9,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 709,
+      "text": ".",
+      "reference": "",
+      "error_rate": null,
+      "metric": "WER"
+    },
+    {
+      "file": "메모_자동차검사",
+      "language": "ko",
+      "duration_s": 7.23,
+      "wall_s": 0.95,
+      "load_ms": 481.6,
+      "total_ms": 760.88,
+      "realtime_factor": 0.131,
+      "peak_rss_mb": 494.4,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 1058,
+      "text": "다음 주 화요일에 자동차 정기 검사를 받아야 해요. 차량 등록증을 꼭 가져가세요.",
+      "reference": "다음 주 화요일에 자동차 정기 검사를 받아야 해요. 차량 등록증을 꼭 가져가세요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "메모_생신선물",
+      "language": "ko",
+      "duration_s": 7.81,
+      "wall_s": 0.95,
+      "load_ms": 475.54,
+      "total_ms": 760.35,
+      "realtime_factor": 0.122,
+      "peak_rss_mb": 494.7,
+      "gpu_baseline_mb": 4095,
+      "gpu_peak_delta_mb": 1044,
+      "text": "엄마 생신 선물로 꽃다발과 케이크를 주문했어요. 토요일 오후 3시에 찾으러 가야 해요.",
+      "reference": "엄마 생신 선물로 꽃다발과 케이크를 주문했어요. 토요일 오후 세 시에 찾으러 가야 해요.",
+      "error_rate": 0.029,
+      "metric": "CER"
+    },
+    {
+      "file": "메모_관리비",
+      "language": "ko",
+      "duration_s": 5.38,
+      "wall_s": 0.91,
+      "load_ms": 485.85,
+      "total_ms": 727.15,
+      "realtime_factor": 0.17,
+      "peak_rss_mb": 494.3,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 1051,
+      "text": "관리비 고지서가 나왔는데 이번 달 전기 요금이 많이 올랐어요.",
+      "reference": "관리비 고지서가 나왔는데 이번 달 전기 요금이 많이 올랐어요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "메모_처방전",
+      "language": "ko",
+      "duration_s": 5.38,
+      "wall_s": 0.91,
+      "load_ms": 466.23,
+      "total_ms": 725.81,
+      "realtime_factor": 0.17,
+      "peak_rss_mb": 494.4,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 1051,
+      "text": "약국에서 감기약을 사고 처방전은 책상 서랍에 넣어두었어요.",
+      "reference": "약국에서 감기약을 사고 처방전은 책상 서랍에 넣어 두었어요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "memo_passport",
+      "language": "en",
+      "duration_s": 4.29,
+      "wall_s": 0.89,
+      "load_ms": 466.12,
+      "total_ms": 698.39,
+      "realtime_factor": 0.207,
+      "peak_rss_mb": 493.9,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 709,
+      "text": "Remember to renew the passport before the trip to Lisbon in March.",
+      "reference": "Remember to renew the passport before the trip to Lisbon in March.",
+      "error_rate": 0.0,
+      "metric": "WER"
+    },
+    {
+      "file": "memo_plumber",
+      "language": "en",
+      "duration_s": 4.8,
+      "wall_s": 0.9,
+      "load_ms": 467.98,
+      "total_ms": 706.78,
+      "realtime_factor": 0.187,
+      "peak_rss_mb": 494.3,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 795,
+      "text": "The plumber is coming on Thursday morning to fix the leak under the kitchen sink.",
+      "reference": "The plumber is coming on Thursday morning to fix the leak under the kitchen sink.",
+      "error_rate": 0.0,
+      "metric": "WER"
+    },
+    {
+      "file": "distractor_00",
+      "language": "ko",
+      "duration_s": 5.44,
+      "wall_s": 0.91,
+      "load_ms": 483.66,
+      "total_ms": 728.17,
+      "realtime_factor": 0.168,
+      "peak_rss_mb": 493.7,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 1051,
+      "text": "오늘 저녁은 된장찌개를 끓이고 냉장고에 남은 두부를 쓰기로 했어요.",
+      "reference": "오늘 저녁은 된장찌개를 끓이고 냉장고에 남은 두부를 쓰기로 했어요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_01",
+      "language": "ko",
+      "duration_s": 5.06,
+      "wall_s": 0.94,
+      "load_ms": 488.19,
+      "total_ms": 733.02,
+      "realtime_factor": 0.186,
+      "peak_rss_mb": 494.2,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 1051,
+      "text": "회사 앞 카페가 다음 달부터 리모델링 때문에 문을 닫는데요.",
+      "reference": "회사 앞 카페가 다음 달부터 리모델링 때문에 문을 닫는대요.",
+      "error_rate": 0.042,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_02",
+      "language": "ko",
+      "duration_s": 4.03,
+      "wall_s": 0.93,
+      "load_ms": 470.95,
+      "total_ms": 701.92,
+      "realtime_factor": 0.231,
+      "peak_rss_mb": 494.3,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 709,
+      "text": "아이 학교 운동회가 금요일이라 도시락을 싸야 해요.",
+      "reference": "아이 학교 운동회가 금요일이라 도시락을 싸야 해요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_03",
+      "language": "ko",
+      "duration_s": 4.29,
+      "wall_s": 0.92,
+      "load_ms": 486.13,
+      "total_ms": 725.97,
+      "realtime_factor": 0.215,
+      "peak_rss_mb": 493.8,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 1051,
+      "text": "주말에 등산 갈 때 비 소식이 있으니 우비를 챙기자.",
+      "reference": "주말에 등산 갈 때 비 소식이 있으니 우비를 챙기자.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_04",
+      "language": "ko",
+      "duration_s": 5.31,
+      "wall_s": 0.91,
+      "load_ms": 476.52,
+      "total_ms": 728.98,
+      "realtime_factor": 0.172,
+      "peak_rss_mb": 494.6,
+      "gpu_baseline_mb": 4088,
+      "gpu_peak_delta_mb": 1051,
+      "text": "세탁기 필터 청소를 한 달에 한 번은 해야 한다고 들었어요.",
+      "reference": "세탁기 필터 청소를 한 달에 한 번은 해야 한다고 들었어요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_05",
+      "language": "ko",
+      "duration_s": 3.58,
+      "wall_s": 0.89,
+      "load_ms": 466.75,
+      "total_ms": 692.38,
+      "realtime_factor": 0.249,
+      "peak_rss_mb": 493.7,
+      "gpu_baseline_mb": 4086,
+      "gpu_peak_delta_mb": 709,
+      "text": "도서관 책 반납 기한이 모레까지예요.",
+      "reference": "도서관 책 반납 기한이 모레까지예요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_06",
+      "language": "ko",
+      "duration_s": 5.12,
+      "wall_s": 0.91,
+      "load_ms": 480.33,
+      "total_ms": 725.43,
+      "realtime_factor": 0.178,
+      "peak_rss_mb": 494.2,
+      "gpu_baseline_mb": 4086,
+      "gpu_peak_delta_mb": 1051,
+      "text": "강아지 예방접종을 이번 주 안에 동물병원에서 마쳐야 해요.",
+      "reference": "강아지 예방 접종을 이번 주 안에 동물병원에서 맞혀야 해요.",
+      "error_rate": 0.083,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_07",
+      "language": "ko",
+      "duration_s": 4.22,
+      "wall_s": 0.88,
+      "load_ms": 461.02,
+      "total_ms": 697.7,
+      "realtime_factor": 0.209,
+      "peak_rss_mb": 494.1,
+      "gpu_baseline_mb": 4086,
+      "gpu_peak_delta_mb": 709,
+      "text": "친구 결혼식 축의금 봉투를 미리 준비해 두세요.",
+      "reference": "친구 결혼식 축의금 봉투를 미리 준비해 두세요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_08",
+      "language": "ko",
+      "duration_s": 5.31,
+      "wall_s": 0.91,
+      "load_ms": 485.52,
+      "total_ms": 728.61,
+      "realtime_factor": 0.172,
+      "peak_rss_mb": 494.7,
+      "gpu_baseline_mb": 4086,
+      "gpu_peak_delta_mb": 1051,
+      "text": "새로 산 노트북 화면에 밝은 점이 하나 보여서 교환을 문의했어요.",
+      "reference": "새로 산 노트북 화면에 밝은 점이 하나 보여서 교환을 문의했어요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_09",
+      "language": "ko",
+      "duration_s": 3.46,
+      "wall_s": 0.9,
+      "load_ms": 475.31,
+      "total_ms": 700.57,
+      "realtime_factor": 0.259,
+      "peak_rss_mb": 494.5,
+      "gpu_baseline_mb": 4086,
+      "gpu_peak_delta_mb": 709,
+      "text": "베란다 화분에 물 주는 걸 잊지 마세요.",
+      "reference": "베란다 화분에 물 주는 걸 잊지 마세요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_10",
+      "language": "ko",
+      "duration_s": 4.48,
+      "wall_s": 0.9,
+      "load_ms": 470.28,
+      "total_ms": 712.39,
+      "realtime_factor": 0.202,
+      "peak_rss_mb": 494.3,
+      "gpu_baseline_mb": 4086,
+      "gpu_peak_delta_mb": 1051,
+      "text": "부모님 댁 김장 날짜를 다음 주 토요일로 정했어요.",
+      "reference": "부모님 댁 김장 날짜를 다음 주 토요일로 정했어요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_11",
+      "language": "ko",
+      "duration_s": 4.22,
+      "wall_s": 0.89,
+      "load_ms": 474.74,
+      "total_ms": 706.43,
+      "realtime_factor": 0.211,
+      "peak_rss_mb": 494.3,
+      "gpu_baseline_mb": 4086,
+      "gpu_peak_delta_mb": 709,
+      "text": "지하철 정기권을 다음 달 것으로 충전해야 해요.",
+      "reference": "지하철 정기권을 다음 달 것으로 충전해야 해요.",
+      "error_rate": 0.0,
+      "metric": "CER"
+    },
+    {
+      "file": "distractor_12",
+      "language": "en",
+      "duration_s": 4.03,
+      "wall_s": 0.88,
+      "load_ms": 475.37,
+      "total_ms": 690.71,
+      "realtime_factor": 0.218,
+      "peak_rss_mb": 494.6,
+      "gpu_baseline_mb": 4086,
+      "gpu_peak_delta_mb": 708,
+      "text": "The team meeting moved to 3.30 because the client called.",
+      "reference": "The team meeting moved to three thirty because the client called.",
+      "error_rate": 0.182,
+      "metric": "WER"
+    },
+    {
+      "file": "distractor_13",
+      "language": "en",
+      "duration_s": 4.8,
+      "wall_s": 0.91,
+      "load_ms": 484.77,
+      "total_ms": 718.27,
+      "realtime_factor": 0.19,
+      "peak_rss_mb": 494.4,
+      "gpu_baseline_mb": 4085,
+      "gpu_peak_delta_mb": 1051,
+      "text": "Buy oat milk, eggs, and a loaf of rye bread on the way home.",
+      "reference": "Buy oat milk, eggs, and a loaf of rye bread on the way home.",
+      "error_rate": 0.0,
+      "metric": "WER"
+    },
+    {
+      "file": "distractor_14",
+      "language": "en",
+      "duration_s": 4.16,
+      "wall_s": 0.87,
+      "load_ms": 461.73,
+      "total_ms": 681.96,
+      "realtime_factor": 0.209,
+      "peak_rss_mb": 494.9,
+      "gpu_baseline_mb": 4085,
+      "gpu_peak_delta_mb": 709,
+      "text": "My bike tire is flat again, I need a new inner tube.",
+      "reference": "My bike tire is flat again, I need a new inner tube.",
+      "error_rate": 0.0,
+      "metric": "WER"
+    },
+    {
+      "file": "distractor_15",
+      "language": "en",
+      "duration_s": 3.9,
+      "wall_s": 0.87,
+      "load_ms": 466.92,
+      "total_ms": 677.98,
+      "realtime_factor": 0.222,
+      "peak_rss_mb": 495.2,
+      "gpu_baseline_mb": 4085,
+      "gpu_peak_delta_mb": 709,
+      "text": "The library book about Roman history is due on Friday.",
+      "reference": "The library book about Roman history is due on Friday.",
+      "error_rate": 0.0,
+      "metric": "WER"
+    },
+    {
+      "file": "distractor_16",
+      "language": "en",
+      "duration_s": 3.52,
+      "wall_s": 0.91,
+      "load_ms": 478.11,
+      "total_ms": 687.08,
+      "realtime_factor": 0.258,
+      "peak_rss_mb": 494.5,
+      "gpu_baseline_mb": 4085,
+      "gpu_peak_delta_mb": 709,
+      "text": "Call the bank about the duplicate charge on my card.",
+      "reference": "Call the bank about the duplicate charge on my card.",
+      "error_rate": 0.0,
+      "metric": "WER"
+    },
+    {
+      "file": "distractor_17",
+      "language": "en",
+      "duration_s": 4.42,
+      "wall_s": 0.87,
+      "load_ms": 462.87,
+      "total_ms": 687.81,
+      "realtime_factor": 0.198,
+      "peak_rss_mb": 494.3,
+      "gpu_baseline_mb": 4085,
+      "gpu_peak_delta_mb": 709,
+      "text": "Water the tomatoes on the balcony every second day while I am away.",
+      "reference": "Water the tomatoes on the balcony every second day while I am away.",
+      "error_rate": 0.0,
+      "metric": "WER"
+    },
+    {
+      "file": "distractor_18",
+      "language": "en",
+      "duration_s": 4.1,
+      "wall_s": 0.88,
+      "load_ms": 467.75,
+      "total_ms": 693.94,
+      "realtime_factor": 0.214,
+      "peak_rss_mb": 493.9,
+      "gpu_baseline_mb": 4085,
+      "gpu_peak_delta_mb": 709,
+      "text": "The concert tickets will be sent by email a week before the show.",
+      "reference": "The concert tickets will be sent by email a week before the show.",
+      "error_rate": 0.0,
+      "metric": "WER"
+    },
+    {
+      "file": "distractor_19",
+      "language": "en",
+      "duration_s": 3.9,
+      "wall_s": 0.89,
+      "load_ms": 482.58,
+      "total_ms": 695.86,
+      "realtime_factor": 0.227,
+      "peak_rss_mb": 494.5,
+      "gpu_baseline_mb": 4085,
+      "gpu_peak_delta_mb": 709,
+      "text": "Remind Sam to bring the projector cable to the workshop.",
+      "reference": "Remind Sam to bring the projector cable to the workshop.",
+      "error_rate": 0.0,
+      "metric": "WER"
+    }
+  ],
+  "long_audio_speed": {
+    "file": "long_podcast_10min",
+    "language": "en",
+    "duration_s": 592.7,
+    "wall_s": 8.36,
+    "load_ms": 478.68,
+    "total_ms": 8164.02,
+    "realtime_factor": 0.014,
+    "peak_rss_mb": 612.9,
+    "gpu_baseline_mb": 4085,
+    "gpu_peak_delta_mb": 1051
+  },
+  "summary": {
+    "u1": {
+      "base": {
+        "n": 8,
+        "r1": 0,
+        "r5": 0,
+        "missing": 8,
+        "place_ok": 0
+      },
+      "asr": {
+        "n": 8,
+        "r1": 8,
+        "r5": 8,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "asr_own": {
+        "n": 8,
+        "r1": 8,
+        "r5": 8,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "en": {
+        "base_r1": 0,
+        "asr_r1": 4,
+        "asr_own_r1": 4,
+        "n": 4
+      },
+      "ko": {
+        "base_r1": 0,
+        "asr_r1": 4,
+        "asr_own_r1": 4,
+        "n": 4
+      }
+    },
+    "independent_audio": {
+      "base": {
+        "n": 13,
+        "r1": 8,
+        "r5": 11,
+        "missing": 2,
+        "place_ok": 0
+      },
+      "asr": {
+        "n": 13,
+        "r1": 13,
+        "r5": 13,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "asr_own": {
+        "n": 13,
+        "r1": 13,
+        "r5": 13,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "en": {
+        "base_r1": 4,
+        "asr_r1": 7,
+        "asr_own_r1": 7,
+        "n": 7
+      },
+      "ko": {
+        "base_r1": 4,
+        "asr_r1": 6,
+        "asr_own_r1": 6,
+        "n": 6
+      }
+    },
+    "independent_audio_in_holdout_index": {
+      "base": {
+        "n": 13,
+        "r1": 8,
+        "r5": 11,
+        "missing": 2,
+        "place_ok": 0
+      },
+      "asr": {
+        "n": 13,
+        "r1": 13,
+        "r5": 13,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "asr_own": {
+        "n": 13,
+        "r1": 12,
+        "r5": 13,
+        "missing": 0,
+        "place_ok": 0
+      }
+    },
+    "media_regression": {
+      "base": {
+        "n": 8,
+        "r1": 8,
+        "r5": 8,
+        "missing": 0,
+        "place_ok": 8
+      },
+      "asr": {
+        "n": 8,
+        "r1": 8,
+        "r5": 8,
+        "missing": 0,
+        "place_ok": 8
+      },
+      "asr_own": {
+        "n": 8,
+        "r1": 8,
+        "r5": 8,
+        "missing": 0,
+        "place_ok": 8
+      }
+    },
+    "documents_eval": {
+      "base": {
+        "n": 29,
+        "r1": 24,
+        "r5": 27,
+        "missing": 2,
+        "place_ok": 0
+      },
+      "asr": {
+        "n": 29,
+        "r1": 24,
+        "r5": 27,
+        "missing": 2,
+        "place_ok": 0
+      },
+      "asr_own": {
+        "n": 29,
+        "r1": 24,
+        "r5": 27,
+        "missing": 2,
+        "place_ok": 0
+      },
+      "media_in_top5": {
+        "base": 17,
+        "asr": 23,
+        "asr_own": 22
+      }
+    },
+    "stage2": {
+      "base": {
+        "n": 22,
+        "r1": 21,
+        "r5": 22,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "asr": {
+        "n": 22,
+        "r1": 21,
+        "r5": 22,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "asr_own": {
+        "n": 22,
+        "r1": 21,
+        "r5": 22,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "media_in_top5": {
+        "base": 13,
+        "asr": 20,
+        "asr_own": 15
+      }
+    },
+    "holdout_eval": {
+      "base": {
+        "n": 32,
+        "r1": 31,
+        "r5": 32,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "asr": {
+        "n": 32,
+        "r1": 29,
+        "r5": 32,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "asr_own": {
+        "n": 32,
+        "r1": 30,
+        "r5": 32,
+        "missing": 0,
+        "place_ok": 0
+      },
+      "media_in_top5": {
+        "base": 12,
+        "asr": 25,
+        "asr_own": 19
+      }
+    }
+  },
+  "rows": {
+    "u1": [
+      {
+        "q": "dentist appointment reminder voice note",
+        "expect": "test_data/media/음성메모_0917.m4a",
+        "tag": "u1-en",
+        "base": {
+          "rank": null,
+          "top": [
+            "independent/distractor_19.m4a",
+            "independent/memo_passport.m4a",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "independent/distractor_19.m4a",
+            "independent/memo_passport.m4a",
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_12.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/distractor_19.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.63
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/distractor_19.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.39
+        }
+      },
+      {
+        "q": "dentist appointment tomorrow morning",
+        "expect": "test_data/media/음성메모_0917.m4a",
+        "tag": "u1-en",
+        "base": {
+          "rank": null,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data/media/clip_2026-08-30.mp4",
+            "test_data/documents/kickoff_meeting.html"
+          ],
+          "hits": 4,
+          "above": [
+            "independent/memo_plumber.m4a",
+            "test_data/media/clip_2026-08-30.mp4",
+            "test_data/documents/kickoff_meeting.html",
+            "test_data/documents/invoice_INV-4821.docx"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/memo_plumber.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 7.17
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/memo_plumber.m4a",
+            "test_data/media/clip_2026-08-30.mp4"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 7.85
+        }
+      },
+      {
+        "q": "remember to bring the health insurance card",
+        "expect": "test_data/media/음성메모_0917.m4a",
+        "tag": "u1-en",
+        "base": {
+          "rank": null,
+          "top": [
+            "independent/memo_passport.m4a",
+            "independent/distractor_19.m4a"
+          ],
+          "hits": 2,
+          "above": [
+            "independent/memo_passport.m4a",
+            "independent/distractor_19.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/memo_passport.m4a",
+            "independent/distractor_19.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.56
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/memo_passport.m4a",
+            "independent/distractor_19.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.11
+        }
+      },
+      {
+        "q": "voice memo about going to the dentist",
+        "expect": "test_data/media/음성메모_0917.m4a",
+        "tag": "u1-en",
+        "base": {
+          "rank": null,
+          "top": [
+            "independent/distractor_12.m4a",
+            "independent/memo_passport.m4a",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 3,
+          "above": [
+            "independent/distractor_12.m4a",
+            "independent/memo_passport.m4a",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/memo_passport.m4a",
+            "independent/memo_plumber.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.01
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/distractor_12.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.66
+        }
+      },
+      {
+        "q": "치과 예약 음성 메모",
+        "expect": "test_data/media/음성메모_0917.m4a",
+        "tag": "u1-ko",
+        "base": {
+          "rank": null,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_07.m4a",
+            "independent/distractor_08.m4a"
+          ],
+          "hits": 3,
+          "above": [
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_07.m4a",
+            "independent/distractor_08.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_01.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.06
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.64
+        }
+      },
+      {
+        "q": "내일 아침 치과 예약",
+        "expect": "test_data/media/음성메모_0917.m4a",
+        "tag": "u1-ko",
+        "base": {
+          "rank": null,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_10.m4a"
+          ],
+          "hits": 2,
+          "above": [
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_10.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/메모_자동차검사.m4a",
+            "independent/메모_생신선물.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 7.0
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 7.1
+        }
+      },
+      {
+        "q": "건강보험증 챙기기",
+        "expect": "test_data/media/음성메모_0917.m4a",
+        "tag": "u1-ko",
+        "base": {
+          "rank": null,
+          "top": [
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 1,
+          "above": [
+            "independent/메모_자동차검사.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_03.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.32
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.79
+        }
+      },
+      {
+        "q": "치과 가는 것에 대한 음성 메모",
+        "expect": "test_data/media/음성메모_0917.m4a",
+        "tag": "u1-ko",
+        "base": {
+          "rank": null,
+          "top": [
+            "independent/distractor_07.m4a"
+          ],
+          "hits": 1,
+          "above": [
+            "independent/distractor_07.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a",
+            "independent/메모_처방전.m4a",
+            "independent/distractor_01.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.95
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/음성메모_0917.m4a"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.43
+        }
+      }
+    ],
+    "independent_audio": [
+      {
+        "q": "car inspection reminder",
+        "expect": "independent/메모_자동차검사.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 2,
+          "top": [
+            "independent/distractor_19.m4a",
+            "independent/메모_자동차검사.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 3,
+          "above": [
+            "independent/distractor_19.m4a"
+          ],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.09
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_19.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.88
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_19.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.0
+        }
+      },
+      {
+        "q": "bring the vehicle registration",
+        "expect": "independent/메모_자동차검사.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/memo_passport.m4a",
+            "independent/distractor_19.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.03
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_19.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.15
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/memo_passport.m4a",
+            "independent/distractor_19.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.84
+        }
+      },
+      {
+        "q": "자동차 정기 검사",
+        "expect": "independent/메모_자동차검사.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.6
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.86
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.31
+        }
+      },
+      {
+        "q": "pick up the flowers and cake for mom's birthday",
+        "expect": "independent/메모_생신선물.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 2,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/메모_생신선물.m4a",
+            "test_data/misc/note_a.md"
+          ],
+          "hits": 4,
+          "above": [
+            "test_data/media/clip_2026-08-30.mp4"
+          ],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.24
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_10.m4a",
+            "independent/distractor_13.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.83
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "test_data/media/clip_2026-08-30.mp4",
+            "test_data/misc/note_a.md"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 7.62
+        }
+      },
+      {
+        "q": "생신 선물 케이크 주문",
+        "expect": "independent/메모_생신선물.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": null,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_07.m4a"
+          ],
+          "hits": 2,
+          "above": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_07.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_07.m4a",
+            "test_data/media/clip_2026-08-30.mp4"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.99
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_07.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.49
+        }
+      },
+      {
+        "q": "electricity bill went up this month",
+        "expect": "independent/메모_관리비.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "test_data/documents/invoice_INV-4821.docx",
+            "test_data/documents/long/handbook.txt"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.82
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 7.55
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "test_data/documents/invoice_INV-4821.docx",
+            "test_data/documents/long/handbook.txt"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 7.26
+        }
+      },
+      {
+        "q": "관리비 전기 요금",
+        "expect": "independent/메모_관리비.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.85
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.93
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.98
+        }
+      },
+      {
+        "q": "where I put the prescription",
+        "expect": "independent/메모_처방전.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": null,
+          "top": [
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 1,
+          "above": [
+            "independent/distractor_17.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_처방전.m4a",
+            "test_data/media/음성메모_0917.m4a",
+            "independent/distractor_13.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.05
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_처방전.m4a",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.7
+        }
+      },
+      {
+        "q": "처방전 보관한 곳",
+        "expect": "independent/메모_처방전.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": 2,
+          "top": [
+            "independent/distractor_05.m4a",
+            "independent/메모_처방전.m4a"
+          ],
+          "hits": 2,
+          "above": [
+            "independent/distractor_05.m4a"
+          ],
+          "segment": "name",
+          "loc": null,
+          "place_ok": null,
+          "z": 1.13
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_처방전.m4a",
+            "independent/distractor_05.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.71
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_처방전.m4a",
+            "independent/distractor_05.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.43
+        }
+      },
+      {
+        "q": "passport renewal before travel",
+        "expect": "independent/memo_passport.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a",
+            "test_data/documents/long/handbook.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 8.04
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a",
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_18.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.82
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.57
+        }
+      },
+      {
+        "q": "여권 갱신 알림",
+        "expect": "independent/memo_passport.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a",
+            "independent/distractor_07.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.96
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.35
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.28
+        }
+      },
+      {
+        "q": "plumber appointment for the leaking sink",
+        "expect": "independent/memo_plumber.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.71
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "independent/distractor_14.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.02
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.22
+        }
+      },
+      {
+        "q": "싱크대 누수 수리 기사 방문",
+        "expect": "independent/memo_plumber.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "independent/distractor_07.m4a",
+            "test_data/misc/memo_3.txt"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.22
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "independent/distractor_04.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.76
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "independent/distractor_04.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.82
+        }
+      }
+    ],
+    "independent_audio_in_holdout_index": [
+      {
+        "q": "car inspection reminder",
+        "expect": "independent/메모_자동차검사.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 3,
+          "top": [
+            "test_data_holdout/documents/car_service.txt",
+            "independent/distractor_19.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "test_data_holdout/documents/car_service.txt",
+            "independent/distractor_19.m4a"
+          ],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 2.5
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "test_data_holdout/documents/car_service.txt",
+            "independent/distractor_19.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.04
+        },
+        "asr_own": {
+          "rank": 2,
+          "top": [
+            "test_data_holdout/documents/car_service.txt",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_19.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "test_data_holdout/documents/car_service.txt"
+          ],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.43
+        }
+      },
+      {
+        "q": "bring the vehicle registration",
+        "expect": "independent/메모_자동차검사.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/memo_passport.m4a",
+            "test_data_holdout/documents/car_service.txt"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 2.75
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_19.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.03
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/memo_passport.m4a",
+            "test_data_holdout/documents/car_service.txt"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.55
+        }
+      },
+      {
+        "q": "자동차 정기 검사",
+        "expect": "independent/메모_자동차검사.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "test_data_holdout/documents/car_service.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.18
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a",
+            "test_data_holdout/documents/car_service.txt"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.38
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_자동차검사.m4a",
+            "test_data_holdout/documents/car_service.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.93
+        }
+      },
+      {
+        "q": "pick up the flowers and cake for mom's birthday",
+        "expect": "independent/메모_생신선물.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 2,
+          "top": [
+            "test_data_holdout/documents/birthday_party.txt",
+            "independent/메모_생신선물.m4a",
+            "media_copy/clip_2026-08-30.mp4"
+          ],
+          "hits": 5,
+          "above": [
+            "test_data_holdout/documents/birthday_party.txt"
+          ],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 2.54
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_10.m4a",
+            "independent/distractor_13.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.59
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "test_data_holdout/documents/birthday_party.txt",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.37
+        }
+      },
+      {
+        "q": "생신 선물 케이크 주문",
+        "expect": "independent/메모_생신선물.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": null,
+          "top": [
+            "media_copy/clip_2026-08-30.mp4",
+            "test_data_holdout/documents/birthday_party.txt",
+            "independent/distractor_07.m4a"
+          ],
+          "hits": 3,
+          "above": [
+            "media_copy/clip_2026-08-30.mp4",
+            "test_data_holdout/documents/birthday_party.txt",
+            "independent/distractor_07.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_07.m4a",
+            "media_copy/clip_2026-08-30.mp4"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.73
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "media_copy/clip_2026-08-30.mp4",
+            "test_data_holdout/documents/birthday_party.txt"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.17
+        }
+      },
+      {
+        "q": "electricity bill went up this month",
+        "expect": "independent/메모_관리비.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "test_data_holdout/documents/email_landlord.txt",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.08
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.9
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "test_data_holdout/documents/email_landlord.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 6.61
+        }
+      },
+      {
+        "q": "관리비 전기 요금",
+        "expect": "independent/메모_관리비.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.41
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "independent/distractor_11.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.06
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_관리비.m4a",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 4.6
+        }
+      },
+      {
+        "q": "where I put the prescription",
+        "expect": "independent/메모_처방전.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": null,
+          "top": [
+            "test_data_holdout/documents/allergy_note.txt",
+            "test_data_holdout/documents/long/IT_안내서.txt",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+          ],
+          "hits": 3,
+          "above": [
+            "test_data_holdout/documents/allergy_note.txt",
+            "test_data_holdout/documents/long/IT_안내서.txt",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_처방전.m4a",
+            "media_copy/음성메모_0917.m4a",
+            "test_data_holdout/documents/allergy_note.txt"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.44
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_처방전.m4a",
+            "test_data_holdout/documents/allergy_note.txt",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.01
+        }
+      },
+      {
+        "q": "처방전 보관한 곳",
+        "expect": "independent/메모_처방전.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": 2,
+          "top": [
+            "independent/distractor_05.m4a",
+            "independent/메모_처방전.m4a"
+          ],
+          "hits": 2,
+          "above": [
+            "independent/distractor_05.m4a"
+          ],
+          "segment": "name",
+          "loc": null,
+          "place_ok": null,
+          "z": 1.06
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/메모_처방전.m4a",
+            "independent/distractor_05.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.76
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/메모_처방전.m4a",
+            "independent/distractor_05.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.28
+        }
+      },
+      {
+        "q": "passport renewal before travel",
+        "expect": "independent/memo_passport.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.41
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a",
+            "media_copy/home_show_ep12.m4a",
+            "independent/distractor_18.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.56
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a",
+            "media_copy/home_show_ep12.m4a",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.13
+        }
+      },
+      {
+        "q": "여권 갱신 알림",
+        "expect": "independent/memo_passport.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 2.04
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 2.4
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/memo_passport.m4a",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 2.13
+        }
+      },
+      {
+        "q": "plumber appointment for the leaking sink",
+        "expect": "independent/memo_plumber.m4a",
+        "tag": "indep-en",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data_holdout/documents/email_landlord.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.64
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data_holdout/documents/email_landlord.txt",
+            "independent/distractor_14.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.37
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data_holdout/documents/email_landlord.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 5.47
+        }
+      },
+      {
+        "q": "싱크대 누수 수리 기사 방문",
+        "expect": "independent/memo_plumber.m4a",
+        "tag": "indep-ko",
+        "base": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data_holdout/documents/email_landlord.txt",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.42
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data_holdout/documents/email_landlord.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.37
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data_holdout/documents/email_landlord.txt",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": null,
+          "z": 3.44
+        }
+      }
+    ],
+    "media_regression": [
+      {
+        "q": "where they talk about sleep",
+        "expect": "test_data/media/home_show_ep12.m4a",
+        "tag": "audio",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "test_data/code_project/Screenshot 2026-10-02 retry.png",
+            "test_data/pictures/night_sky.png"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "audio",
+          "loc": 25.0,
+          "place_ok": true,
+          "z": 6.38
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_03.m4a",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 25.0,
+          "place_ok": true,
+          "z": 5.41
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "audio",
+          "loc": 25.0,
+          "place_ok": true,
+          "z": 5.7
+        }
+      },
+      {
+        "q": "tips for falling asleep at night",
+        "expect": "test_data/media/home_show_ep12.m4a",
+        "tag": "audio",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "test_data/pictures/night_sky.png"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 25.0,
+          "place_ok": true,
+          "z": 5.67
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_17.m4a",
+            "test_data/media/clip_2026-08-30.mp4"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 25.0,
+          "place_ok": true,
+          "z": 5.75
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 25.0,
+          "place_ok": true,
+          "z": 5.59
+        }
+      },
+      {
+        "q": "community garden opening",
+        "expect": "test_data/media/home_show_ep12.m4a",
+        "tag": "audio",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "test_data/misc/note_a.md",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": true,
+          "z": 8.45
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_17.m4a",
+            "independent/memo_plumber.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": true,
+          "z": 8.09
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_17.m4a",
+            "test_data/misc/note_a.md"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": true,
+          "z": 8.0
+        }
+      },
+      {
+        "q": "trains are faster than flying",
+        "expect": "test_data/media/home_show_ep12.m4a",
+        "tag": "audio",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "test_data/documents/tokyo_trip.md",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "audio",
+          "loc": 50.0,
+          "place_ok": true,
+          "z": 6.86
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_13.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 50.0,
+          "place_ok": true,
+          "z": 6.08
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/home_show_ep12.m4a",
+            "test_data/documents/tokyo_trip.md"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "audio",
+          "loc": 50.0,
+          "place_ok": true,
+          "z": 5.77
+        }
+      },
+      {
+        "q": "black and white stripes in a video",
+        "expect": "test_data/media/clip_2026-08-30.mp4",
+        "tag": "frame",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "test_data/pictures/sunset_beach.heic"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "frame",
+          "loc": 0.5,
+          "place_ok": true,
+          "z": 8.56
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "test_data/pictures/sunset_beach.heic",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "frame",
+          "loc": 0.5,
+          "place_ok": true,
+          "z": 8.18
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "test_data/pictures/sunset_beach.heic",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "frame",
+          "loc": 0.5,
+          "place_ok": true,
+          "z": 8.49
+        }
+      },
+      {
+        "q": "a sailboat on the water",
+        "expect": "test_data/media/clip_2026-08-30.mp4",
+        "tag": "frame",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "test_data/pictures/sunset_beach.heic",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "frame",
+          "loc": 6.5,
+          "place_ok": true,
+          "z": 8.45
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_17.m4a",
+            "independent/memo_plumber.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "frame",
+          "loc": 6.5,
+          "place_ok": true,
+          "z": 6.79
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_17.m4a",
+            "test_data/pictures/sunset_beach.heic"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "frame",
+          "loc": 6.5,
+          "place_ok": true,
+          "z": 8.3
+        }
+      },
+      {
+        "q": "birthday cake with candles",
+        "expect": "test_data/media/clip_2026-08-30.mp4",
+        "tag": "frame",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "frame",
+          "loc": 9.5,
+          "place_ok": true,
+          "z": 8.27
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_13.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "frame",
+          "loc": 9.5,
+          "place_ok": true,
+          "z": 6.82
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/메모_생신선물.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "frame",
+          "loc": 9.5,
+          "place_ok": true,
+          "z": 7.81
+        }
+      },
+      {
+        "q": "weather forecast with rain tomorrow",
+        "expect": "test_data/media/clip_2026-08-30.mp4",
+        "tag": "soundtrack",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_18.m4a",
+            "test_data/documents/kickoff_meeting.html"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "audio",
+          "loc": 0.0,
+          "place_ok": true,
+          "z": 8.68
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "test_data/media/음성메모_0917.m4a",
+            "independent/memo_plumber.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": true,
+          "z": 7.75
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/media/clip_2026-08-30.mp4",
+            "test_data/media/음성메모_0917.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "transcript",
+          "loc": 0.0,
+          "place_ok": true,
+          "z": 7.73
+        }
+      }
+    ],
+    "documents_eval": [
+      {
+        "q": "moving a houseplant into a bigger container",
+        "expect": "test_data/misc/note_a.md",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/note_a.md",
+            "independent/distractor_14.m4a",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.03
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/note_a.md",
+            "independent/distractor_17.m4a",
+            "independent/distractor_09.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 5.04
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/note_a.md",
+            "independent/distractor_17.m4a",
+            "independent/distractor_09.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 5.43
+        }
+      },
+      {
+        "q": "what to do after a car crash",
+        "expect": "test_data/misc/doc_17.docx",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/doc_17.docx",
+            "independent/메모_자동차검사.m4a",
+            "independent/메모_처방전.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.05
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/doc_17.docx",
+            "independent/메모_자동차검사.m4a",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.4
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/doc_17.docx",
+            "independent/메모_자동차검사.m4a",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.87
+        }
+      },
+      {
+        "q": "washing machine won't drain the water",
+        "expect": "test_data/misc/memo_3.txt",
+        "tag": [
+          "meaning",
+          "cross-lingual"
+        ],
+        "base": {
+          "rank": 2,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "test_data/misc/memo_3.txt",
+            "independent/distractor_14.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.05
+        },
+        "asr": {
+          "rank": 2,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "test_data/misc/memo_3.txt",
+            "independent/distractor_04.m4a"
+          ],
+          "hits": 5,
+          "above": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.0
+        },
+        "asr_own": {
+          "rank": 3,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/distractor_04.m4a",
+            "test_data/misc/memo_3.txt"
+          ],
+          "hits": 5,
+          "above": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/distractor_04.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 2.95
+        }
+      },
+      {
+        "q": "세탁기 물이 안 빠질 때",
+        "expect": "test_data/misc/memo_3.txt",
+        "tag": [
+          "meaning",
+          "ko"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/memo_3.txt",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 5.02
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/memo_3.txt",
+            "independent/distractor_04.m4a",
+            "independent/distractor_09.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 4.61
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/memo_3.txt",
+            "independent/distractor_04.m4a",
+            "independent/distractor_09.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 4.66
+        }
+      },
+      {
+        "q": "a house with a red roof and a tree",
+        "expect": "test_data/misc/img_a.png",
+        "tag": [
+          "meaning",
+          "image"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/img_a.png",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.29
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/img_a.png",
+            "independent/distractor_17.m4a",
+            "independent/distractor_13.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.05
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/img_a.png",
+            "independent/distractor_17.m4a",
+            "independent/distractor_13.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.82
+        }
+      },
+      {
+        "q": "빨간 지붕 집 그림",
+        "expect": "test_data/misc/img_a.png",
+        "tag": [
+          "meaning",
+          "image",
+          "ko"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/img_a.png"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 4.24
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/img_a.png",
+            "independent/distractor_01.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.83
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/misc/img_a.png"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 4.17
+        }
+      },
+      {
+        "q": "how much do I owe for the hosting services",
+        "expect": "test_data/documents/invoice_INV-4821.docx",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "test_data/pictures/quarterly_chart.png",
+            "test_data/documents/lease_agreement.pdf"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.65
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/메모_관리비.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.99
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/메모_관리비.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.39
+        }
+      },
+      {
+        "q": "can I keep a dog or a cat in the apartment",
+        "expect": "test_data/documents/lease_agreement.pdf",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/lease_agreement.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 2.0,
+          "place_ok": null,
+          "z": 5.96
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/lease_agreement.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 2.0,
+          "place_ok": null,
+          "z": 6.18
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/lease_agreement.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 2.0,
+          "place_ok": null,
+          "z": 6.17
+        }
+      },
+      {
+        "q": "spicy stew with pork and tofu",
+        "expect": "test_data/documents/김치찌개_레시피.txt",
+        "tag": [
+          "meaning",
+          "cross-lingual"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/김치찌개_레시피.txt",
+            "independent/distractor_07.m4a",
+            "independent/distractor_13.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.5
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/김치찌개_레시피.txt",
+            "independent/distractor_00.m4a",
+            "independent/distractor_13.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.89
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/김치찌개_레시피.txt",
+            "independent/distractor_00.m4a",
+            "independent/distractor_07.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.06
+        }
+      },
+      {
+        "q": "Japan itinerary with a temple visit",
+        "expect": "test_data/documents/tokyo_trip.md",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/tokyo_trip.md",
+            "test_data/pictures/red_circle.webp"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 9.52
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/tokyo_trip.md",
+            "independent/memo_passport.m4a",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.77
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/tokyo_trip.md",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 9.07
+        }
+      },
+      {
+        "q": "notice that the lift will be out of service",
+        "expect": "test_data/documents/엘리베이터_점검_안내.pdf",
+        "tag": [
+          "meaning",
+          "cross-lingual",
+          "image"
+        ],
+        "base": {
+          "rank": null,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 1,
+          "above": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": null,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/distractor_01.m4a"
+          ],
+          "hits": 2,
+          "above": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/distractor_01.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr_own": {
+          "rank": null,
+          "top": [
+            "independent/distractor_01.m4a",
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/distractor_05.m4a"
+          ],
+          "hits": 3,
+          "above": [
+            "independent/distractor_01.m4a",
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/distractor_05.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        }
+      },
+      {
+        "q": "the online purchase failed because the bank refused the card",
+        "expect": "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+        "tag": [
+          "meaning",
+          "image"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "independent/distractor_16.m4a",
+            "test_data/pictures/quarterly_chart.png"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.3
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "independent/distractor_16.m4a",
+            "independent/distractor_13.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.64
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "independent/distractor_16.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.72
+        }
+      },
+      {
+        "q": "a red octagon telling drivers to halt",
+        "expect": "test_data/pictures/stop_sign.jpg",
+        "tag": [
+          "meaning",
+          "image"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/stop_sign.jpg",
+            "test_data/misc/doc_17.docx",
+            "test_data/pictures/red_circle.webp"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.68
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/stop_sign.jpg",
+            "test_data/misc/doc_17.docx",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.23
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/stop_sign.jpg",
+            "test_data/misc/doc_17.docx",
+            "test_data/pictures/red_circle.webp"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.55
+        }
+      },
+      {
+        "q": "evening sun reflecting on the ocean",
+        "expect": "test_data/pictures/sunset_beach.heic",
+        "tag": [
+          "meaning",
+          "image"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/sunset_beach.heic",
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.25
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/sunset_beach.heic",
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 5.32
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/sunset_beach.heic",
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 5.67
+        }
+      },
+      {
+        "q": "lots of tiny stars and a thin moon",
+        "expect": "test_data/pictures/night_sky.png",
+        "tag": [
+          "meaning",
+          "image"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/night_sky.png",
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.66
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/night_sky.png",
+            "independent/distractor_17.m4a",
+            "independent/distractor_04.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.14
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/night_sky.png",
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.19
+        }
+      },
+      {
+        "q": "graph comparing values with vertical bars",
+        "expect": "test_data/pictures/quarterly_chart.png",
+        "tag": [
+          "meaning",
+          "image"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/quarterly_chart.png",
+            "test_data/pictures/sunset_beach.heic",
+            "independent/메모_관리비.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.36
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/quarterly_chart.png",
+            "test_data/pictures/sunset_beach.heic",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.28
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/quarterly_chart.png",
+            "test_data/pictures/sunset_beach.heic",
+            "independent/메모_관리비.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.41
+        }
+      },
+      {
+        "q": "차를 세워 둔 비용은 어디서 내나",
+        "expect": "test_data/documents/주차_안내_cp949.txt",
+        "tag": [
+          "meaning",
+          "ko"
+        ],
+        "base": {
+          "rank": null,
+          "top": [
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 1,
+          "above": [
+            "independent/메모_자동차검사.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": null,
+          "top": [
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 1,
+          "above": [
+            "independent/메모_자동차검사.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        },
+        "asr_own": {
+          "rank": null,
+          "top": [
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 1,
+          "above": [
+            "independent/메모_자동차검사.m4a"
+          ],
+          "segment": null,
+          "loc": null,
+          "place_ok": null,
+          "z": null
+        }
+      },
+      {
+        "q": "is flood damage covered by the warranty",
+        "expect": "test_data/documents/long/facilities_manual.pdf",
+        "tag": [
+          "long-pdf",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 12.0,
+          "place_ok": null,
+          "z": 5.72
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 12.0,
+          "place_ok": null,
+          "z": 5.74
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 12.0,
+          "place_ok": null,
+          "z": 5.82
+        }
+      },
+      {
+        "q": "how do I change the air purifier filter",
+        "expect": "test_data/documents/long/facilities_manual.pdf",
+        "tag": [
+          "long-pdf",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/distractor_04.m4a",
+            "test_data/misc/memo_3.txt"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "page",
+          "loc": 87.0,
+          "place_ok": null,
+          "z": 6.26
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/distractor_04.m4a",
+            "test_data/misc/memo_3.txt"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "page",
+          "loc": 87.0,
+          "place_ok": null,
+          "z": 5.85
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/distractor_04.m4a",
+            "independent/distractor_14.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "page",
+          "loc": 87.0,
+          "place_ok": null,
+          "z": 5.89
+        }
+      },
+      {
+        "q": "what does error E42 mean",
+        "expect": "test_data/documents/long/facilities_manual.pdf",
+        "tag": [
+          "long-pdf"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 115.0,
+          "place_ok": null,
+          "z": 7.32
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 115.0,
+          "place_ok": null,
+          "z": 7.3
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 115.0,
+          "place_ok": null,
+          "z": 7.65
+        }
+      },
+      {
+        "q": "the condensate pump is clogged",
+        "expect": "test_data/documents/long/facilities_manual.pdf",
+        "tag": [
+          "long-pdf",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 115.0,
+          "place_ok": null,
+          "z": 3.81
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 115.0,
+          "place_ok": null,
+          "z": 3.88
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 115.0,
+          "place_ok": null,
+          "z": 3.85
+        }
+      },
+      {
+        "q": "how many weeks of paid leave do new parents get",
+        "expect": "test_data/documents/long/handbook.txt",
+        "tag": [
+          "long-doc",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/handbook.txt",
+            "test_data/documents/lease_agreement.pdf",
+            "test_data/pictures/quarterly_chart.png"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 3.0,
+          "place_ok": null,
+          "z": 4.64
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/handbook.txt",
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_18.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 3.0,
+          "place_ok": null,
+          "z": 3.82
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/handbook.txt",
+            "test_data/documents/lease_agreement.pdf",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 3.0,
+          "place_ok": null,
+          "z": 4.49
+        }
+      },
+      {
+        "q": "when is the emergency power generator tested",
+        "expect": "test_data/documents/long/handbook.txt",
+        "tag": [
+          "long-doc",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/handbook.txt",
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 37.0,
+          "place_ok": null,
+          "z": 1.83
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/handbook.txt",
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 37.0,
+          "place_ok": null,
+          "z": 2.0
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/handbook.txt",
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 37.0,
+          "place_ok": null,
+          "z": 1.92
+        }
+      },
+      {
+        "q": "where can I leave my bike",
+        "expect": "test_data/documents/long/handbook.txt",
+        "tag": [
+          "long-doc",
+          "meaning"
+        ],
+        "base": {
+          "rank": 2,
+          "top": [
+            "independent/distractor_14.m4a",
+            "test_data/documents/long/handbook.txt"
+          ],
+          "hits": 2,
+          "above": [
+            "independent/distractor_14.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 3.0,
+          "place_ok": null,
+          "z": 0.84
+        },
+        "asr": {
+          "rank": 4,
+          "top": [
+            "independent/distractor_14.m4a",
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_05.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "independent/distractor_14.m4a",
+            "test_data/media/home_show_ep12.m4a",
+            "independent/distractor_05.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 3.0,
+          "place_ok": null,
+          "z": 0.48
+        },
+        "asr_own": {
+          "rank": 2,
+          "top": [
+            "independent/distractor_14.m4a",
+            "test_data/documents/long/handbook.txt"
+          ],
+          "hits": 2,
+          "above": [
+            "independent/distractor_14.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 3.0,
+          "place_ok": null,
+          "z": 0.79
+        }
+      },
+      {
+        "q": "야간 근무 수당은 얼마인가",
+        "expect": "test_data/documents/long/사내_규정.txt",
+        "tag": [
+          "long-doc",
+          "ko"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/사내_규정.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 49.0,
+          "place_ok": null,
+          "z": 3.42
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/사내_규정.txt",
+            "independent/distractor_10.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 49.0,
+          "place_ok": null,
+          "z": 3.46
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/사내_규정.txt",
+            "independent/distractor_10.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 49.0,
+          "place_ok": null,
+          "z": 3.57
+        }
+      },
+      {
+        "q": "night shift pay rate",
+        "expect": "test_data/documents/long/사내_규정.txt",
+        "tag": [
+          "long-doc",
+          "meaning",
+          "cross-lingual"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/사내_규정.txt",
+            "test_data/pictures/quarterly_chart.png",
+            "independent/distractor_10.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 49.0,
+          "place_ok": null,
+          "z": 4.62
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/사내_규정.txt",
+            "test_data/pictures/quarterly_chart.png"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 49.0,
+          "place_ok": null,
+          "z": 4.46
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/사내_규정.txt",
+            "test_data/pictures/quarterly_chart.png",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 49.0,
+          "place_ok": null,
+          "z": 4.45
+        }
+      },
+      {
+        "q": "INV-4821",
+        "expect": "test_data/documents/invoice_INV-4821.docx",
+        "tag": [
+          "keyword"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/메모_관리비.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 2.99
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/메모_관리비.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.04
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/메모_관리비.m4a",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 2.98
+        }
+      },
+      {
+        "q": "SERIAL-77Q3X",
+        "expect": "test_data/documents/sensor_dump.txt",
+        "tag": [
+          "keyword"
+        ],
+        "base": {
+          "rank": 4,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 11.0,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 4,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 11.0,
+          "place_ok": null,
+          "z": null
+        },
+        "asr_own": {
+          "rank": 4,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 11.0,
+          "place_ok": null,
+          "z": null
+        }
+      },
+      {
+        "q": "E42",
+        "expect": "test_data/documents/long/facilities_manual.pdf",
+        "tag": [
+          "keyword",
+          "long-pdf"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/메모_관리비.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "page",
+          "loc": 115.0,
+          "place_ok": null,
+          "z": 7.89
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/메모_관리비.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "page",
+          "loc": 115.0,
+          "place_ok": null,
+          "z": 7.81
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/long/facilities_manual.pdf",
+            "independent/메모_관리비.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "page",
+          "loc": 115.0,
+          "place_ok": null,
+          "z": 7.9
+        }
+      }
+    ],
+    "stage2": [
+      {
+        "q": "the clause about pets in the lease",
+        "expect": "test_data/documents/lease_agreement.pdf",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/lease_agreement.pdf",
+            "test_data/media/음성메모_0917.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "page",
+          "loc": 2.0,
+          "place_ok": null,
+          "z": 7.13
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/lease_agreement.pdf",
+            "test_data/media/음성메모_0917.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "page",
+          "loc": 2.0,
+          "place_ok": null,
+          "z": 7.32
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/lease_agreement.pdf",
+            "test_data/media/음성메모_0917.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "page",
+          "loc": 2.0,
+          "place_ok": null,
+          "z": 7.35
+        }
+      },
+      {
+        "q": "when can the tenant end the lease early",
+        "expect": "test_data/documents/lease_agreement.pdf",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/lease_agreement.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 3.0,
+          "place_ok": null,
+          "z": 7.22
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/lease_agreement.pdf",
+            "independent/memo_plumber.m4a",
+            "independent/distractor_05.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "page",
+          "loc": 3.0,
+          "place_ok": null,
+          "z": 6.8
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/lease_agreement.pdf",
+            "independent/memo_plumber.m4a",
+            "independent/distractor_05.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "page",
+          "loc": 3.0,
+          "place_ok": null,
+          "z": 6.77
+        }
+      },
+      {
+        "q": "Tokyo travel plans",
+        "expect": "test_data/documents/tokyo_trip.md",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/tokyo_trip.md",
+            "test_data/media/home_show_ep12.m4a",
+            "test_data/pictures/quarterly_chart.png"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 9.25
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/tokyo_trip.md",
+            "test_data/media/home_show_ep12.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.17
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/tokyo_trip.md",
+            "test_data/media/home_show_ep12.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.85
+        }
+      },
+      {
+        "q": "Kamakura Great Buddha day trip",
+        "expect": "test_data/documents/tokyo_trip.md",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/tokyo_trip.md",
+            "test_data/media/clip_2026-08-30.mp4",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.81
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/tokyo_trip.md",
+            "test_data/media/home_show_ep12.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.6
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/tokyo_trip.md",
+            "test_data/media/home_show_ep12.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.9
+        }
+      },
+      {
+        "q": "김치찌개 만드는 법",
+        "expect": "test_data/documents/김치찌개_레시피.txt",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/김치찌개_레시피.txt",
+            "independent/distractor_10.m4a",
+            "independent/distractor_07.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.49
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/김치찌개_레시피.txt",
+            "independent/distractor_00.m4a",
+            "independent/distractor_10.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.84
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/김치찌개_레시피.txt",
+            "independent/distractor_00.m4a",
+            "independent/distractor_10.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.52
+        }
+      },
+      {
+        "q": "pork and kimchi stew recipe",
+        "expect": "test_data/documents/김치찌개_레시피.txt",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/김치찌개_레시피.txt",
+            "independent/distractor_07.m4a",
+            "independent/distractor_10.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.23
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/김치찌개_레시피.txt",
+            "independent/distractor_10.m4a",
+            "independent/distractor_00.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.43
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/김치찌개_레시피.txt",
+            "independent/distractor_10.m4a",
+            "independent/distractor_00.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.06
+        }
+      },
+      {
+        "q": "INV-4821",
+        "expect": "test_data/documents/invoice_INV-4821.docx",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/메모_관리비.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 2.99
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/메모_관리비.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.04
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/메모_관리비.m4a",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 2.98
+        }
+      },
+      {
+        "q": "invoice for web hosting",
+        "expect": "test_data/documents/invoice_INV-4821.docx",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 10.2
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/메모_관리비.m4a",
+            "independent/distractor_18.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 9.91
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/메모_관리비.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 10.41
+        }
+      },
+      {
+        "q": "project kickoff meeting budget",
+        "expect": "test_data/documents/kickoff_meeting.html",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/kickoff_meeting.html",
+            "test_data/documents/tokyo_trip.md",
+            "independent/distractor_12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.9
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/kickoff_meeting.html",
+            "independent/distractor_12.m4a",
+            "test_data/documents/tokyo_trip.md"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.53
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/kickoff_meeting.html",
+            "independent/distractor_12.m4a",
+            "test_data/documents/tokyo_trip.md"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 8.59
+        }
+      },
+      {
+        "q": "parking fee payment",
+        "expect": "test_data/documents/주차_안내_cp949.txt",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/주차_안내_cp949.txt",
+            "independent/메모_자동차검사.m4a",
+            "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.1
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/주차_안내_cp949.txt",
+            "independent/distractor_11.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.5
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/주차_안내_cp949.txt",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.87
+        }
+      },
+      {
+        "q": "주차 요금 정산",
+        "expect": "test_data/documents/주차_안내_cp949.txt",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/주차_안내_cp949.txt",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 4.73
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/주차_안내_cp949.txt",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 4.61
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/주차_안내_cp949.txt",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 4.76
+        }
+      },
+      {
+        "q": "SERIAL-77Q3X",
+        "expect": "test_data/documents/sensor_dump.txt",
+        "tag": "stage2",
+        "base": {
+          "rank": 4,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 11.0,
+          "place_ok": null,
+          "z": null
+        },
+        "asr": {
+          "rank": 4,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 11.0,
+          "place_ok": null,
+          "z": null
+        },
+        "asr_own": {
+          "rank": 4,
+          "top": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "hits": 4,
+          "above": [
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_04.m4a",
+            "independent/메모_자동차검사.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 11.0,
+          "place_ok": null,
+          "z": null
+        }
+      },
+      {
+        "q": "엘리베이터 점검 안내문",
+        "expect": "test_data/documents/엘리베이터_점검_안내.pdf",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/엘리베이터_점검_안내.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page_image",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.07
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/엘리베이터_점검_안내.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page_image",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.03
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/documents/엘리베이터_점검_안내.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page_image",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.25
+        }
+      },
+      {
+        "q": "payment declined error",
+        "expect": "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "test_data/documents/invoice_INV-4821.docx",
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 9.2
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "test_data/documents/invoice_INV-4821.docx",
+            "independent/distractor_16.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.65
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "test_data/documents/invoice_INV-4821.docx",
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 9.3
+        }
+      },
+      {
+        "q": "a red stop sign",
+        "expect": "test_data/pictures/stop_sign.jpg",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/stop_sign.jpg",
+            "test_data/pictures/red_circle.webp",
+            "test_data/misc/img_a.png"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.99
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/stop_sign.jpg",
+            "test_data/pictures/red_circle.webp",
+            "independent/distractor_01.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.05
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/stop_sign.jpg",
+            "test_data/pictures/red_circle.webp"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 9.21
+        }
+      },
+      {
+        "q": "night sky with a crescent moon",
+        "expect": "test_data/pictures/night_sky.png",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/night_sky.png",
+            "independent/메모_생신선물.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.97
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/night_sky.png",
+            "independent/메모_관리비.m4a",
+            "test_data/media/clip_2026-08-30.mp4"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.29
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/night_sky.png",
+            "independent/메모_생신선물.m4a",
+            "independent/메모_관리비.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.67
+        }
+      },
+      {
+        "q": "sunset over the sea",
+        "expect": "test_data/pictures/sunset_beach.heic",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/sunset_beach.heic",
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.39
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/sunset_beach.heic",
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 5.63
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/sunset_beach.heic",
+            "test_data/media/clip_2026-08-30.mp4",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.76
+        }
+      },
+      {
+        "q": "바다 위 노을 사진",
+        "expect": "test_data/pictures/sunset_beach.heic",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/sunset_beach.heic"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.01
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/sunset_beach.heic",
+            "independent/distractor_09.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 2.68
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/sunset_beach.heic"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 2.93
+        }
+      },
+      {
+        "q": "bar chart",
+        "expect": "test_data/pictures/quarterly_chart.png",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/quarterly_chart.png",
+            "test_data/pictures/sunset_beach.heic",
+            "test_data/media/clip_2026-08-30.mp4"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.75
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/quarterly_chart.png",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.34
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/quarterly_chart.png"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.92
+        }
+      },
+      {
+        "q": "a red circle",
+        "expect": "test_data/pictures/red_circle.webp",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/red_circle.webp",
+            "test_data/pictures/stop_sign.jpg",
+            "test_data/misc/img_a.png"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.74
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/red_circle.webp",
+            "test_data/pictures/stop_sign.jpg",
+            "test_data/misc/img_a.png"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.63
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/red_circle.webp",
+            "test_data/pictures/stop_sign.jpg",
+            "test_data/misc/img_a.png"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.81
+        }
+      },
+      {
+        "q": "a green arrow pointing up",
+        "expect": "test_data/pictures/IMG_0042.jpg",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/IMG_0042.jpg",
+            "test_data/documents/long/facilities_manual.pdf",
+            "test_data/documents/lease_agreement.pdf"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 10.21
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/IMG_0042.jpg",
+            "independent/distractor_17.m4a",
+            "test_data/documents/long/facilities_manual.pdf"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 9.3
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/pictures/IMG_0042.jpg",
+            "test_data/documents/long/facilities_manual.pdf",
+            "test_data/documents/lease_agreement.pdf"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 10.47
+        }
+      },
+      {
+        "q": "python retry with exponential backoff",
+        "expect": "test_data/code_project/Screenshot 2026-10-02 retry.png",
+        "tag": "stage2",
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data/code_project/Screenshot 2026-10-02 retry.png",
+            "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "test_data/pictures/quarterly_chart.png"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.55
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data/code_project/Screenshot 2026-10-02 retry.png",
+            "independent/distractor_12.m4a",
+            "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.45
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data/code_project/Screenshot 2026-10-02 retry.png",
+            "test_data/pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+            "independent/distractor_12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 8.53
+        }
+      }
+    ],
+    "holdout_eval": [
+      {
+        "q": "biggest vegetable we ever grew",
+        "expect": "test_data_holdout/documents/long/the_patient_gardener.txt",
+        "tag": [
+          "long-doc",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 7.0,
+          "place_ok": null,
+          "z": 2.35
+        },
+        "asr": {
+          "rank": 2,
+          "top": [
+            "media_copy/home_show_ep12.m4a",
+            "test_data_holdout/documents/long/the_patient_gardener.txt",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [
+            "media_copy/home_show_ep12.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 7.0,
+          "place_ok": null,
+          "z": 2.37
+        },
+        "asr_own": {
+          "rank": 2,
+          "top": [
+            "media_copy/home_show_ep12.m4a",
+            "test_data_holdout/documents/long/the_patient_gardener.txt",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [
+            "media_copy/home_show_ep12.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 7.0,
+          "place_ok": null,
+          "z": 2.41
+        }
+      },
+      {
+        "q": "how to stop snails from eating the plants",
+        "expect": "test_data_holdout/documents/long/the_patient_gardener.txt",
+        "tag": [
+          "long-doc",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 22.0,
+          "place_ok": null,
+          "z": 2.79
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 22.0,
+          "place_ok": null,
+          "z": 2.89
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 22.0,
+          "place_ok": null,
+          "z": 2.89
+        }
+      },
+      {
+        "q": "what replaced the old greenhouse heater",
+        "expect": "test_data_holdout/documents/long/the_patient_gardener.txt",
+        "tag": [
+          "long-doc",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/the_patient_gardener.txt",
+            "test_data_holdout/documents/long/river_city_guide.pdf"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 5.15
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/the_patient_gardener.txt",
+            "independent/distractor_17.m4a",
+            "independent/distractor_14.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 5.07
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/the_patient_gardener.txt",
+            "independent/distractor_17.m4a",
+            "independent/distractor_14.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 5.07
+        }
+      },
+      {
+        "q": "how many stairs up the church tower",
+        "expect": "test_data_holdout/documents/long/river_city_guide.pdf",
+        "tag": [
+          "long-pdf",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 9.0,
+          "place_ok": null,
+          "z": 6.59
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 9.0,
+          "place_ok": null,
+          "z": 6.69
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 9.0,
+          "place_ok": null,
+          "z": 6.69
+        }
+      },
+      {
+        "q": "where do I collect something I forgot on the tram",
+        "expect": "test_data_holdout/documents/long/river_city_guide.pdf",
+        "tag": [
+          "long-pdf",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "page",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 3.16
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "independent/memo_passport.m4a",
+            "independent/distractor_11.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "page",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 2.94
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "page",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 3.18
+        }
+      },
+      {
+        "q": "balloon crash on a theatre roof",
+        "expect": "test_data_holdout/documents/long/river_city_guide.pdf",
+        "tag": [
+          "long-pdf",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "page",
+          "loc": 73.0,
+          "place_ok": null,
+          "z": 6.34
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "independent/distractor_01.m4a",
+            "independent/distractor_18.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "page",
+          "loc": 73.0,
+          "place_ok": null,
+          "z": 5.36
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "test_data_holdout/documents/long/the_patient_gardener.txt",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "page",
+          "loc": 73.0,
+          "place_ok": null,
+          "z": 6.15
+        }
+      },
+      {
+        "q": "회사에서 사무용품 비용을 얼마까지 지원해 주나",
+        "expect": "test_data_holdout/documents/long/IT_안내서.txt",
+        "tag": [
+          "long-doc",
+          "ko",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 24.0,
+          "place_ok": null,
+          "z": 2.09
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 24.0,
+          "place_ok": null,
+          "z": 2.11
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 24.0,
+          "place_ok": null,
+          "z": 2.21
+        }
+      },
+      {
+        "q": "해외에서 재택근무해도 되나요",
+        "expect": "test_data_holdout/documents/long/IT_안내서.txt",
+        "tag": [
+          "long-doc",
+          "ko",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 2.82
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 2.79
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 2.99
+        }
+      },
+      {
+        "q": "rules for working remotely from another country",
+        "expect": "test_data_holdout/documents/long/IT_안내서.txt",
+        "tag": [
+          "long-doc",
+          "cross-lingual",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 2.96
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/IT_안내서.txt",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 3.04
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/IT_안내서.txt",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 44.0,
+          "place_ok": null,
+          "z": 3.04
+        }
+      },
+      {
+        "q": "leaking faucet in the kitchen",
+        "expect": "test_data_holdout/documents/email_landlord.txt",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 2,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data_holdout/documents/email_landlord.txt"
+          ],
+          "hits": 2,
+          "above": [
+            "independent/memo_plumber.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 4.32
+        },
+        "asr": {
+          "rank": 2,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data_holdout/documents/email_landlord.txt",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 5,
+          "above": [
+            "independent/memo_plumber.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.87
+        },
+        "asr_own": {
+          "rank": 2,
+          "top": [
+            "independent/memo_plumber.m4a",
+            "test_data_holdout/documents/email_landlord.txt",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 3,
+          "above": [
+            "independent/memo_plumber.m4a"
+          ],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 4.11
+        }
+      },
+      {
+        "q": "swimming pool closed for cleaning",
+        "expect": "test_data_holdout/documents/gym_membership.md",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/gym_membership.md",
+            "test_data_holdout/documents/email_landlord.txt",
+            "independent/memo_plumber.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.81
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/gym_membership.md",
+            "independent/distractor_01.m4a",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.11
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/gym_membership.md",
+            "independent/distractor_01.m4a",
+            "test_data_holdout/documents/email_landlord.txt"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.54
+        }
+      },
+      {
+        "q": "a child's celebration with dinosaurs",
+        "expect": "test_data_holdout/documents/birthday_party.txt",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/birthday_party.txt",
+            "media_copy/clip_2026-08-30.mp4",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.37
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/birthday_party.txt",
+            "independent/distractor_02.m4a",
+            "media_copy/clip_2026-08-30.mp4"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.87
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/birthday_party.txt",
+            "media_copy/clip_2026-08-30.mp4",
+            "independent/distractor_02.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.57
+        }
+      },
+      {
+        "q": "when were the brake pads replaced",
+        "expect": "test_data_holdout/documents/car_service.txt",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/car_service.txt",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_14.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 7.18
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/car_service.txt",
+            "independent/distractor_14.m4a",
+            "independent/distractor_12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 5.69
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/car_service.txt",
+            "independent/메모_자동차검사.m4a",
+            "independent/distractor_14.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.61
+        }
+      },
+      {
+        "q": "where does the reading group meet",
+        "expect": "test_data_holdout/documents/독서모임.md",
+        "tag": [
+          "meaning",
+          "cross-lingual"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/독서모임.md",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 5.43
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/독서모임.md",
+            "test_data_holdout/documents/long/IT_안내서.txt",
+            "media_copy/home_show_ep12.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 5.34
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/독서모임.md",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 5.52
+        }
+      },
+      {
+        "q": "새 집으로 옮기기 전 준비",
+        "expect": "test_data_holdout/documents/이사_체크리스트.txt",
+        "tag": [
+          "meaning",
+          "ko"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/이사_체크리스트.txt",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.37
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/이사_체크리스트.txt",
+            "independent/distractor_07.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.14
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/이사_체크리스트.txt",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.47
+        }
+      },
+      {
+        "q": "the kid can't eat peanuts, where is her injection pen",
+        "expect": "test_data_holdout/documents/allergy_note.txt",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/allergy_note.txt",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 5.51
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/allergy_note.txt",
+            "independent/메모_처방전.m4a",
+            "independent/distractor_02.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 4.78
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/allergy_note.txt",
+            "test_data_holdout/documents/long/the_patient_gardener.txt",
+            "independent/메모_처방전.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 5.64
+        }
+      },
+      {
+        "q": "simple loaf baked in a cast iron pot",
+        "expect": "test_data_holdout/documents/recipe_bread.md",
+        "tag": [
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/recipe_bread.md",
+            "independent/distractor_13.m4a",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.23
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/recipe_bread.md",
+            "independent/distractor_13.m4a",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.2
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/recipe_bread.md",
+            "independent/distractor_13.m4a",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 6.26
+        }
+      },
+      {
+        "q": "an umbrella in the rain",
+        "expect": "test_data_holdout/pictures/IMG_3301.jpg",
+        "tag": [
+          "image",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3301.jpg",
+            "media_copy/clip_2026-08-30.mp4",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 5.77
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3301.jpg",
+            "media_copy/clip_2026-08-30.mp4",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 5.13
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3301.jpg",
+            "media_copy/clip_2026-08-30.mp4",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 5.53
+        }
+      },
+      {
+        "q": "a red bicycle",
+        "expect": "test_data_holdout/pictures/IMG_3302.jpg",
+        "tag": [
+          "image",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3302.jpg",
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "independent/distractor_14.m4a"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.82
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3302.jpg",
+            "independent/distractor_14.m4a",
+            "test_data_holdout/documents/long/river_city_guide.pdf"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 5.64
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3302.jpg",
+            "independent/distractor_14.m4a",
+            "test_data_holdout/documents/long/river_city_guide.pdf"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.66
+        }
+      },
+      {
+        "q": "a cup of hot coffee",
+        "expect": "test_data_holdout/pictures/IMG_3303.jpg",
+        "tag": [
+          "image",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3303.jpg",
+            "independent/distractor_01.m4a",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.13
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3303.jpg",
+            "independent/distractor_01.m4a",
+            "media_copy/home_show_ep12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.2
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3303.jpg",
+            "independent/distractor_01.m4a",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.17
+        }
+      },
+      {
+        "q": "a circle divided into colored slices",
+        "expect": "test_data_holdout/pictures/chart_final.png",
+        "tag": [
+          "image",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/chart_final.png",
+            "test_data_holdout/pictures/IMG_3305.jpg",
+            "media_copy/clip_2026-08-30.mp4"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.56
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/chart_final.png",
+            "test_data_holdout/pictures/IMG_3305.jpg",
+            "media_copy/clip_2026-08-30.mp4"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.3
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/chart_final.png",
+            "test_data_holdout/pictures/IMG_3305.jpg",
+            "media_copy/clip_2026-08-30.mp4"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.8
+        }
+      },
+      {
+        "q": "snowy mountain peaks",
+        "expect": "test_data_holdout/pictures/IMG_3304.jpg",
+        "tag": [
+          "image",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3304.jpg",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.53
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3304.jpg",
+            "independent/distractor_03.m4a",
+            "media_copy/home_show_ep12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 5.52
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3304.jpg",
+            "independent/distractor_03.m4a",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.34
+        }
+      },
+      {
+        "q": "a wall clock showing the time",
+        "expect": "test_data_holdout/pictures/IMG_3305.jpg",
+        "tag": [
+          "image",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3305.jpg",
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.25
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3305.jpg",
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "independent/distractor_12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 5.68
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3305.jpg",
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "independent/distractor_12.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 6.74
+        }
+      },
+      {
+        "q": "커피 한 잔",
+        "expect": "test_data_holdout/pictures/IMG_3303.jpg",
+        "tag": [
+          "image",
+          "ko",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3303.jpg",
+            "independent/distractor_01.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.81
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3303.jpg",
+            "independent/distractor_01.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.27
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/IMG_3303.jpg",
+            "independent/distractor_01.m4a"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.72
+        }
+      },
+      {
+        "q": "wrong password, account about to be locked",
+        "expect": "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+        "tag": [
+          "screenshot",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.05
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.18
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.22
+        }
+      },
+      {
+        "q": "the file finished downloading",
+        "expect": "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+        "tag": [
+          "screenshot",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.67
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.52
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+            "test_data_holdout/documents/long/IT_안내서.txt",
+            "test_data_holdout/documents/long/the_patient_gardener.txt"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.7
+        }
+      },
+      {
+        "q": "dentist appointment reminder",
+        "expect": "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+        "tag": [
+          "screenshot",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+            "independent/distractor_19.m4a",
+            "independent/memo_passport.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 4.57
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+            "media_copy/음성메모_0917.m4a",
+            "independent/distractor_19.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.79
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-11 083000.png",
+            "media_copy/음성메모_0917.m4a",
+            "independent/distractor_19.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 4.23
+        }
+      },
+      {
+        "q": "phone battery almost empty",
+        "expect": "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+        "tag": [
+          "screenshot",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "test_data_holdout/documents/allergy_note.txt",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 4.59
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "independent/distractor_11.m4a",
+            "independent/distractor_14.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 3.92
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "test_data_holdout/documents/allergy_note.txt",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-02 101500.png"
+          ],
+          "hits": 3,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 4.45
+        }
+      },
+      {
+        "q": "배터리가 거의 다 됐다는 알림",
+        "expect": "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+        "tag": [
+          "screenshot",
+          "ko",
+          "meaning"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-20 221000.png"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 2.37
+        },
+        "asr": {
+          "rank": 2,
+          "top": [
+            "independent/distractor_11.m4a",
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-20 221000.png"
+          ],
+          "hits": 2,
+          "above": [
+            "independent/distractor_11.m4a"
+          ],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 2.15
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-20 221000.png",
+            "test_data_holdout/documents/long/IT_안내서.txt"
+          ],
+          "hits": 2,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 2.32
+        }
+      },
+      {
+        "q": "holiday_photos.zip",
+        "expect": "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-05 160200.png",
+        "tag": [
+          "keyword",
+          "ocr"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.42
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.55
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/pictures/Screenshots/Screenshot 2026-09-05 160200.png"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "image",
+          "loc": null,
+          "place_ok": null,
+          "z": 7.72
+        }
+      },
+      {
+        "q": "EpiPen",
+        "expect": "test_data_holdout/documents/allergy_note.txt",
+        "tag": [
+          "keyword"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/allergy_note.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.89
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/allergy_note.txt",
+            "independent/distractor_17.m4a",
+            "independent/메모_처방전.m4a"
+          ],
+          "hits": 4,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 3.46
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/allergy_note.txt"
+          ],
+          "hits": 1,
+          "above": [],
+          "segment": "chunk",
+          "loc": 1.0,
+          "place_ok": null,
+          "z": 4.05
+        }
+      },
+      {
+        "q": "386 steps",
+        "expect": "test_data_holdout/documents/long/river_city_guide.pdf",
+        "tag": [
+          "keyword",
+          "long-pdf"
+        ],
+        "base": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_03.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "page",
+          "loc": 9.0,
+          "place_ok": null,
+          "z": 4.41
+        },
+        "asr": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "independent/distractor_17.m4a",
+            "independent/distractor_03.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "page",
+          "loc": 9.0,
+          "place_ok": null,
+          "z": 3.91
+        },
+        "asr_own": {
+          "rank": 1,
+          "top": [
+            "test_data_holdout/documents/long/river_city_guide.pdf",
+            "independent/메모_생신선물.m4a",
+            "independent/distractor_17.m4a"
+          ],
+          "hits": 5,
+          "above": [],
+          "segment": "page",
+          "loc": 9.0,
+          "place_ok": null,
+          "z": 4.32
+        }
+      }
+    ]
+  }
+}

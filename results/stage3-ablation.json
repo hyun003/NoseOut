@@ -1,0 +1,96 @@
+{
+  "baseline": {
+    "r1": "47/51",
+    "mrr": 0.941,
+    "place": "13/14",
+    "stage3_r1": 0.862,
+    "stage2_r1": 1.0,
+    "misses": [
+      "washing machine won't drain the water",
+      "notice that the lift will be out of service",
+      "차를 세워 둔 비용은 어디서 내나",
+      "where can I leave my bike"
+    ]
+  },
+  "A": {
+    "r1": "46/51",
+    "mrr": 0.931,
+    "place": "13/14",
+    "stage3_r1": 0.828,
+    "stage2_r1": 1.0,
+    "misses": [
+      "washing machine won't drain the water",
+      "notice that the lift will be out of service",
+      "차를 세워 둔 비용은 어디서 내나",
+      "when is the emergency power generator tested",
+      "where can I leave my bike"
+    ]
+  },
+  "B": {
+    "r1": "47/51",
+    "mrr": 0.938,
+    "place": "13/14",
+    "stage3_r1": 0.862,
+    "stage2_r1": 1.0,
+    "misses": [
+      "washing machine won't drain the water",
+      "notice that the lift will be out of service",
+      "차를 세워 둔 비용은 어디서 내나",
+      "where can I leave my bike"
+    ]
+  },
+  "C": {
+    "r1": "47/51",
+    "mrr": 0.941,
+    "place": "13/14",
+    "stage3_r1": 0.862,
+    "stage2_r1": 1.0,
+    "misses": [
+      "washing machine won't drain the water",
+      "notice that the lift will be out of service",
+      "차를 세워 둔 비용은 어디서 내나",
+      "where can I leave my bike"
+    ]
+  },
+  "A+B": {
+    "r1": "46/51",
+    "mrr": 0.928,
+    "place": "13/14",
+    "stage3_r1": 0.828,
+    "stage2_r1": 1.0,
+    "misses": [
+      "washing machine won't drain the water",
+      "notice that the lift will be out of service",
+      "차를 세워 둔 비용은 어디서 내나",
+      "when is the emergency power generator tested",
+      "where can I leave my bike"
+    ]
+  },
+  "B+C": {
+    "r1": "47/51",
+    "mrr": 0.938,
+    "place": "13/14",
+    "stage3_r1": 0.862,
+    "stage2_r1": 1.0,
+    "misses": [
+      "washing machine won't drain the water",
+      "notice that the lift will be out of service",
+      "차를 세워 둔 비용은 어디서 내나",
+      "where can I leave my bike"
+    ]
+  },
+  "A+B+C": {
+    "r1": "46/51",
+    "mrr": 0.928,
+    "place": "13/14",
+    "stage3_r1": 0.828,
+    "stage2_r1": 1.0,
+    "misses": [
+      "washing machine won't drain the water",
+      "notice that the lift will be out of service",
+      "차를 세워 둔 비용은 어디서 내나",
+      "when is the emergency power generator tested",
+      "where can I leave my bike"
+    ]
+  }
+}

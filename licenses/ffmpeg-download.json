@@ -1,0 +1,21 @@
+{
+  "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-09-30-13-08/ffmpeg-n8.1.3-9-g29e619e767-win64-lgpl-8.1.zip",
+  "sha256": "4a7642b2264c03e8a0ce8a3825b933ee5580656f45695a086fe7e294045ffc0a",
+  "bytes": 170611883,
+  "archive_root": "ffmpeg-n8.1.3-9-g29e619e767-win64-lgpl-8.1",
+  "build": "ffmpeg version n8.1.3-9-g29e619e767-20260930 Copyright (c) 2000-2026 the FFmpeg developers",
+  "license": "LGPL-3.0-or-later",
+  "upstream_license": "https://ffmpeg.org/legal.html",
+  "retention": "Upstream monthly build retained for two years; update URL and hashes before removal",
+  "binaries": [
+    {
+      "file": "ffmpeg.exe",
+      "sha256": "3d2e4806d8ab7194705718e5c5b39a86d7b42ba8396c7f5e36f2abe65b7145ab"
+    },
+    {
+      "file": "ffprobe.exe",
+      "sha256": "daed1aac5fc522d6b63759176fa728317e38c515cf21e6359bd832fa99743797"
+    }
+  ],
+  "included_in_public_exe": false
+}

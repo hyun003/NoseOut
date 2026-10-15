@@ -1,0 +1,18 @@
+{
+  "meeting_en": {
+    "culture": "en-US",
+    "text": "The team meeting has been moved to Friday afternoon at three o'clock."
+  },
+  "weather_en": {
+    "culture": "en-US",
+    "text": "Tomorrow it will rain heavily in the morning, so bring an umbrella."
+  },
+  "recipe_en": {
+    "culture": "en-US",
+    "text": "Boil the pasta for ten minutes, then add the tomato sauce and fresh basil."
+  },
+  "train_ko": {
+    "culture": "ko-KR",
+    "text": "서울역에서 부산으로 가는 기차는 오후 두 시에 출발합니다."
+  }
+}

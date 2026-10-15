@@ -1,0 +1,38 @@
+{
+  "base": "test_data",
+  "note": "3단계 평가 세트. 원본 DigUp evals/*.json 형식을 따른다. tag 'meaning'은 검색어의 어떤 단어도 파일·폴더 이름에 없는 질의. page는 PDF 쪽, contains는 가리킨 구간에 있어야 할 문장 조각.",
+  "queries": [
+    {"q": "moving a houseplant into a bigger container", "expect": "misc/note_a.md", "tag": ["meaning"]},
+    {"q": "what to do after a car crash", "expect": "misc/doc_17.docx", "tag": ["meaning"]},
+    {"q": "washing machine won't drain the water", "expect": "misc/memo_3.txt", "tag": ["meaning", "cross-lingual"]},
+    {"q": "세탁기 물이 안 빠질 때", "expect": "misc/memo_3.txt", "tag": ["meaning", "ko"]},
+    {"q": "a house with a red roof and a tree", "expect": "misc/img_a.png", "tag": ["meaning", "image"]},
+    {"q": "빨간 지붕 집 그림", "expect": "misc/img_a.png", "tag": ["meaning", "image", "ko"]},
+    {"q": "how much do I owe for the hosting services", "expect": "documents/invoice_INV-4821.docx", "tag": ["meaning"]},
+    {"q": "can I keep a dog or a cat in the apartment", "expect": "documents/lease_agreement.pdf", "page": 2, "tag": ["meaning"]},
+    {"q": "spicy stew with pork and tofu", "expect": "documents/김치찌개_레시피.txt", "tag": ["meaning", "cross-lingual"]},
+    {"q": "Japan itinerary with a temple visit", "expect": "documents/tokyo_trip.md", "tag": ["meaning"]},
+    {"q": "notice that the lift will be out of service", "expect": "documents/엘리베이터_점검_안내.pdf", "page": 1, "tag": ["meaning", "cross-lingual", "image"]},
+    {"q": "the online purchase failed because the bank refused the card", "expect": "pictures/Screenshots/Screenshot 2026-10-01 093000.png", "tag": ["meaning", "image"]},
+    {"q": "a red octagon telling drivers to halt", "expect": "pictures/stop_sign.jpg", "tag": ["meaning", "image"]},
+    {"q": "evening sun reflecting on the ocean", "expect": "pictures/sunset_beach.heic", "tag": ["meaning", "image"]},
+    {"q": "lots of tiny stars and a thin moon", "expect": "pictures/night_sky.png", "tag": ["meaning", "image"]},
+    {"q": "graph comparing values with vertical bars", "expect": "pictures/quarterly_chart.png", "tag": ["meaning", "image"]},
+    {"q": "차를 세워 둔 비용은 어디서 내나", "expect": "documents/주차_안내_cp949.txt", "tag": ["meaning", "ko"]},
+
+    {"q": "is flood damage covered by the warranty", "expect": "documents/long/facilities_manual.pdf", "page": 12, "tag": ["long-pdf", "meaning"]},
+    {"q": "how do I change the air purifier filter", "expect": "documents/long/facilities_manual.pdf", "page": 87, "tag": ["long-pdf", "meaning"]},
+    {"q": "what does error E42 mean", "expect": "documents/long/facilities_manual.pdf", "page": 115, "tag": ["long-pdf"]},
+    {"q": "the condensate pump is clogged", "expect": "documents/long/facilities_manual.pdf", "page": 115, "tag": ["long-pdf", "meaning"]},
+
+    {"q": "how many weeks of paid leave do new parents get", "expect": "documents/long/handbook.txt", "contains": "sixteen weeks", "tag": ["long-doc", "meaning"]},
+    {"q": "when is the emergency power generator tested", "expect": "documents/long/handbook.txt", "contains": "backup diesel generator", "tag": ["long-doc", "meaning"]},
+    {"q": "where can I leave my bike", "expect": "documents/long/handbook.txt", "contains": "locked cage", "tag": ["long-doc", "meaning"]},
+    {"q": "야간 근무 수당은 얼마인가", "expect": "documents/long/사내_규정.txt", "contains": "1.5배", "tag": ["long-doc", "ko"]},
+    {"q": "night shift pay rate", "expect": "documents/long/사내_규정.txt", "contains": "1.5배", "tag": ["long-doc", "meaning", "cross-lingual"]},
+
+    {"q": "INV-4821", "expect": "documents/invoice_INV-4821.docx", "tag": ["keyword"]},
+    {"q": "SERIAL-77Q3X", "expect": "documents/sensor_dump.txt", "tag": ["keyword"]},
+    {"q": "E42", "expect": "documents/long/facilities_manual.pdf", "page": 115, "tag": ["keyword", "long-pdf"]}
+  ]
+}

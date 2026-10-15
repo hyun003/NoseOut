@@ -1,0 +1,68 @@
+{
+  "review_date": "2026-10-15",
+  "upstream_notices": [
+    {
+      "file": "GNU/LGPL-3.0.txt",
+      "url": "https://raw.githubusercontent.com/qt/qtbase/v6.12.0/LICENSES/LGPL-3.0-only.txt",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    {
+      "file": "GNU/GPL-3.0.txt",
+      "url": "https://raw.githubusercontent.com/qt/qtbase/v6.12.0/LICENSES/GPL-3.0-only.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "file": "llama.cpp-b11461/LICENSE",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b11461/LICENSE",
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "file": "Apache-2.0.txt",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "WinRT-3.2.1/LICENSE",
+      "url": "https://raw.githubusercontent.com/pywinrt/pywinrt/v3.2.1/LICENSE",
+      "sha256": "6e898069e8b3c6d8d23dc70ac7067cc2b7c9db14c36df873026758db82c0891d"
+    },
+    {
+      "file": "Python-3.14.4/OpenSSL-3.0.19-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.0.19/LICENSE.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+    },
+    {
+      "file": "Python-3.14.4/libffi-LICENSE",
+      "url": "https://raw.githubusercontent.com/libffi/libffi/v3.4.4/LICENSE",
+      "sha256": "2c9c2acb9743e6b007b91350475308aee44691d96aa20eacef8e199988c8c388"
+    },
+    {
+      "file": "Python-3.14.4/zstd-LICENSE",
+      "url": "https://raw.githubusercontent.com/facebook/zstd/v1.5.7/LICENSE",
+      "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+    },
+    {
+      "file": "Python-3.14.4/zlib-ng-LICENSE",
+      "url": "https://raw.githubusercontent.com/zlib-ng/zlib-ng/2.2.4/LICENSE.md",
+      "sha256": "6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee"
+    },
+    {
+      "file": "Python-3.14.4/xz-COPYING",
+      "url": "https://raw.githubusercontent.com/tukaani-project/xz/v5.2.5/COPYING",
+      "sha256": "bcb02973ef6e87ea73d331b3a80df7748407f17efdb784b61b47e0e610d3bb5c"
+    },
+    {
+      "file": "EmbeddingGemma-2/GGUF-README.md",
+      "url": "https://huggingface.co/ggml-org/embeddinggemma-2-GGUF/raw/bfcd298762cc34d0357ece5ebdd31791a3a374d8/README.md",
+      "sha256": "1e3a35cf706dbcecce8f20ef756c2dd6c14dfbe9a5d93e35edc19e683fd0bc60"
+    },
+    {
+      "file": "EmbeddingGemma-2/GGUF-src_sha.txt",
+      "url": "https://huggingface.co/ggml-org/embeddinggemma-2-GGUF/raw/bfcd298762cc34d0357ece5ebdd31791a3a374d8/.src_sha",
+      "sha256": "b5c8528f025644e89d7dd701d228947be11bde5a313d8dd84ed124643683caa0"
+    }
+  ],
+  "cuda_provenance": "results/cuda-license-provenance-20261015.json",
+  "python_third_party_versions_source": "https://github.com/python/cpython/blob/v3.14.4/PCbuild/python.props",
+  "qt_sources": "corresponding-sources.json"
+}

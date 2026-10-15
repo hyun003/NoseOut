@@ -1,0 +1,270 @@
+{
+  "queries": 22,
+  "top1": 1.0,
+  "mrr": 1.0,
+  "found_in_top10": 22,
+  "rows": [
+    {
+      "query": "the clause about pets in the lease",
+      "expected": "documents/lease_agreement.pdf",
+      "rank": 1,
+      "top": [
+        "documents/lease_agreement.pdf"
+      ],
+      "page": 2.0,
+      "z": 6.93,
+      "keyword_rank": 1
+    },
+    {
+      "query": "when can the tenant end the lease early",
+      "expected": "documents/lease_agreement.pdf",
+      "rank": 1,
+      "top": [
+        "documents/lease_agreement.pdf"
+      ],
+      "page": 3.0,
+      "z": 6.96,
+      "keyword_rank": 1
+    },
+    {
+      "query": "Tokyo travel plans",
+      "expected": "documents/tokyo_trip.md",
+      "rank": 1,
+      "top": [
+        "documents/tokyo_trip.md",
+        "media/home_show_ep12.m4a",
+        "pictures/quarterly_chart.png"
+      ],
+      "page": 1.0,
+      "z": 8.93,
+      "keyword_rank": 1
+    },
+    {
+      "query": "Kamakura Great Buddha day trip",
+      "expected": "documents/tokyo_trip.md",
+      "rank": 1,
+      "top": [
+        "documents/tokyo_trip.md",
+        "media/home_show_ep12.m4a",
+        "media/clip_2026-08-30.mp4"
+      ],
+      "page": 1.0,
+      "z": 8.33,
+      "keyword_rank": 1
+    },
+    {
+      "query": "김치찌개 만드는 법",
+      "expected": "documents/김치찌개_레시피.txt",
+      "rank": 1,
+      "top": [
+        "documents/김치찌개_레시피.txt"
+      ],
+      "page": 1.0,
+      "z": 7.91,
+      "keyword_rank": 1
+    },
+    {
+      "query": "pork and kimchi stew recipe",
+      "expected": "documents/김치찌개_레시피.txt",
+      "rank": 1,
+      "top": [
+        "documents/김치찌개_레시피.txt"
+      ],
+      "page": 1.0,
+      "z": 8.5,
+      "keyword_rank": null
+    },
+    {
+      "query": "INV-4821",
+      "expected": "documents/invoice_INV-4821.docx",
+      "rank": 1,
+      "top": [
+        "documents/invoice_INV-4821.docx"
+      ],
+      "page": 1.0,
+      "z": 2.89,
+      "keyword_rank": 1
+    },
+    {
+      "query": "invoice for web hosting",
+      "expected": "documents/invoice_INV-4821.docx",
+      "rank": 1,
+      "top": [
+        "documents/invoice_INV-4821.docx"
+      ],
+      "page": 1.0,
+      "z": 9.96,
+      "keyword_rank": 1
+    },
+    {
+      "query": "project kickoff meeting budget",
+      "expected": "documents/kickoff_meeting.html",
+      "rank": 1,
+      "top": [
+        "documents/kickoff_meeting.html",
+        "documents/tokyo_trip.md",
+        "documents/invoice_INV-4821.docx"
+      ],
+      "page": 1.0,
+      "z": 9.07,
+      "keyword_rank": 1
+    },
+    {
+      "query": "parking fee payment",
+      "expected": "documents/주차_안내_cp949.txt",
+      "rank": 1,
+      "top": [
+        "documents/주차_안내_cp949.txt",
+        "documents/invoice_INV-4821.docx",
+        "pictures/Screenshots/Screenshot 2026-10-01 093000.png"
+      ],
+      "page": 1.0,
+      "z": 7.12,
+      "keyword_rank": null
+    },
+    {
+      "query": "주차 요금 정산",
+      "expected": "documents/주차_안내_cp949.txt",
+      "rank": 1,
+      "top": [
+        "documents/주차_안내_cp949.txt"
+      ],
+      "page": 1.0,
+      "z": 4.85,
+      "keyword_rank": 1
+    },
+    {
+      "query": "SERIAL-77Q3X",
+      "expected": "documents/sensor_dump.txt",
+      "rank": 1,
+      "top": [
+        "documents/sensor_dump.txt"
+      ],
+      "page": 11.0,
+      "z": null,
+      "keyword_rank": 1
+    },
+    {
+      "query": "엘리베이터 점검 안내문",
+      "expected": "documents/엘리베이터_점검_안내.pdf",
+      "rank": 1,
+      "top": [
+        "documents/엘리베이터_점검_안내.pdf"
+      ],
+      "page": 1.0,
+      "z": 2.7,
+      "keyword_rank": 1
+    },
+    {
+      "query": "payment declined error",
+      "expected": "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+      "rank": 1,
+      "top": [
+        "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+        "documents/invoice_INV-4821.docx",
+        "documents/long/facilities_manual.pdf"
+      ],
+      "page": null,
+      "z": 8.96,
+      "keyword_rank": 1
+    },
+    {
+      "query": "a red stop sign",
+      "expected": "pictures/stop_sign.jpg",
+      "rank": 1,
+      "top": [
+        "pictures/stop_sign.jpg",
+        "pictures/red_circle.webp"
+      ],
+      "page": null,
+      "z": 8.53,
+      "keyword_rank": 1
+    },
+    {
+      "query": "night sky with a crescent moon",
+      "expected": "pictures/night_sky.png",
+      "rank": 1,
+      "top": [
+        "pictures/night_sky.png"
+      ],
+      "page": null,
+      "z": 9.49,
+      "keyword_rank": 1
+    },
+    {
+      "query": "sunset over the sea",
+      "expected": "pictures/sunset_beach.heic",
+      "rank": 1,
+      "top": [
+        "pictures/sunset_beach.heic",
+        "media/clip_2026-08-30.mp4"
+      ],
+      "page": null,
+      "z": 7.87,
+      "keyword_rank": 1
+    },
+    {
+      "query": "바다 위 노을 사진",
+      "expected": "pictures/sunset_beach.heic",
+      "rank": 1,
+      "top": [
+        "pictures/sunset_beach.heic",
+        "media/clip_2026-08-30.mp4"
+      ],
+      "page": null,
+      "z": 3.47,
+      "keyword_rank": null
+    },
+    {
+      "query": "bar chart",
+      "expected": "pictures/quarterly_chart.png",
+      "rank": 1,
+      "top": [
+        "pictures/quarterly_chart.png"
+      ],
+      "page": null,
+      "z": 7.25,
+      "keyword_rank": 1
+    },
+    {
+      "query": "a red circle",
+      "expected": "pictures/red_circle.webp",
+      "rank": 1,
+      "top": [
+        "pictures/red_circle.webp",
+        "pictures/stop_sign.jpg",
+        "misc/img_a.png"
+      ],
+      "page": null,
+      "z": 7.45,
+      "keyword_rank": 1
+    },
+    {
+      "query": "a green arrow pointing up",
+      "expected": "pictures/IMG_0042.jpg",
+      "rank": 1,
+      "top": [
+        "pictures/IMG_0042.jpg",
+        "documents/long/facilities_manual.pdf",
+        "documents/lease_agreement.pdf"
+      ],
+      "page": null,
+      "z": 9.94,
+      "keyword_rank": null
+    },
+    {
+      "query": "python retry with exponential backoff",
+      "expected": "code_project/Screenshot 2026-10-02 retry.png",
+      "rank": 1,
+      "top": [
+        "code_project/Screenshot 2026-10-02 retry.png",
+        "pictures/Screenshots/Screenshot 2026-10-01 093000.png",
+        "pictures/quarterly_chart.png"
+      ],
+      "page": null,
+      "z": 8.31,
+      "keyword_rank": 1
+    }
+  ],
+  "meaning_alone_passes_gate": 21
+}

@@ -1,0 +1,101 @@
+{
+  "size": 100000,
+  "changes": 1000,
+  "volume_usn": true,
+  "volume_reason": "",
+  "note": "합성 0바이트 파일, OS 파일 캐시를 비우지 않음(관리자 권한 필요). 파일 이름·경로는 기록하지 않음.",
+  "walk": {
+    "first_registration": {
+      "seconds": 4.502,
+      "cpu_seconds": 6.25,
+      "files": 100000,
+      "folders": 2550,
+      "search_during_registration": {
+        "n": 221,
+        "p50_ms": 9.67,
+        "p95_ms": 21.24,
+        "max_ms": 23.93
+      },
+      "memory_before": {
+        "working_set_mb": 35.9,
+        "peak_working_set_mb": 36.1,
+        "private_mb": 505.6
+      },
+      "memory_after": {
+        "working_set_mb": 39.9,
+        "peak_working_set_mb": 42.1,
+        "private_mb": 508.3
+      },
+      "db_bytes": 87985864
+    },
+    "restart_unchanged": {
+      "seconds": 1.004,
+      "cpu_seconds": 1.0
+    },
+    "restart_after_changes": {
+      "seconds": 1.038,
+      "cpu_seconds": 1.031
+    }
+  },
+  "usn": {
+    "first_registration": {
+      "seconds": 4.073,
+      "cpu_seconds": 5.812,
+      "files": 101000,
+      "folders": 2551,
+      "search_during_registration": {
+        "n": 194,
+        "p50_ms": 10.61,
+        "p95_ms": 21.83,
+        "max_ms": 27.02
+      },
+      "memory_before": {
+        "working_set_mb": 38.4,
+        "peak_working_set_mb": 42.1,
+        "private_mb": 506.6
+      },
+      "memory_after": {
+        "working_set_mb": 41.7,
+        "peak_working_set_mb": 43.8,
+        "private_mb": 510.7
+      },
+      "db_bytes": 86388360
+    },
+    "restart_unchanged": {
+      "seconds": 0.002,
+      "cpu_seconds": 0.0
+    },
+    "restart_after_changes": {
+      "seconds": 0.044,
+      "cpu_seconds": 0.047
+    },
+    "files_after_changes": 102000,
+    "live_change_visible_ms": 27.3,
+    "idle_poll": {
+      "n": 20,
+      "p50_ms": 0.04,
+      "p95_ms": 0.13,
+      "max_ms": 0.13
+    }
+  },
+  "mft_records_processing": {
+    "seconds": 2.975,
+    "cpu_seconds": 2.906,
+    "records": 104561,
+    "files": 102001,
+    "folders": 2552,
+    "memory_before": {
+      "working_set_mb": 97.8,
+      "peak_working_set_mb": 97.8,
+      "private_mb": 566.0
+    },
+    "memory_after": {
+      "working_set_mb": 103.7,
+      "peak_working_set_mb": 105.4,
+      "private_mb": 572.4
+    },
+    "db_bytes": 66615304,
+    "note": "관리자 도우미의 실제 MFT 열거·파이프 전송 시간은 포함하지 않음(UAC 필요, 미측정)"
+  },
+  "measured_at": "2026-10-15 01:19"
+}

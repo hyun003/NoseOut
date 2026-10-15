@@ -1,0 +1,129 @@
+{
+  "test": "NoseOut 0.1.0 Windows Sandbox (no NVIDIA driver, no VC++)",
+  "run": "run-20261015-192908",
+  "started": "2026-10-15T19:29:08+09:00",
+  "finished": "2026-10-15T19:38:29+09:00",
+  "privacy": "샌드박스 계정·컴퓨터 이름, 절대 경로, 포트, PID는 뺐다. 원본 result.json은 개발 PC의 outputs/(git 제외)에만 있다.",
+  "package": {
+    "file": "NoseOut-0.1.0-win-x64.zip",
+    "source_commit": "827e83144e033a55276f785aac93633379f562bf",
+    "sha256": "ebeb147b4a33da15d441abac8fd44872c1563bf9977117d70c5ed9f06a3f1c20",
+    "sha256_matches_artifacts": true,
+    "files": 650
+  },
+  "verdict": {
+    "recorded": "INVALID",
+    "recorded_reason": "이름이 nv*.dll인 파일 2개(nvcuda.dll 0개, HostDriverStore 안 0개) 때문에 a_environment가 INVALID",
+    "rule_change": "a_environment는 파일 버전 정보의 회사명(CompanyName)에 NVIDIA가 든 nv*.dll만 센다. 나머지 nv*.dll은 회사명과 함께 기록만 한다.",
+    "recalculated": "PASS",
+    "recalculation": {
+      "nv_dll_count": 2,
+      "nvidia_dll_count": 0,
+      "other_nv_dlls": [
+        "C:\\Windows\\WinSxS\\amd64_microsoft-windows-n..irtualization-agent_31bf3856ad364e35_10.0.26100.8115_none_e423a9e45bca0edb\\NvAgent.dll | Microsoft Corporation (Network Virtualization Agent, 10.0.26100.8115)",
+        "C:\\Windows\\WinSxS\\amd64_microsoft-windows-n..irtualization-agent_31bf3856ad364e35_10.0.26100.8115_none_e423a9e45bca0edb\\r\\NvAgent.dll | (회사명 없음: WinSxS 역방향 차분 파일, 버전 리소스 없음)"
+      ],
+      "how": "샌드박스는 닫혀 파일을 다시 읽을 수 없다. 같은 구성요소 이름·버전(10.0.26100.8115)의 WinSxS 폴더가 개발 PC에도 있어 그 파일의 버전 정보를 읽었다. 고친 run-test.ps1의 판정 블록을 이 폴더에 그대로 실행해 NVIDIA 0개를 확인했다.",
+      "steps_after": {
+        "a_environment": "PASS",
+        "b_zip": "PASS",
+        "c_first_run_without_runtime": "PASS",
+        "d_vc_install": "PASS",
+        "c2_first_run_with_runtime": "PASS",
+        "e_llama_server_cpu": "PASS",
+        "f_app_start": "PASS",
+        "f2_ai_index": "PASS (참고용, 아래 f2 판독 참고)"
+      }
+    }
+  },
+  "environment": {
+    "os": "Microsoft Windows 11 Enterprise 10.0.26100",
+    "cpu": "AMD Ryzen 7 7800X3D 8-Core Processor (호스트 CPU, 샌드박스 논리 프로세서 16개)",
+    "memory_gb": 8,
+    "video": ["Microsoft Remote Display Adapter (driver 10.0.26100.9711)"],
+    "vgpu": "Disable",
+    "networking": "Disable",
+    "is_admin": true,
+    "nvcuda_dll_in_system32": false,
+    "vc_runtime_absent": true,
+    "nvidia_scan": {
+      "roots": ["C:\\"],
+      "seconds": 214.1,
+      "directories_scanned": 80274,
+      "directories_denied": 43,
+      "host_driver_store_exists": false
+    }
+  },
+  "steps": {
+    "b_zip": {
+      "status": "PASS",
+      "extract_seconds": 13.9,
+      "zone_identifier_on_exe": "ZoneId=3",
+      "missing": [],
+      "bundled_vc_dlls": [],
+      "runtime_alias_absent_before_start": true
+    },
+    "c_first_run_without_runtime": {
+      "status": "PASS",
+      "exit_code": 1,
+      "has_official_url": true,
+      "has_korean_notice": true,
+      "would_start_app": false
+    },
+    "d_vc_install": {
+      "status": "PASS",
+      "installer": "vc_redist.x64.exe 14.44.35211 (Authenticode Valid, Microsoft Corporation)",
+      "exit_code": 0,
+      "seconds": 243.1,
+      "runtime_version_after": "14.44.35211.0 (DLL 5개 모두)"
+    },
+    "c2_first_run_with_runtime": {
+      "status": "PASS",
+      "exit_code": 0,
+      "would_start_app": true
+    },
+    "e_llama_server_cpu": {
+      "status": "PASS",
+      "arguments": "--embeddings --pooling mean -c 4096 -b 4096 -ub 4096 -np 1 -ngl 999 -t 8 --no-webui --mmproj <mmproj> --image-min-tokens 1 --image-max-tokens 1120",
+      "device_lines": ["ggml_cuda_init: failed to initialize CUDA: (null)"],
+      "cuda_device_found": false,
+      "start_seconds": 5.8,
+      "text_seconds": 0.06,
+      "image_seconds": 2.83,
+      "text_dimensions": 768,
+      "image_dimensions": 768,
+      "text_image_cosine": 0.7028,
+      "process_cpu_seconds": 29
+    },
+    "f_app_start": {
+      "status": "PASS",
+      "alive_after_60s": true,
+      "alias_in_app_folder": true,
+      "startup_error_log": null,
+      "search_engine_arguments": "--embeddings --pooling mean -c 4096 -b 4096 -ub 4096 -np 1 -ngl 999 -t 8 --no-webui (mmproj 없음: 검색 서비스는 텍스트 전용)",
+      "search_engine_working_set_mb": 437
+    },
+    "f2_ai_index": {
+      "status": "PASS",
+      "seconds_until_all_found": 15,
+      "samples_in_index": ["sandbox_tokyo_trip.md", "sandbox_kimchi_recipe.txt", "sandbox_night_sky.png", "sandbox_lease_agreement.pdf"],
+      "window_status": "이름 등록: 완료 (4개) · 내용 분석: 완료 · 검색 가능 4개 · 남은 분석 0개",
+      "judgement_limit": "f2는 index.sqlite(+wal) 바이트에 파일 이름이 있는지만 본다. 이름만 등록돼도 통과하므로 그림 임베딩 여부는 이 판정으로 알 수 없다. 샌드박스의 색인 DB는 샌드박스와 함께 사라져 세그먼트를 직접 확인하지 못했다.",
+      "observed_engine": "15초 시점에 보인 llama-server는 검색 서비스(SearchService)의 텍스트 전용 엔진이다(mmproj 없음, CPU 3초). 색인 엔진(IndexService)은 mmproj를 포함해 분석할 때만 띄우고 작업이 끝나면 끈다. 이 시험은 15초마다 보므로 그 사이에 뜨고 꺼진 색인 엔진은 기록되지 않았다.",
+      "window_evidence": "창의 '검색 가능 4개 · 남은 분석 0개'는 색인에서 분석 완료(state done/partial)로 센 값이다. 그림 파일은 Indexer._image가 embed_image로 벡터를 받고 image 세그먼트를 넣은 뒤에만 done이 되므로(처음 색인에는 다른 done 경로가 없음), 그림 임베딩이 됐다는 간접 증거다."
+    }
+  },
+  "f2_reproduction_on_dev_pc": {
+    "date": "2026-10-16",
+    "how": "같은 시험 파일 4개를 .tmp/에 복사하고 CUDA_VISIBLE_DEVICES=-1(GPU 숨김)로 개발 소스 CLI 'python -m noseout index'를 실행했다. 앱의 IndexService와 같은 기본 ServerConfig(mmproj 포함)를 쓴다.",
+    "engine_log": ["ggml_cuda_init: failed to initialize CUDA: no CUDA-capable device is detected", "srv load_model: loaded multimodal model (mmproj-embeddinggemma-2-Q8_0.gguf)"],
+    "seconds": 4.1,
+    "segments": {
+      "sandbox_night_sky.png": [{"kind": "name", "modality": "none"}, {"kind": "image", "modality": "image", "vector_bytes": 1536}],
+      "sandbox_tokyo_trip.md": [{"kind": "name", "modality": "none"}, {"kind": "chunk", "modality": "text", "vector_bytes": 1536}],
+      "sandbox_kimchi_recipe.txt": [{"kind": "name", "modality": "none"}, {"kind": "chunk", "modality": "text", "vector_bytes": 1536}],
+      "sandbox_lease_agreement.pdf": [{"kind": "name", "modality": "none"}, {"kind": "page", "modality": "text", "vector_bytes": 1536, "pages": 3}]
+    },
+    "limit": "개발 PC 재현이며 샌드박스의 색인 DB 자체를 본 것은 아니다. 다음 샌드박스 시험에서 f2가 세그먼트 종류를 직접 기록하게 하면 확정할 수 있다."
+  }
+}

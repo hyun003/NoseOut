@@ -1,0 +1,15 @@
+{
+  "old_head": "1b281717c4d431f0cac9bfee3d804689e6643f66",
+  "new_head": "875302db73a05aab491a3be7b5b545e3cf4506a8",
+  "commits": 13,
+  "redacted_path_occurrences": 3,
+  "removed_tts_file_changes": 4,
+  "backup": "outputs/history-backup-20261015",
+  "state": "existing repository history cleaned",
+  "private_path_matches": 0,
+  "credential_pattern_matches": 0,
+  "tts_tracked_files": 0,
+  "working_file_hash_mismatches": 0,
+  "new_commit_created": false,
+  "pushed": false
+}

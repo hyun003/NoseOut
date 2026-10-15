@@ -1,0 +1,12 @@
+{
+  "mode": "cpu",
+  "load_seconds": 1.59,
+  "vram_delta_mib": null,
+  "query_ms": 24.8,
+  "docs_per_second_~250tok": 25.5,
+  "image_70_ms": 476.4,
+  "image_280_ms": 2240.8,
+  "image_1120_ms": 14283.5,
+  "audio_4s_ms": 218.2,
+  "photo_cos_70_vs_1120": 0.9577
+}

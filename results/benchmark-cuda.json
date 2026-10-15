@@ -1,0 +1,13 @@
+{
+  "mode": "cuda",
+  "load_seconds": 1.83,
+  "vram_delta_mib": 1735,
+  "query_ms": 14.4,
+  "docs_per_second_~250tok": 136.1,
+  "image_70_ms": 51.1,
+  "image_280_ms": 122.6,
+  "image_1120_ms": 500.9,
+  "audio_4s_ms": 28.2,
+  "vram_peak_mib_after_work": 2167,
+  "photo_cos_70_vs_1120": 0.9559
+}

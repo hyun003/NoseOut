@@ -1,0 +1,8 @@
+{
+  "runtime_setup_exit": 0,
+  "isolated_bundled_modules_exit": 0,
+  "isolated_output": "{\"imports\": true, \"qt_event_loop\": true, \"heic_absent\": true, \"numpy_version\": \"2.5.4\"}\n",
+  "exe_invalid_helper_exit": 2,
+  "gui_platform": "offscreen test, not interactive app run",
+  "private_bundle_modified": false
+}

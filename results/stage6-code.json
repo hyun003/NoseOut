@@ -1,0 +1,168 @@
+{
+  "measured": "2026-10-14 02:15",
+  "files": 10,
+  "indexed": 10,
+  "index_seconds": 0.36,
+  "meaning_queries": 11,
+  "meaning_r1": 11,
+  "meaning_r3": 11,
+  "name_queries": 3,
+  "name_r1": 3,
+  "name_line_correct": 3,
+  "rows": [
+    {
+      "query": "retry a payment with exponential backoff",
+      "expected": "shop/payments/client.py",
+      "rank": 1,
+      "top": [
+        "shop/payments/client.py"
+      ],
+      "line_expected": null,
+      "line": null,
+      "location": "Python"
+    },
+    {
+      "query": "parse a comma separated line with quoted fields",
+      "expected": "shop/web/csv.ts",
+      "rank": 1,
+      "top": [
+        "shop/web/csv.ts"
+      ],
+      "line_expected": null,
+      "line": 1,
+      "location": "TypeScript"
+    },
+    {
+      "query": "sign a session id with HMAC SHA-256",
+      "expected": "shop/auth/tokens.go",
+      "rank": 1,
+      "top": [
+        "shop/auth/tokens.go"
+      ],
+      "line_expected": null,
+      "line": 10,
+      "location": "Go"
+    },
+    {
+      "query": "evict the oldest entry when the cache is full",
+      "expected": "shop/cache/lru.rs",
+      "rank": 1,
+      "top": [
+        "shop/cache/lru.rs"
+      ],
+      "line_expected": null,
+      "line": null,
+      "location": "Rust"
+    },
+    {
+      "query": "make a smaller preview image keeping proportions",
+      "expected": "shop/images/resize.py",
+      "rank": 1,
+      "top": [
+        "shop/images/resize.py"
+      ],
+      "line_expected": null,
+      "line": 4,
+      "location": "Python"
+    },
+    {
+      "query": "database table for customer orders",
+      "expected": "shop/db/migrate.sql",
+      "rank": 1,
+      "top": [
+        "shop/db/migrate.sql"
+      ],
+      "line_expected": null,
+      "line": 1,
+      "location": "SQL"
+    },
+    {
+      "query": "zip the data folder and keep the last seven archives",
+      "expected": "shop/scripts/backup.ps1",
+      "rank": 1,
+      "top": [
+        "shop/scripts/backup.ps1"
+      ],
+      "line_expected": null,
+      "line": 3,
+      "location": "PowerShell"
+    },
+    {
+      "query": "email text listing the items bought",
+      "expected": "shop/mail/templates.js",
+      "rank": 1,
+      "top": [
+        "shop/mail/templates.js"
+      ],
+      "line_expected": null,
+      "line": 2,
+      "location": "JavaScript"
+    },
+    {
+      "query": "smooth a time series with a sliding window mean",
+      "expected": "shop/stats/mean.py",
+      "rank": 1,
+      "top": [
+        "shop/stats/mean.py"
+      ],
+      "line_expected": null,
+      "line": 1,
+      "location": "Python"
+    },
+    {
+      "query": "결제가 실패하면 점점 오래 기다렸다가 다시 시도",
+      "expected": "shop/payments/client.py",
+      "rank": 1,
+      "top": [
+        "shop/payments/client.py"
+      ],
+      "line_expected": null,
+      "line": null,
+      "location": "Python"
+    },
+    {
+      "query": "오래된 백업 압축 파일 지우기",
+      "expected": "shop/scripts/backup.ps1",
+      "rank": 1,
+      "top": [
+        "shop/scripts/backup.ps1"
+      ],
+      "line_expected": null,
+      "line": null,
+      "location": "PowerShell"
+    },
+    {
+      "query": "make_thumbnail",
+      "expected": "shop/images/resize.py",
+      "rank": 1,
+      "top": [
+        "shop/images/resize.py"
+      ],
+      "line_expected": 4,
+      "line": 4,
+      "location": "Python"
+    },
+    {
+      "query": "moving_average",
+      "expected": "shop/stats/mean.py",
+      "rank": 1,
+      "top": [
+        "shop/stats/mean.py"
+      ],
+      "line_expected": 1,
+      "line": 1,
+      "location": "Python"
+    },
+    {
+      "query": "renderReceipt",
+      "expected": "shop/mail/templates.js",
+      "rank": 1,
+      "top": [
+        "shop/mail/templates.js"
+      ],
+      "line_expected": 1,
+      "line": 1,
+      "location": "JavaScript"
+    }
+  ]
+}

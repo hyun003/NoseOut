@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-13",
+  "baseline_commit": "460be0e",
+  "committed": false,
+  "pytest": {
+    "command": ".venv/Scripts/python -m pytest -q --basetemp=.tmp/pytest-s5-owned-final",
+    "passed": 204,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 47.70,
+    "exit_code": 0,
+    "reference_vectors": "passed"
+  },
+  "unchanged": ["setsScale ON", "검색 점수 기준", "임베딩 입력", "모델", "llama.cpp 버전"],
+  "ui": {
+    "inputs": ["test_data", "test_data/documents"],
+    "settings_and_indexes": [".tmp/ui-codex-home", ".tmp/ui-codex-fixed", ".tmp/ui-codex-final", ".tmp/ui-codex-stop"],
+    "index": {"files": 28, "done": 26, "skipped": 2, "failed": 0},
+    "global_hotkey": "다른 앱 앞에서 호출 및 Esc 숨김 후 재호출 확인",
+    "reveal": "Ctrl+Enter와 버튼으로 합성 영상 파일 선택 확인",
+    "dark_mode": "상태·결과·완료 문구 가독성 확인",
+    "video": {"file": "test_data/media/clip_2026-08-30.mp4", "displayed_location": "0:09", "player_argument": "/seek=00:00:09", "exact_playhead_verified": false},
+    "stop_resume": {"test_only_delay_seconds": 30, "files": 11, "done_before_stop": 1, "done_after_resume": 10, "failed": 0},
+    "shared_menu_quit": {"directly_clicked": true, "app_exit_code": 0, "owned_servers_remaining": 0},
+    "tray_shell_click_verified": false,
+    "initial_foreground_guaranteed": false
+  },
+  "engine_cleanup": {
+    "before_fix_orphan_reproduced": true,
+    "job_kill_on_close": true,
+    "parent_abrupt_exit_test": "passed",
+    "parent_forced_exit_test": "passed",
+    "unrelated_engine_survival_test": "passed"
+  },
+  "scope": {"existing_index_opened": false, "user_files_used": false, "new_packages_installed": false, "U1_work": false, "stage6_work": false}
+}
