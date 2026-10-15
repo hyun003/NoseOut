@@ -1,5 +1,7 @@
 # NoseOut
 
+**[⬇ NoseOut 0.1.0 내려받기 (Windows x64)](https://github.com/hyun003/NoseOut/releases/latest)** — `NoseOut-0.1.0-win-x64.zip`을 받아 압축을 풀고 `처음 실행.bat`을 실행하세요.
+
 Windows 11용 로컬 파일 검색 프로그램입니다. 파일 이름·경로는 AI 분석과 별도로 빠르게 검색하고,
 문서·사진·PDF·음성·영상은 선택한 범위에서 분석해 내용으로 찾습니다.
 
