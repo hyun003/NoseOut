@@ -133,8 +133,7 @@ Windows 로그인 시 실행은 `NoseOut.exe`로 실행했을 때만 켤 수 있
 생성하며, 출력 재배포 허가까지 보장하지 않습니다. 원본 MIT 합성 기준 자료는 고지와 함께 포함합니다.
 모델·엔진이 없으면 관련 테스트는 건너뛸 수 있습니다. 간헐적으로 실패하던 동시 색인 시험(이름 검색 3번이 끝나기 전에
 AI 색인이 먼저 끝나던 고정 대기)은 2026-10-15에 테스트가 직접 여닫는 문(threading.Event)으로 바꿨습니다.
-공개 준비 수정 후 개발 환경 전체 실행은 429개 통과였습니다(최신 수치는 아래 공개 안내 문서).
-자세한 결과와 검증 범위는 [보완 기록](docs/history-and-license-cleanup-20261015.md)에 있습니다.
+개발 환경 전체 실행은 439개 통과였습니다(2026-10-16).
 
 ## 알려진 한계
 
@@ -157,7 +156,6 @@ Gemma is a trademark of Google LLC. NoseOut is not affiliated with or endorsed b
 EmbeddingGemma 2 모델의 사용과 재배포는 모델 카드가 안내하는
 [Gemma Prohibited Use Policy](https://ai.google.dev/gemma/prohibited_use_policy)를 따릅니다.
 
-[공개 준비 점검](docs/publication-review.md), [제3자 고지](THIRD_PARTY_NOTICES.md),
-[구조](docs/architecture.md)를 참고하세요.
+라이선스 이행(고지, 대응 소스, 재배포 조건)은 [공개용 배포 조건](docs/binary-distribution.md)과
+[제3자 고지](THIRD_PARTY_NOTICES.md)를 참고하세요. 구조는 [구조](docs/architecture.md)에 있습니다.
 Git 기록과 시험 음성을 제외한 소스 묶음은 `scripts/export_source.py`로 만들 수 있습니다.
-GitHub에 올릴 범위와 공개 전 절차는 [GitHub 공개 안내](docs/github-publication.md)를 참고하세요.

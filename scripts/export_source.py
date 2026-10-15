@@ -14,8 +14,11 @@ ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_ROOTS = {"src", "tests", "scripts", "docs", "evals", "results", "licenses"}
 ALLOWED_FILES = {".gitignore", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md",
                  "pytest.ini", "requirements.txt", "requirements-build.txt"}
-# 개발 일지·작업 규칙(PC 사양, 내부 진행 기록)은 저장소에만 두고 공개 스냅샷에는 넣지 않는다.
-INTERNAL_FILES = {"AGENTS.md", "docs/progress.md"}
+# 개발 일지·작업 규칙(PC 사양, 내부 진행 기록)과 공개 준비 과정의 내부 검토 문서는 저장소에만 두고
+# 공개 스냅샷에는 넣지 않는다. 라이선스 이행 설명은 docs/binary-distribution.md와 THIRD_PARTY_NOTICES.md가 맡는다.
+INTERNAL_FILES = {"AGENTS.md", "docs/progress.md",
+                  "docs/exe-license-review-20261015.md", "docs/history-and-license-cleanup-20261015.md",
+                  "docs/publication-review.md", "docs/github-publication.md"}
 EXCLUDED_TTS = {f"tests/fixtures/{name}.wav" for name in
                 ("meeting_en", "weather_en", "recipe_en", "train_ko")}
 BLOCKED_SUFFIXES = {".exe", ".dll", ".gguf", ".sqlite", ".log", ".zip", ".pyc"}
@@ -67,7 +70,8 @@ def main() -> int:
     if not required.issubset(included):
         raise SystemExit("필수 라이선스 고지가 없습니다.")
     # 공개 문서가 스냅샷에서 뺀 내부 문서를 링크하면 깨진 링크가 된다.
-    internal_link = re.compile(rb"\]\((?:\.\./|\./)?(?:docs/)?(?:AGENTS|progress)\.md")
+    stems = b"|".join(re.escape(Path(name).stem.encode()) for name in sorted(INTERNAL_FILES))
+    internal_link = re.compile(rb"\]\((?:\.\./|\./)?(?:docs/)?(?:" + stems + rb")\.md")
     linked = [name for name, data in included.items() if name.endswith(".md") and internal_link.search(data)]
     if linked:
         raise SystemExit(f"공개 문서가 내부 문서를 링크합니다: {linked}")

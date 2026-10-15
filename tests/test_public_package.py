@@ -59,10 +59,16 @@ def test_bundled_qt_notices_are_only_notice_texts():
 
 def test_source_snapshot_leaves_out_internal_documents():
     export = load("export_source")
-    assert {"AGENTS.md", "docs/progress.md"} <= export.INTERNAL_FILES
+    internal = {"AGENTS.md", "docs/progress.md", "docs/exe-license-review-20261015.md",
+                "docs/history-and-license-cleanup-20261015.md", "docs/publication-review.md",
+                "docs/github-publication.md"}
+    assert internal <= export.INTERNAL_FILES
     assert "AGENTS.md" not in export.ALLOWED_FILES
-    link = re.compile(r"\]\((?:\./)?(?:docs/)?(?:AGENTS|progress)\.md")
-    assert not link.search((ROOT / "README.md").read_text(encoding="utf-8"))
+    stems = "|".join(re.escape(PurePosixPath(name).stem) for name in internal)
+    link = re.compile(rf"\]\((?:\.\./|\./)?(?:docs/)?(?:{stems})\.md")
+    public_docs = [ROOT / "README.md", ROOT / "THIRD_PARTY_NOTICES.md"] + [
+        p for p in (ROOT / "docs").glob("*.md") if f"docs/{p.name}" not in internal]
+    assert [p.name for p in public_docs if link.search(p.read_text(encoding="utf-8"))] == []
 
 
 def test_first_run_batch_file_is_utf8_without_bom_and_ascii_comments():
